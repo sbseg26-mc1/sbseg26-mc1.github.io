@@ -1,0 +1,23 @@
+# Material de origem do capítulo, não versionado neste repositório
+minicurso.pdf
+*.pdf
+
+# Artefatos de edição em LaTeX, caso o capítulo seja editado nesta pasta
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.synctex.gz
+*.toc
+
+# Sistema operacional e editores
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# Servidor local de desenvolvimento
+.cache/
+node_modules/

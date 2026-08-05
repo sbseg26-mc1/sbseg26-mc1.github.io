@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="pt-BR" >
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Minicurso 1 do SBSeg 2026: IA aplicada à Resposta a Incidentes</title>
+<meta name="description" content="Material do Minicurso 1 do SBSeg 2026. Pseudonimização, classificação de incidentes e geração de playbooks com IA, sobre dados reais anonimizados de CSIRTs, com validação humana em cada transição.">
+<meta name="theme-color" content="#0c4a6b">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Minicurso 1 do SBSeg 2026: IA aplicada à Resposta a Incidentes">
+<meta property="og:description" content="Pseudonimização, classificação e geração de playbooks com IA, sobre dados reais anonimizados de CSIRTs.">
+<meta property="og:url" content="https://sbseg26-mc1.github.io/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;600;700&amp;display=swap">
+<link rel="stylesheet" href="assets/css/site.css">
+<script>
+  /* Aplica o tema salvo antes da primeira pintura, evitando piscada de cor. */
+  (function () {
+    try {
+      var t = localStorage.getItem("tema");
+      if (t) document.documentElement.setAttribute("data-theme", t);
+    } catch (e) {}
+  })();
+</script>
+</head>
+<body>
+
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+<header class="site-header">
+  <div class="wrap site-header__inner">
+    <a class="brand" href="index.html">
+      <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true">
+        <rect width="32" height="32" rx="7" fill="#0c4a6b"/>
+        <path d="M8 16h16" stroke="#fff" stroke-opacity=".35" stroke-width="2" stroke-linecap="round"/>
+        <circle cx="8" cy="16" r="3.6" fill="#4fd8c4"/>
+        <circle cx="16" cy="16" r="3.6" fill="#f2be55"/>
+        <circle cx="24" cy="16" r="3.6" fill="#b494f5"/>
+      </svg>
+      <span>
+        <span class="brand__name">IA aplicada à Resposta a Incidentes</span>
+        <span class="brand__meta">Minicurso 1 do SBSeg 2026</span>
+      </span>
+    </a>
+
+    <nav class="nav" id="menu" aria-label="Navegação principal">
+      <a href="index.html" aria-current="page">Início</a>
+      <a href="catalogo.html">Catálogo</a>
+      <a href="praticas.html">Práticas</a>
+      <a href="sobre.html">Sobre</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="icon-btn theme-toggle" type="button" aria-label="Alternar modo claro e escuro">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      </button>
+      <button class="icon-btn nav-toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir e fechar o menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="conteudo">
+
+<!-- ====================== HERO ====================== -->
+<section class="hero">
+  <div class="wrap hero__grid">
+    <div>
+      <div class="tag-row" style="margin-bottom: 1.25rem;">
+        <span class="tag tag--base">SBSeg 2026</span>
+        <span class="tag">Minicurso 1</span>
+        <span class="tag">3 práticas guiadas, 70 minutos</span>
+      </div>
+
+      <h1>Inteligência Artificial aplicada à Resposta a Incidentes</h1>
+
+      <p class="hero__lead">
+        Da norma à prática executável: como Modelos de Linguagem de Grande Escala
+        podem apoiar equipes de resposta a incidentes sem tirar o analista do
+        processo.
+      </p>
+
+      <p class="hero__thesis">
+        <strong>A tese do capítulo:</strong> a IA não substitui a resposta a
+        incidentes. Ela amplia a capacidade de triagem, análise, documentação e
+        recomendação quando está integrada a frameworks consolidados, dados
+        confiáveis, anonimização adequada e validação humana.
+      </p>
+
+      <div class="btn-row">
+        <a class="btn btn--primary" href="praticas.html">
+          Ver as três práticas
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a class="btn" href="catalogo.html">Catálogo de ferramentas</a>
+        <a class="btn" href="https://github.com/sbseg26-mc1">Repositório e notebooks</a>
+      </div>
+    </div>
+
+    <!-- Diagrama do pipeline -->
+    <div class="pipeline">
+      <ol class="flow">
+        <li class="flow__io">Ticket recebido pelo CSIRT</li>
+
+        <li class="flow__arrow" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </li>
+
+        <li class="flow__stage flow__stage--ec1">
+          <span class="flow__badge">EC1</span>
+          <h3>Pseudonimização</h3>
+          <p class="flow__tools">ANON-LFI, AnonShield</p>
+          <p class="flow__note">NER + regex + HMAC-SHA256</p>
+        </li>
+
+        <li class="flow__gate">Validação humana</li>
+
+        <li class="flow__stage flow__stage--ec2">
+          <span class="flow__badge">EC2</span>
+          <h3>Classificação</h3>
+          <p class="flow__tools">AutoClass-LFI, SecLINC</p>
+          <p class="flow__note">taxonomia + prompting</p>
+        </li>
+
+        <li class="flow__gate">Validação humana</li>
+
+        <li class="flow__stage flow__stage--ec3">
+          <span class="flow__badge">EC3</span>
+          <h3>Playbook</h3>
+          <p class="flow__tools">AutoClass-LFI</p>
+          <p class="flow__note">Markdown, Ansible, CACAO</p>
+        </li>
+
+        <li class="flow__arrow" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </li>
+
+        <li class="flow__io">Resposta documentada e auditável</li>
+      </ol>
+
+      <p class="pipeline__caption">
+        Os três estudos de caso não são exercícios independentes: formam um
+        pipeline único, no qual a saída de um alimenta o seguinte. A validação
+        humana aparece <strong>entre</strong> os estágios, e não apenas ao final,
+        porque um erro de classificação produz um playbook silenciosamente errado.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== NÚMEROS ====================== -->
+<section class="section section--alt">
+  <div class="wrap">
+    <div class="section__head">
+      <span class="eyebrow">Por que este tema importa</span>
+      <h2>Seis números do capítulo</h2>
+      <p>
+        Dois indicadores explicam a pressão sobre as equipes, dois delimitam o
+        que a IA entrega hoje, e dois lembram que o problema não é só técnico.
+      </p>
+    </div>
+
+    <div class="grid grid--wide">
+      <div class="stat">
+        <span class="stat__value">516.556</span>
+        <span class="stat__label">
+          notificações de incidentes registradas pelo CERT.br em 2024, uma média
+          de 1.411 por dia.
+        </span>
+        <span class="stat__source">CERT.br, 2025</span>
+      </div>
+
+      <div class="stat">
+        <span class="stat__value">4 milhões</span>
+        <span class="stat__label">
+          é o déficit global estimado de profissionais de segurança. A triagem
+          cresce mais rápido do que a capacidade de formar analistas.
+        </span>
+        <span class="stat__source">ISC2, 2023</span>
+      </div>
+
+      <div class="stat stat--ec3">
+        <span class="stat__value">42%</span>
+        <span class="stat__label">
+          dos sumários produzidos por modelos <strong>operando sozinhos</strong>
+          continham imprecisões factuais, e 35% omitiram detalhes críticos. Em
+          uso colaborativo, os mesmos modelos reduzem o esforço do analista.
+        </span>
+        <span class="stat__source">Kramer et al., SOUPS 2025</span>
+      </div>
+
+      <div class="stat stat--ec2">
+        <span class="stat__value">92,27%</span>
+        <span class="stat__label">
+          de acurácia na classificação de 194 incidentes, combinando taxonomia
+          estruturada com heurística iterativa de prompting.
+        </span>
+        <span class="stat__source">Severo et al., 2025</span>
+      </div>
+
+      <div class="stat stat--ec1">
+        <span class="stat__value">738×</span>
+        <span class="stat__label">
+          de aceleração do AnonShield sobre a geração anterior: de cerca de 92,9
+          horas para 453 segundos em 70.951 registros. O ganho é arquitetural, e
+          não dependente de GPU.
+        </span>
+        <span class="stat__source">Kapelinski et al., SBRC 2026</span>
+      </div>
+
+      <div class="stat">
+        <span class="stat__value">18,5%</span>
+        <span class="stat__label">
+          é a taxa de divergência entre <strong>dois analistas humanos</strong>
+          rotulando os mesmos tickets. Esse é o teto prático de qualquer
+          classificador avaliado contra rótulo humano.
+        </span>
+        <span class="stat__source">Jesus Filho et al., ICMLA 2025</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== O QUE TORNA ESTE MINICURSO DIFERENTE ====================== -->
+<section class="section">
+  <div class="wrap">
+    <div class="section__head">
+      <span class="eyebrow">O diferencial</span>
+      <h2>Dados reais, anonimizados, com política explícita</h2>
+      <p>
+        A maior parte do material didático sobre IA em segurança opera sobre
+        exemplos sintéticos. Exemplos sintéticos são limpos, sem ambiguidade e
+        sem ruído, e por isso escondem exatamente as dificuldades que
+        caracterizam a tarefa real.
+      </p>
+    </div>
+
+    <div class="grid">
+      <article class="card card--ec1">
+        <div class="card__top">
+          <span class="card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </span>
+          <h3>Nada de dado bruto sai da origem</h3>
+        </div>
+        <p>
+          Os tickets reais foram cedidos por CSIRTs parceiros e pseudonimizados
+          localmente, sem depender de qualquer serviço externo. As demonstrações
+          ao vivo operam sobre tickets sintéticos.
+        </p>
+      </article>
+
+      <article class="card card--ec2">
+        <div class="card__top">
+          <span class="card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h18M3 12h12M3 18h7"/></svg>
+          </span>
+          <h3>Uma base com o desbalanceamento real</h3>
+        </div>
+        <p>
+          São 185 registros de 182 incidentes únicos, acumulados em cerca de 18
+          meses. Uma única categoria concentra 64,9% da base, o que torna a
+          acurácia global uma métrica enganosa e obriga a medir por categoria.
+        </p>
+      </article>
+
+      <article class="card card--ec3">
+        <div class="card__top">
+          <span class="card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 17l6-6-6-6M12 19h8"/></svg>
+          </span>
+          <h3>Notebooks que cabem na cabeça</h3>
+        </div>
+        <p>
+          Cada prática reimplementa o essencial do mecanismo em poucas dezenas de
+          linhas de Python, sem GPU e sem credenciais de API, de modo que o
+          comportamento observado na ferramenta de produção se torne
+          inspecionável.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="card__top">
+          <span class="card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9.5" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg>
+          </span>
+          <h3>O humano no laço é medido, não presumido</h3>
+        </div>
+        <p>
+          O ciclo do GT-LFI incorpora as correções feitas pelos analistas ao
+          conhecimento usado pelo sistema. A validação humana é fonte de sinal de
+          correção, e não apenas uma salvaguarda burocrática.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== TRILHAS POR PERFIL ====================== -->
+<section class="section section--alt">
+  <div class="wrap">
+    <div class="section__head">
+      <span class="eyebrow">Público diverso, entradas diferentes</span>
+      <h2>Por onde começar, conforme o seu perfil</h2>
+      <p>
+        O material é o mesmo para todos. O que muda é a ordem em que ele rende
+        mais. Escolha a trilha mais próxima da sua situação.
+      </p>
+    </div>
+
+    <div class="grid grid--wide">
+      <article class="card track">
+        <h3>Estudante de graduação</h3>
+        <p>Primeiro contato com resposta a incidentes.</p>
+        <ol>
+          <li><strong>Entenda o encadeamento:</strong> leia o diagrama do pipeline acima, de ponta a ponta.</li>
+          <li><strong>Comece pela Prática 1:</strong> anonimizar é, antes de tudo, um problema de detecção, e isso fica visível em minutos.</li>
+          <li><strong>Fixe o vocabulário:</strong> percorra o grupo de padrões e taxonomias do catálogo.</li>
+        </ol>
+        <div class="card__links">
+          <a href="praticas.html#pratica-1">Ir para a Prática 1</a>
+          <a href="catalogo.html#padroes">Padrões e taxonomias</a>
+        </div>
+      </article>
+
+      <article class="card track">
+        <h3>Docente</h3>
+        <p>Quer aproveitar o material em disciplina ou oficina.</p>
+        <ol>
+          <li><strong>Use os notebooks como estão:</strong> são auto-contidos, executam sem GPU e sem credenciais.</li>
+          <li><strong>Aproveite as perguntas de discussão:</strong> cada prática traz as perguntas que conduzem a análise em sala.</li>
+          <li><strong>Adote os tickets sintéticos:</strong> publicados no repositório, dispensam acordo de uso de dados.</li>
+        </ol>
+        <div class="card__links">
+          <a href="praticas.html">Roteiro das práticas</a>
+          <a href="https://github.com/sbseg26-mc1">Repositório</a>
+        </div>
+      </article>
+
+      <article class="card track">
+        <h3>Pesquisador</h3>
+        <p>Quer replicar, comparar ou estender os resultados.</p>
+        <ol>
+          <li><strong>Leia as ressalvas metodológicas:</strong> números de acurácia só são comparáveis quando se sabe sobre qual conjunto e sob qual taxonomia foram medidos.</li>
+          <li><strong>Mapeie as lacunas:</strong> dados, avaliação, explicabilidade acionável, colaboração humano-IA e verificabilidade de agentes.</li>
+          <li><strong>Vá às fontes:</strong> a lista de leituras recomendadas reúne os SoKs e os estudos empíricos centrais.</li>
+        </ol>
+        <div class="card__links">
+          <a href="sobre.html#leituras">Leituras recomendadas</a>
+          <a href="sobre.html#como-citar">Como citar</a>
+        </div>
+      </article>
+
+      <article class="card track">
+        <h3>Profissional de CSIRT ou SOC</h3>
+        <p>Quer avaliar o que dá para levar para a operação.</p>
+        <ol>
+          <li><strong>Decida a política de dados primeiro:</strong> pseudonimização não é anonimização, e o dado pseudonimizado continua sendo dado pessoal perante a LGPD.</li>
+          <li><strong>Meça o custo da privacidade:</strong> cerca de 60% de acurácia com modelos abertos locais contra mais de 90% com modelos comerciais.</li>
+          <li><strong>Monte o ambiente por camadas:</strong> visibilidade, depois detecção comportamental, e só então a camada cognitiva.</li>
+        </ol>
+        <div class="card__links">
+          <a href="catalogo.html#grupo">Ferramentas do grupo</a>
+          <a href="catalogo.html#soar">SOAR e resposta</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== PREPARO ====================== -->
+<section class="section">
+  <div class="wrap">
+    <div class="section__head">
+      <span class="eyebrow">Antes da sala</span>
+      <h2>Prepare o ambiente</h2>
+      <p>
+        Os notebooks foram escritos com três restrições deliberadas: são
+        auto-contidos, executam sem GPU e sem credenciais de API, e
+        reimplementam em poucas dezenas de linhas o mecanismo essencial de cada
+        ferramenta.
+      </p>
+    </div>
+
+    <div class="grid grid--2">
+      <div class="card">
+        <h3>O mínimo necessário</h3>
+        <dl class="deflist">
+          <dt>Python 3 com Jupyter</dt>
+          <dd>Qualquer instalação recente serve. Um notebook local ou um serviço de notebooks na nuvem, à sua escolha.</dd>
+          <dt>Sem GPU</dt>
+          <dd>A demonstração de referência do AnonShield executa em um notebook comum com quatro vCPUs e 8 GB de RAM.</dd>
+          <dt>Sem credenciais</dt>
+          <dd>As práticas rodam com um provedor local ou simulado. Executar com modelo comercial é opcional.</dd>
+          <dt>Clone o repositório</dt>
+          <dd>Os três notebooks, os tickets sintéticos, os prompts de referência e os playbooks estão no repositório da organização.</dd>
+        </dl>
+        <div class="card__links">
+          <a href="https://github.com/sbseg26-mc1">github.com/sbseg26-mc1</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Três provedores intercambiáveis</h3>
+        <p>
+          O notebook de classificação seleciona o provedor por uma única
+          variável, o que permite executar a atividade inteira em qualquer
+          cenário de conectividade e de orçamento.
+        </p>
+        <ol>
+          <li><strong>Modelo local via Ollama:</strong> o dado não sai da máquina. É o caminho que torna tangível o argumento de privacidade.</li>
+          <li><strong>API compatível com OpenAI:</strong> para quem já tem credencial e quer ver o teto de desempenho.</li>
+          <li><strong>Provedor simulado determinístico:</strong> sem rede, sem custo, com saída reprodutível. Garante que ninguém fique parado.</li>
+        </ol>
+        <div class="card__links">
+          <a href="catalogo.html#modelos">Modelos e execução local</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout" style="margin-top: 2rem;">
+      <span class="callout__icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 16v-5M12 8h.01"/></svg>
+      </span>
+      <div>
+        <h3>Sobre os dados usados nas práticas</h3>
+        <p>
+          Por segurança operacional dos CSIRTs cedentes e em conformidade com a
+          LGPD, a base real de tickets não é disponibilizada. As demonstrações ao
+          vivo de anonimização usam <strong>tickets sintéticos</strong>,
+          publicados no repositório. Os resultados agregados sobre a base real
+          são apresentados de forma pré-computada, sempre acompanhados do código
+          que os produziu.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="site-footer__grid">
+      <div>
+        <h4>O minicurso</h4>
+        <p>
+          Capítulo 1 do livro de minicursos do XXVI Simpósio Brasileiro de
+          Cibersegurança, o SBSeg 2026.
+        </p>
+      </div>
+      <div>
+        <h4>Navegação</h4>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="catalogo.html">Catálogo de ferramentas</a></li>
+          <li><a href="praticas.html">Práticas</a></li>
+          <li><a href="sobre.html">Sobre o capítulo</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Código</h4>
+        <ul>
+          <li><a href="https://github.com/sbseg26-mc1">Repositório do minicurso</a></li>
+          <li><a href="https://gt-rnp-lfi.github.io/home/">Projeto GT-LFI</a></li>
+          <li><a href="https://github.com/AnonShield/tool">AnonShield</a></li>
+          <li><a href="https://github.com/gt-rnp-lfi/lfi-autoclass">AutoClass-LFI</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Apoio</h4>
+        <p>
+          CAPES (código 001), RNP por meio do Programa Hackers do Bem e do
+          GT-LFI, FAPERGS, CNPq e ANATEL por meio do termo com o ITA.
+        </p>
+      </div>
+    </div>
+
+    <div class="site-footer__bottom">
+      <span>Conteúdo deste site sob licença Apache 2.0.</span>
+      <span>&copy; <span data-ano>2026</span> Autores do Capítulo 1.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/site.js" defer></script>
+</body>
+</html>

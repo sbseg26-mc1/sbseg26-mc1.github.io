@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img"
+     aria-label="Três estágios encadeados do minicurso">
+  <rect width="32" height="32" rx="7" fill="#0c4a6b"/>
+  <path d="M8 16h16" stroke="#ffffff" stroke-opacity=".35" stroke-width="2"
+        stroke-linecap="round"/>
+  <circle cx="8" cy="16" r="3.6" fill="#4fd8c4"/>
+  <circle cx="16" cy="16" r="3.6" fill="#f2be55"/>
+  <circle cx="24" cy="16" r="3.6" fill="#b494f5"/>
+</svg>
