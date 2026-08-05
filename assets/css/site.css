@@ -60,8 +60,7 @@
   --fs-h3: clamp(1.2rem, 1.1rem + 0.45vw, 1.4rem);
   --fs-lead: clamp(1.12rem, 1.04rem + 0.4vw, 1.3rem);
   --fs-body: 1.0625rem;
-  --fs-sm: 1rem;
-  --fs-label: 0.9375rem;
+  --fs-sm: 1rem; /* piso do site: nenhum texto de conteúdo abaixo de 16px */
 
   /* Espaçamento */
   --sp-1: 0.25rem;
@@ -166,6 +165,12 @@
   box-sizing: border-box;
 }
 
+/* O atributo hidden vem da folha do navegador e qualquer display declarado
+   aqui o venceria, porque a origem do autor tem precedência sobre a do
+   navegador. Como o catálogo esconde cartões, grupos e botões por atributo,
+   o !important garante que hidden signifique escondido em todos eles. */
+[hidden] { display: none !important; }
+
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 5.5rem;
@@ -216,7 +221,8 @@ img, svg { max-width: 100%; }
 
 code, kbd, samp, pre {
   font-family: var(--font-mono);
-  font-size: 0.94em;
+  /* Correção óptica da monoespaçada, sem descer do piso de 16px. */
+  font-size: max(1rem, 0.94em);
 }
 
 code {
@@ -232,7 +238,7 @@ pre {
   border-radius: var(--radius-sm);
   padding: var(--sp-4);
   overflow-x: auto;
-  font-size: var(--fs-label);
+  font-size: var(--fs-sm);
   line-height: 1.6;
 }
 
@@ -312,7 +318,7 @@ hr {
 .eyebrow {
   display: block;
   font-family: var(--font-mono);
-  font-size: var(--fs-label);
+  font-size: var(--fs-sm);
   font-weight: 600;
   letter-spacing: 0.09em;
   text-transform: uppercase;
@@ -378,7 +384,7 @@ hr {
 
 .brand__meta {
   display: block;
-  font-size: var(--fs-label);
+  font-size: var(--fs-sm);
   font-weight: 500;
   color: var(--text-muted);
 }
@@ -477,6 +483,21 @@ hr {
   .header-actions { margin-left: auto; }
 }
 
+/* Em telas estreitas sobra pouco espaço entre a marca e os dois botões, e o
+   título por extenso quebraria em três linhas dentro do cabeçalho fixo. Nesse
+   caso mostramos só a linha curta, que continua nomeando o link corretamente
+   para leitores de tela. */
+@media (max-width: 620px) {
+  .brand { gap: var(--sp-2); }
+  .brand__name { display: none; }
+
+  .brand__meta {
+    font-size: 1.02rem;
+    font-weight: 700;
+    color: var(--text);
+  }
+}
+
 /* -------------------------------------------------------------------------
    5. Botões e etiquetas
    ------------------------------------------------------------------------- */
@@ -536,7 +557,7 @@ hr {
   background: var(--surface-2);
   border: 1px solid var(--border);
   color: var(--text-muted);
-  font-size: var(--fs-label);
+  font-size: var(--fs-sm);
   font-weight: 600;
   line-height: 1.5;
 }
@@ -568,15 +589,11 @@ hr {
   border-bottom: 1px solid var(--border);
 }
 
-.hero__grid {
-  display: grid;
-  gap: var(--sp-7);
-  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
-  align-items: center;
-}
-
-@media (max-width: 900px) {
-  .hero__grid { grid-template-columns: 1fr; gap: var(--sp-6); }
+/* O hero é uma coluna só: o diagrama do pipeline tem seção própria logo
+   abaixo, onde recebe a largura que a leitura da esquerda para a direita
+   exige. O limite aqui é de medida de leitura, não de grade. */
+.hero__conteudo {
+  max-width: 56rem;
 }
 
 .hero h1 { margin-bottom: var(--sp-4); }
@@ -652,7 +669,7 @@ hr {
   gap: var(--sp-3);
   margin-top: auto;
   padding-top: var(--sp-4);
-  font-size: var(--fs-label);
+  font-size: var(--fs-sm);
   font-weight: 600;
 }
 
@@ -707,7 +724,7 @@ hr {
   display: block;
   margin-top: var(--sp-3);
   font-family: var(--font-mono);
-  font-size: 0.875rem;
+  font-size: var(--fs-sm);
   color: var(--text-muted);
   opacity: 0.85;
 }
@@ -722,6 +739,10 @@ hr {
    ------------------------------------------------------------------------- */
 
 .pipeline {
+  /* O diagrama ocupa uma coluna do hero, e não a largura da janela. Quem
+     decide entre a fila horizontal e a pilha vertical é a largura que o
+     componente recebeu, não o tamanho da tela. */
+  container-type: inline-size;
   padding: var(--sp-5);
   background: var(--surface);
   border: 1px solid var(--border);
@@ -752,10 +773,10 @@ hr {
 }
 
 .flow__io {
-  flex: 0 1 7.5rem;
+  flex: 0 1 10rem;
   background: var(--surface-2);
   border: 1px dashed var(--border-strong);
-  font-size: var(--fs-label);
+  font-size: var(--fs-sm);
   color: var(--text-muted);
 }
 
@@ -776,7 +797,7 @@ hr {
   padding: 0.12em 0.6em;
   border-radius: var(--radius-pill);
   font-family: var(--font-mono);
-  font-size: 0.8125rem;
+  font-size: var(--fs-sm);
   font-weight: 700;
   letter-spacing: 0.05em;
 }
@@ -792,24 +813,24 @@ hr {
 
 .flow__tools {
   margin: 0;
-  font-size: var(--fs-label);
+  font-size: var(--fs-sm);
   color: var(--text-muted);
 }
 
 .flow__note {
   margin: var(--sp-2) 0 0;
   font-family: var(--font-mono);
-  font-size: 0.8125rem;
+  font-size: var(--fs-sm);
   color: var(--text-muted);
 }
 
 .flow__gate {
-  flex: 0 0 2.6rem;
+  flex: 0 0 3rem;
   padding: var(--sp-2) 0;
   background: var(--primary-soft);
   border: 1px solid color-mix(in srgb, var(--primary) 35%, transparent);
   color: var(--primary);
-  font-size: 0.8125rem;
+  font-size: var(--fs-sm);
   font-weight: 700;
   line-height: 1.25;
   writing-mode: vertical-rl;
@@ -838,11 +859,26 @@ hr {
   .flow__arrow svg { transform: rotate(90deg); }
 }
 
+/* A fila horizontal só é legível a partir de cerca de 860px de componente:
+   abaixo disso os três estágios não cabem lado a lado sem espremer o texto. */
+@container (max-width: 860px) {
+  .flow { flex-direction: column; }
+  .flow__io { flex: none; }
+  .flow__gate {
+    flex: none;
+    writing-mode: horizontal-tb;
+    padding: var(--sp-2) var(--sp-3);
+  }
+  .flow__arrow { justify-content: center; }
+  .flow__arrow svg { transform: rotate(90deg); }
+}
+
 .pipeline__caption {
+  max-width: var(--prose);
   margin-top: var(--sp-5);
   padding-top: var(--sp-4);
   border-top: 1px solid var(--border);
-  font-size: var(--fs-label);
+  font-size: var(--fs-sm);
   color: var(--text-muted);
 }
 
@@ -903,7 +939,7 @@ hr {
 .filter-group__label {
   flex: none;
   width: 6.2rem;
-  font-size: var(--fs-label);
+  font-size: var(--fs-sm);
   font-weight: 700;
   color: var(--text-muted);
 }
@@ -915,7 +951,7 @@ hr {
   background: var(--surface);
   color: var(--text-muted);
   font: inherit;
-  font-size: var(--fs-label);
+  font-size: var(--fs-sm);
   font-weight: 600;
   cursor: pointer;
   transition: background 0.14s ease, color 0.14s ease,
@@ -964,8 +1000,11 @@ hr {
 .catalog-group__head h2 { margin: 0; font-size: var(--fs-h3); }
 
 .catalog-group__count {
+  flex: none;
+  margin-left: auto;
   font-family: var(--font-mono);
-  font-size: var(--fs-label);
+  font-size: var(--fs-sm);
+  white-space: nowrap;
   color: var(--text-muted);
 }
 
@@ -991,7 +1030,10 @@ hr {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  gap: var(--sp-3);
+  /* Em telas muito estreitas o nome e a etiqueta não cabem lado a lado, e a
+     etiqueta desce para a linha seguinte em vez de esticar o cartão. */
+  flex-wrap: wrap;
+  gap: var(--sp-2) var(--sp-3);
   margin-bottom: var(--sp-2);
 }
 
@@ -1005,7 +1047,7 @@ hr {
 .tool__kind {
   flex: none;
   font-family: var(--font-mono);
-  font-size: 0.875rem;
+  font-size: var(--fs-sm);
   color: var(--text-muted);
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -1023,7 +1065,7 @@ hr {
   padding: var(--sp-3);
   background: var(--surface-2);
   border-radius: var(--radius-sm);
-  font-size: var(--fs-label);
+  font-size: var(--fs-sm);
   color: var(--text-muted);
 }
 
@@ -1043,7 +1085,7 @@ hr {
   display: flex;
   flex-wrap: wrap;
   gap: var(--sp-3);
-  font-size: var(--fs-label);
+  font-size: var(--fs-sm);
   font-weight: 600;
 }
 
@@ -1057,8 +1099,6 @@ hr {
 .tool__links a:hover { text-decoration: underline; }
 
 .tool__links svg { width: 0.95rem; height: 0.95rem; }
-
-.tool[hidden] { display: none; }
 
 .empty-state {
   padding: var(--sp-7) var(--sp-5);
@@ -1140,7 +1180,7 @@ hr {
 
 .moment__time {
   font-family: var(--font-mono);
-  font-size: var(--fs-label);
+  font-size: var(--fs-sm);
   font-weight: 600;
   color: var(--text-muted);
   padding: 0.12em 0.6em;
@@ -1157,7 +1197,7 @@ hr {
 
 .checklist li {
   position: relative;
-  padding-left: 2.3rem;
+  padding-left: 2.55rem;
   margin-bottom: var(--sp-3);
   font-size: var(--fs-sm);
   counter-increment: passo;
@@ -1171,13 +1211,13 @@ hr {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 1.65rem;
-  height: 1.65rem;
+  width: 1.85rem;
+  height: 1.85rem;
   border-radius: 50%;
   background: var(--primary-soft);
   color: var(--primary);
   font-family: var(--font-mono);
-  font-size: 0.875rem;
+  font-size: var(--fs-sm);
   font-weight: 700;
 }
 
@@ -1297,7 +1337,7 @@ hr {
 .people strong { display: block; }
 
 .people span {
-  font-size: var(--fs-label);
+  font-size: var(--fs-sm);
   color: var(--text-muted);
 }
 
@@ -1370,7 +1410,7 @@ tbody tr:last-child td { border-bottom: 0; }
   flex-wrap: wrap;
   gap: var(--sp-3);
   justify-content: space-between;
-  font-size: var(--fs-label);
+  font-size: var(--fs-sm);
 }
 
 /* -------------------------------------------------------------------------

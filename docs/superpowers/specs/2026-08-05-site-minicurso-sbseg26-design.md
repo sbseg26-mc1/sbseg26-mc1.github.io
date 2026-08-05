@@ -82,8 +82,13 @@ contagem de resultados.
 1. **Hero.** Título, tese do capítulo ("a IA não substitui a resposta a incidentes:
    amplia a capacidade de triagem, análise e documentação"), etiquetas do evento e três
    chamadas para ação.
-2. **O pipeline em três estágios.** Diagrama SVG inline: ticket bruto, pseudonimização,
-   classificação, playbook, com a validação humana marcada entre os estágios.
+2. **O pipeline em três estágios.** Seção própria, de largura inteira, logo abaixo do
+   hero: ticket bruto, pseudonimização, classificação, playbook, com a validação humana
+   marcada entre os estágios. O diagrama é HTML e CSS, com SVG apenas nas setas. A fila
+   horizontal precisa de cerca de 860px, e abaixo disso o diagrama empilha na vertical.
+   Quem decide é uma container query sobre a largura do próprio componente, e não uma
+   media query sobre a janela, porque o diagrama pode ocupar uma coluna bem mais estreita
+   do que a tela.
 3. **Números que motivam.** Dados extraídos do capítulo: 516.556 notificações ao CERT.br
    em 2024 (1.411 por dia); 48.448 CVEs em 2025; déficit global de 4 milhões de
    profissionais; 35% de omissões e 42% de imprecisões factuais em operação autônoma;
