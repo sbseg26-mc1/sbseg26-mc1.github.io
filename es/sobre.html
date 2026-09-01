@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="es" >
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Acerca del capítulo | Minicurso 1 del SBSeg 2026</title>
+<meta name="description" content="Resumen, autores, estructura, conclusiones, lecturas recomendadas y forma de citación del Capítulo 1 del libro de minicursos del SBSeg 2026.">
+<meta name="theme-color" content="#0c4a6b">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://sbseg26-mc1.github.io/es/sobre.html">
+<link rel="alternate" hreflang="pt-BR" href="https://sbseg26-mc1.github.io/sobre.html">
+<link rel="alternate" hreflang="en" href="https://sbseg26-mc1.github.io/en/sobre.html">
+<link rel="alternate" hreflang="es" href="https://sbseg26-mc1.github.io/es/sobre.html">
+<link rel="alternate" hreflang="x-default" href="https://sbseg26-mc1.github.io/sobre.html">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:title" content="Acerca del Capítulo 1 del libro de minicursos del SBSeg 2026">
+<meta property="og:description" content="Resumen, autores, estructura, conclusiones y lecturas recomendadas.">
+<meta property="og:url" content="https://sbseg26-mc1.github.io/es/sobre.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;600;700&amp;display=swap">
+<link rel="stylesheet" href="../assets/css/site.css">
+<script>
+  /* Aplica o tema salvo antes da primeira pintura, evitando piscada de cor. */
+  (function () {
+    try {
+      var t = localStorage.getItem("tema");
+      if (t) document.documentElement.setAttribute("data-theme", t);
+    } catch (e) {}
+  })();
+</script>
+</head>
+<body>
+
+<a class="skip-link" href="#conteudo">Saltar al contenido</a>
+
+<header class="site-header">
+  <div class="wrap site-header__inner">
+    <a class="brand" href="index.html">
+      <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true">
+        <rect width="32" height="32" rx="7" fill="#0c4a6b"/>
+        <path d="M8 16h16" stroke="#fff" stroke-opacity=".35" stroke-width="2" stroke-linecap="round"/>
+        <circle cx="8" cy="16" r="3.6" fill="#4fd8c4"/>
+        <circle cx="16" cy="16" r="3.6" fill="#f2be55"/>
+        <circle cx="24" cy="16" r="3.6" fill="#b494f5"/>
+      </svg>
+      <span>
+        <span class="brand__name">IA aplicada a la Respuesta a Incidentes</span>
+        <span class="brand__meta">Minicurso 1 del SBSeg 2026</span>
+      </span>
+    </a>
+
+    <nav class="nav" id="menu" aria-label="Navegación principal">
+      <a href="index.html">Inicio</a>
+      <a href="catalogo.html">Catálogo</a>
+      <a href="praticas.html">Prácticas</a>
+      <a href="sobre.html" aria-current="page">Acerca de</a>
+    </nav>
+
+    <div class="header-actions">
+      <nav class="lang" aria-label="Idioma">
+        <a href="../sobre.html" hreflang="pt-BR" title="Português">PT</a>
+        <a href="../en/sobre.html" hreflang="en" title="English">EN</a>
+        <a href="sobre.html" hreflang="es" aria-current="true" title="Español">ES</a>
+      </nav>
+
+      <button class="icon-btn theme-toggle" type="button"
+              aria-label="Alternar modo claro y oscuro"
+              data-rotulo-claro="Activar modo claro"
+              data-rotulo-escuro="Activar modo oscuro">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      </button>
+      <button class="icon-btn nav-toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir y cerrar el menú">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="conteudo">
+
+<section class="section section--tight">
+  <div class="wrap">
+    <div class="section__head">
+      <span class="eyebrow">Capítulo 1</span>
+      <h1>Inteligencia Artificial aplicada a la Respuesta a Incidentes</h1>
+      <p>
+        Libro de minicursos del XXVI Simposio Brasileño de Ciberseguridad, el
+        SBSeg 2026, publicado por la Sociedad Brasileña de Computación. El
+        capítulo está escrito en portugués, bajo el título "Inteligência
+        Artificial aplicada à Resposta a Incidentes".
+      </p>
+    </div>
+
+    <div class="grid grid--2">
+      <div class="card">
+        <h3>Resumen</h3>
+        <p>
+          Los equipos de Respuesta a Incidentes conviven con un volumen de
+          notificaciones que hace mucho superó la capacidad de triaje manual.
+          Este capítulo examina cómo la Inteligencia Artificial, y en especial
+          los Modelos de Lenguaje de Gran Escala, puede apoyar la respuesta a
+          incidentes sin desplazar al analista humano.
+        </p>
+        <p>
+          Se combinan marcos consolidados (NIST SP 800-61 Rev. 3, NIST CSF 2.0 y
+          FIRST CSIRT Services Framework), una revisión de la literatura
+          reciente organizada por categoría de aplicación y tres estudios de
+          caso realizados sobre una base de tickets reales de incidentes,
+          previamente seudonimizados, cedidos por CSIRT asociados:
+          seudonimización de tickets, clasificación automática de incidentes y
+          generación asistida de playbooks. Cada estudio de caso combina la
+          demostración de las herramientas del grupo proponente con un notebook
+          simple, autocontenido y ejecutable, publicado en un repositorio
+          abierto.
+        </p>
+        <p>
+          El mensaje central es que la IA no sustituye el proceso de respuesta a
+          incidentes, sino que amplía la capacidad de triaje, análisis,
+          documentación y recomendación cuando está integrada a marcos
+          consolidados, datos confiables, anonimización adecuada y validación
+          humana.
+        </p>
+      </div>
+
+      <div class="card" lang="en">
+        <h3>Abstract</h3>
+        <p>
+          Incident response teams face a volume of notifications that has long
+          outgrown what manual triage can absorb. This chapter examines how
+          Artificial Intelligence, and Large Language Models in particular, can
+          support incident response without displacing the human analyst.
+        </p>
+        <p>
+          We combine consolidated frameworks (NIST SP 800-61r3, NIST CSF 2.0, and
+          the FIRST CSIRT Services Framework), a structured review of the recent
+          literature organised by application category, and three hands-on case
+          studies conducted over a base of real, previously pseudonymised incident
+          tickets provided by partner CSIRTs: pseudonymisation of tickets,
+          automated incident classification, and assisted playbook generation. Each
+          case study pairs a demonstration of the proponents' tools with a small,
+          self-contained and executable notebook, published in an open repository.
+        </p>
+        <p>
+          The chapter's central message is that AI does not replace the incident
+          response process; it enlarges triage, analysis, documentation and
+          recommendation capacity when it is integrated with consolidated
+          frameworks, trustworthy data, adequate anonymisation and human
+          validation.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== AUTORES ====================== -->
+<section class="section section--alt" id="autores">
+  <div class="wrap">
+    <div class="section__head">
+      <span class="eyebrow">Quiénes lo escribieron</span>
+      <h2>Autores</h2>
+    </div>
+
+    <ul class="people">
+      <li><strong>Rodrigo Sanches Miani</strong><span lang="pt-BR">Universidade Federal de Uberlândia</span></li>
+      <li><strong>Sebastião Alves de Jesus Filho</strong><span lang="pt-BR">Universidade Federal de Uberlândia</span></li>
+      <li><strong>Diego Kreutz</strong><span lang="pt-BR">Universidade Federal do Pampa</span></li>
+      <li><strong>Cristhian Kapelinski</strong><span lang="pt-BR">Universidade Federal do Pampa</span></li>
+      <li><strong>Lourenço Alves Pereira Júnior</strong><span lang="pt-BR">Instituto Tecnológico de Aeronáutica</span></li>
+      <li><strong>Sidnei Barbieri</strong><span lang="pt-BR">Instituto Tecnológico de Aeronáutica</span></li>
+      <li><strong>Murray Evangelista de Souza</strong><span lang="pt-BR">Instituto Tecnológico de Aeronáutica</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ====================== ESTRUCTURA ====================== -->
+<section class="section" id="estrutura">
+  <div class="wrap">
+    <div class="section__head">
+      <span class="eyebrow">Cómo se organiza el capítulo</span>
+      <h2>Ocho secciones, del fundamento normativo a la práctica ejecutable</h2>
+    </div>
+
+    <div class="table-scroll">
+      <table>
+        <caption class="visually-hidden">Estructura de las ocho secciones del capítulo</caption>
+        <thead>
+          <tr>
+            <th scope="col">Sección</th>
+            <th scope="col">Título</th>
+            <th scope="col">Papel</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1.1</td>
+            <td>Introducción</td>
+            <td>Sitúa la presión sobre los equipos y el diferencial del minicurso: datos reales anonimizados.</td>
+          </tr>
+          <tr>
+            <td>1.2</td>
+            <td>Conceptos Básicos y Marcos de Referencia</td>
+            <td>Nivela el vocabulario: ciclo de vida de la respuesta, CSIRT y SOC, taxonomías, fundamentos de IA y de privacidad.</td>
+          </tr>
+          <tr>
+            <td>1.3</td>
+            <td>Estado del Arte en IA para Respuesta a Incidentes</td>
+            <td>Revisión organizada por categoría de aplicación, con inclusión deliberada de trabajos que reportan límites.</td>
+          </tr>
+          <tr>
+            <td>1.4</td>
+            <td>Entornos, Herramientas y Bases de Datos</td>
+            <td>Caracteriza los recursos sobre los que operan los estudios de caso, de modo que el lector logre reproducir el material.</td>
+          </tr>
+          <tr>
+            <td>1.5</td>
+            <td>Estudio de Caso 1: Anonimización de tickets</td>
+            <td>La puerta de entrada del pipeline. Cobertura de protección y utilidad preservada.</td>
+          </tr>
+          <tr>
+            <td>1.6</td>
+            <td>Estudio de Caso 2: Clasificación de Incidentes</td>
+            <td>Estrategias de prompting, modelos comerciales frente a modelos locales y el escenario de pocos ejemplos.</td>
+          </tr>
+          <tr>
+            <td>1.7</td>
+            <td>Estudio de Caso 3: Generación de Playbooks</td>
+            <td>Del incidente clasificado a la acción, con énfasis en límites, riesgos y validación humana.</td>
+          </tr>
+          <tr>
+            <td>1.8</td>
+            <td>Desafíos, Tendencias y Conclusiones</td>
+            <td>Consolida desafíos de datos, de modelos y de gobernanza, y trata de la formación y la capacitación.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== CONCLUSIONES ====================== -->
+<section class="section section--alt" id="conclusoes">
+  <div class="wrap">
+    <div class="section__head">
+      <span class="eyebrow">Lo que queda</span>
+      <h2>Las cinco conclusiones</h2>
+    </div>
+
+    <div class="grid grid--2">
+      <article class="card">
+        <h3>La IA no sustituye el proceso de respuesta a incidentes</h3>
+        <p>
+          Amplía la capacidad de triaje, análisis y recomendación. La evidencia
+          empírica sostiene la formulación con precisión: los modelos que operan
+          de forma autónoma fallan en proporciones incompatibles con el uso
+          operativo, y los mismos modelos en uso colaborativo producen una
+          ganancia consistente.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>La metodología importa tanto como el modelo</h3>
+        <p>
+          Combinar taxonomía estructurada con heurística iterativa de prompting
+          mejoró la consistencia de la clasificación en todas las arquitecturas
+          evaluadas. Y un único ejemplo etiquetado por categoría puede duplicar
+          el F1 de un clasificador, resultado que el capítulo reproduce sobre su
+          propia base: la exactitud global pasa del <strong>68,4% al
+          89,7%</strong> con un ejemplo por categoría y ninguna llamada
+          adicional de API por ronda. Ambas son intervenciones de bajo costo y
+          alto retorno, disponibles para cualquier equipo.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>La privacidad es requisito de diseño, no etapa posterior</h3>
+        <p>
+          La seudonimización no es un paso burocrático que antecede al trabajo
+          real: es la condición que hace posible operar sobre datos reales. La
+          decisión de diseño que la viabiliza sin destruir la utilidad es la
+          seudonimización determinista con preservación del tipo de la entidad.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>La validación humana es fuente de señal, no solo salvaguarda</h3>
+        <p>
+          El diseño que distingue a las propuestas maduras es aquel en el que la
+          corrección del analista realimenta el sistema. Es esa realimentación
+          la que convierte la herramienta de un producto estático en un activo
+          institucional que mejora con el uso.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>El incidente real es un activo de doble función</h3>
+        <p>
+          Una vez tratado con el cuidado debido, el mismo material que alimenta
+          la operación alimenta la formación. Cerrar ese ciclo, de la operación
+          al aula y de vuelta, es probablemente la contribución más duradera que
+          la comunidad brasileña de seguridad puede extraer de este trabajo.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== LECTURAS ====================== -->
+<section class="section" id="leituras">
+  <div class="wrap">
+    <div class="section__head">
+      <span class="eyebrow">Para ir más lejos</span>
+      <h2>Lecturas recomendadas</h2>
+      <p>
+        Una selección entre las referencias del capítulo, privilegiando
+        revisiones sistemáticas, estudios con evaluación empírica sobre datos
+        reales y trabajos que reportan límites de la automatización, y no solo
+        ganancias.
+      </p>
+    </div>
+
+    <div class="prose">
+      <ul class="readings">
+        <li>
+          <strong lang="en">99% false positives: A qualitative study of SOC analysts' perspectives on security alarms</strong>
+          <span>
+            Alahmadi, Axon y Martinovic. USENIX Security Symposium, 2022. La
+            referencia empírica más citada sobre fatiga de alertas. Distingue el
+            falso positivo del disparo benigno y elicita las cinco propiedades
+            que una alerta necesita tener para ser accionable.
+          </span>
+          <div class="card__links">
+            <a href="https://www.usenix.org/conference/usenixsecurity22/presentation/alahmadi">Artículo</a>
+          </div>
+        </li>
+
+        <li>
+          <strong lang="en">Integrating large language models into security incident response</strong>
+          <span>
+            Kramer, Rosique, Narotam, Bursztein, Kelley, Thomas y Woodruff.
+            SOUPS, 2025. El estudio más riguroso disponible, con 18 analistas y
+            50 incidentes reales. Muestra que la variable decisiva no es la
+            capacidad del modelo, sino el modo de uso.
+          </span>
+        </li>
+
+        <li>
+          <strong lang="en">SoK: Explainable machine learning for computer security applications</strong>
+          <span>
+            Nadeem, Vos, Cao, Pajola, Dieck, Baumgartner y Verwer. IEEE
+            EuroS&amp;P, 2023. Concluye que la explicabilidad practicada sirve al
+            investigador, y no al operador que necesita decidir si actúa.
+          </span>
+        </li>
+
+        <li>
+          <strong lang="en">SoK: AI support for analyst situation awareness in security operation centres</strong>
+          <span>
+            Karunasingha, Baruwal Chhetri, Nepal, Paris y Kanhere. EuroUSEC,
+            2025. Identifica la brecha de colaboración entre humanos e IA: la
+            mayor parte de las propuestas trata al analista como consumidor
+            pasivo de las salidas del modelo.
+          </span>
+        </li>
+
+        <li>
+          <strong lang="en">SoK: Applications and challenges of using recommender systems in cybersecurity incident handling and response</strong>
+          <span>
+            Husák y Čermák. ARES, 2022. Formula la recomendación de acciones de
+            respuesta como problema de recomendación e identifica la asimetría
+            central del dominio: recomendar una acción inadecuada en seguridad
+            puede ser peor que no recomendar nada.
+          </span>
+        </li>
+
+        <li>
+          <strong lang="en">Incident Response Recommendations and Considerations for Cybersecurity Risk Management: A CSF 2.0 Community Profile</strong>
+          <span>
+            Nelson, Rekhi, Souppaya y Scarfone. NIST Special Publication
+            800-61r3, 2025. La revisión que reposiciona la respuesta a
+            incidentes como un recorte de la gestión de riesgo.
+          </span>
+          <div class="card__links">
+            <a href="https://csrc.nist.gov/pubs/sp/800/61/r3/final">Publicación</a>
+          </div>
+        </li>
+
+        <li>
+          <strong lang="en">On-premise SLMs vs. commercial LLMs: Prompt engineering and incident classification in SOCs and CSIRTs</strong>
+          <span>
+            Almeida, Pohlmann, Severo, Kreutz, Heinrich y Pereira Júnior, 2025.
+            Cuantifica la brecha entre modelos abiertos ejecutados localmente y
+            modelos comerciales, y lo que se gana a cambio.
+          </span>
+          <div class="card__links">
+            <a href="https://arxiv.org/abs/2511.14908">arXiv:2511.14908</a>
+          </div>
+        </li>
+
+        <li>
+          <strong lang="en">Temperature in SLMs: Impact on incident categorization in on-premises environments</strong>
+          <span>
+            Pohlmann, Severo, Almeida, Kreutz, Heinrich y Pereira Júnior, 2025.
+            Aísla la variable que la intuición sugiere que es relevante y muestra
+            que no lo es: los factores determinantes son el número de parámetros
+            y la capacidad de GPU.
+          </span>
+          <div class="card__links">
+            <a href="https://arxiv.org/abs/2511.19464">arXiv:2511.19464</a>
+          </div>
+        </li>
+
+        <li>
+          <strong lang="en">AnonLFI 2.0: Extensible architecture for PII pseudonymization in CSIRTs with OCR and technical recognizers</strong>
+          <span>
+            Kapelinski, Lautert, Machado y Kreutz. WRSeg/ERRC, SBC, 2025. La
+            generación que sustituyó el hash público por HMAC-SHA256 con clave
+            secreta.
+          </span>
+          <div class="card__links">
+            <a href="https://arxiv.org/abs/2511.15744">arXiv:2511.15744</a>
+          </div>
+        </li>
+
+        <li>
+          <strong lang="en">Applying LLMs to the classification of cybersecurity incident tickets in a few-shot scenario</strong>
+          <span>
+            Jesus Filho, Santana Santos, Dias Araújo y Sanches Miani. IEEE ICMLA,
+            2025. Muestra que un único ejemplo etiquetado eleva el F1 medio de
+            cerca del 46% a más del 90%, y documenta la divergencia del 18,5%
+            entre dos anotadores humanos.
+          </span>
+        </li>
+
+        <li>
+          <strong lang="pt-BR">Categorização de incidentes de segurança utilizando engenharia de prompts em LLMs</strong>
+          <span>
+            Severo, Lautert, Kreutz, Bertholdo, Pohlmann y Quincozes. SBSeg, SBC,
+            2025. La referencia más directa en el contexto brasileño: aplica
+            ingeniería de prompts a cuatro LLM comerciales sobre relatos reales
+            de un CSIRT.
+          </span>
+        </li>
+
+        <li>
+          <strong lang="en">CACAO Security Playbooks Version 2.0</strong>
+          <span>
+            OASIS, 2023. El estándar de representación de playbooks en JSON
+            usado como formato de intercambio en la tercera práctica.
+          </span>
+          <div class="card__links">
+            <a href="https://docs.oasis-open.org/cacao/security-playbooks/v2.0/security-playbooks-v2.0.html">Especificación</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== CITACIÓN ====================== -->
+<section class="section section--alt" id="como-citar">
+  <div class="wrap">
+    <div class="section__head">
+      <span class="eyebrow">Referencia</span>
+      <h2>Cómo citar</h2>
+    </div>
+
+    <div class="prose">
+      <div class="callout" style="margin-bottom: 1.5rem;">
+        <span class="callout__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 16v-5M12 8h.01"/></svg>
+        </span>
+        <div>
+          <p>
+            El capítulo se publicará en el libro de minicursos del SBSeg 2026,
+            por la Sociedad Brasileña de Computación. Este sitio no aloja el PDF.
+            Complete el campo de páginas y el identificador digital en cuanto la
+            publicación esté disponible. La referencia de abajo permanece en
+            portugués porque nombra el título publicado.
+          </p>
+        </div>
+      </div>
+
+<pre><code>@incollection{miani2026ia,
+  author    = {Miani, Rodrigo Sanches and Jesus Filho, Sebasti{\~a}o Alves de
+               and Kreutz, Diego and Kapelinski, Cristhian
+               and Pereira J{\'u}nior, Louren{\c{c}}o Alves
+               and Barbieri, Sidnei and Souza, Murray Evangelista de},
+  title     = {Intelig{\^e}ncia Artificial aplicada {\`a} Resposta a Incidentes},
+  booktitle = {Minicursos do XXVI Simp{\'o}sio Brasileiro de
+               Ciberseguran{\c{c}}a (SBSeg)},
+  publisher = {Sociedade Brasileira de Computa{\c{c}}{\~a}o (SBC)},
+  year      = {2026},
+  chapter   = {1},
+  note      = {Material complementar em https://sbseg26-mc1.github.io/}
+}</code></pre>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== AGRADECIMIENTOS ====================== -->
+<section class="section" id="agradecimentos">
+  <div class="wrap">
+    <div class="section__head">
+      <span class="eyebrow">Financiamiento y alianzas</span>
+      <h2>Agradecimientos</h2>
+    </div>
+
+    <div class="prose">
+      <p>
+        Los trabajos que sustentan este capítulo contaron con apoyo parcial de
+        la CAPES, código de financiamiento 001; de la RNP, a través del Programa
+        Hackers do Bem y del GT-LFI (Learn From Incidents); de la FAPERGS, a
+        través de los términos de otorgamiento 24/2551-0001368-7 y
+        24/2551-0000726-1; del CNPq, procesos 409743/2025-9 y 408432/2024-1; y
+        de la ANATEL, a través del Término de Ejecución Descentralizada con el
+        ITA.
+      </p>
+      <p>
+        Los autores agradecen a los CSIRT y Puntos de Presencia asociados por la
+        cesión de los datos que hicieron posibles los estudios de caso.
+      </p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="site-footer__grid">
+      <div>
+        <h4>El minicurso</h4>
+        <p>
+          Capítulo 1 del libro de minicursos del XXVI Simposio Brasileño de
+          Ciberseguridad, el SBSeg 2026.
+        </p>
+      </div>
+      <div>
+        <h4>Navegación</h4>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="catalogo.html">Catálogo de herramientas</a></li>
+          <li><a href="praticas.html">Prácticas</a></li>
+          <li><a href="sobre.html">Acerca del capítulo</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Código</h4>
+        <ul>
+          <li><a href="https://github.com/sbseg26-mc1">Repositorio del minicurso</a></li>
+          <li><a href="https://gt-rnp-lfi.github.io/home/">Proyecto GT-LFI</a></li>
+          <li><a href="https://github.com/AnonShield/anonshield">AnonShield</a></li>
+          <li><a href="https://github.com/gt-rnp-lfi/lfi-autoclass">AutoClass-LFI</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Apoyo</h4>
+        <p>
+          CAPES (código 001), RNP a través del Programa Hackers do Bem y del
+          GT-LFI, FAPERGS, CNPq y ANATEL a través del convenio con el ITA.
+        </p>
+      </div>
+    </div>
+
+    <div class="site-footer__bottom">
+      <span>Contenido de este sitio bajo licencia Apache 2.0.</span>
+      <span>&copy; <span data-ano>2026</span> Autores del Capítulo 1.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/js/site.js" defer></script>
+</body>
+</html>

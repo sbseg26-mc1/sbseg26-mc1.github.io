@@ -1,0 +1,1316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tool and repository catalog | SBSeg 2026 Short Course 1</title>
+<meta name="description" content="Searchable catalog of the tools, repositories, models, standards and taxonomies cited in SBSeg 2026 Short Course 1 on AI applied to incident response.">
+<meta name="theme-color" content="#0c4a6b">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://sbseg26-mc1.github.io/en/catalogo.html">
+<link rel="alternate" hreflang="pt-BR" href="https://sbseg26-mc1.github.io/catalogo.html">
+<link rel="alternate" hreflang="en" href="https://sbseg26-mc1.github.io/en/catalogo.html">
+<link rel="alternate" hreflang="es" href="https://sbseg26-mc1.github.io/es/catalogo.html">
+<link rel="alternate" hreflang="x-default" href="https://sbseg26-mc1.github.io/catalogo.html">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:title" content="Tool and repository catalog">
+<meta property="og:description" content="Tools, repositories, models and standards of SBSeg 2026 Short Course 1.">
+<meta property="og:url" content="https://sbseg26-mc1.github.io/en/catalogo.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;600;700&amp;display=swap">
+<link rel="stylesheet" href="../assets/css/site.css">
+<script>
+  /* Aplica o tema salvo antes da primeira pintura, evitando piscada de cor. */
+  (function () {
+    try {
+      var t = localStorage.getItem("tema");
+      if (t) document.documentElement.setAttribute("data-theme", t);
+    } catch (e) {}
+  })();
+</script>
+</head>
+<body>
+
+<a class="skip-link" href="#conteudo">Skip to content</a>
+
+<svg style="display:none" aria-hidden="true" focusable="false">
+  <symbol id="i-ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+    <path d="M15 3h6v6"/>
+    <path d="M10 14 21 3"/>
+  </symbol>
+</svg>
+
+<header class="site-header">
+  <div class="wrap site-header__inner">
+    <a class="brand" href="index.html">
+      <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true">
+        <rect width="32" height="32" rx="7" fill="#0c4a6b"/>
+        <path d="M8 16h16" stroke="#fff" stroke-opacity=".35" stroke-width="2" stroke-linecap="round"/>
+        <circle cx="8" cy="16" r="3.6" fill="#4fd8c4"/>
+        <circle cx="16" cy="16" r="3.6" fill="#f2be55"/>
+        <circle cx="24" cy="16" r="3.6" fill="#b494f5"/>
+      </svg>
+      <span>
+        <span class="brand__name">AI Applied to Incident Response</span>
+        <span class="brand__meta">SBSeg 2026 Short Course 1</span>
+      </span>
+    </a>
+
+    <nav class="nav" id="menu" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="catalogo.html" aria-current="page">Catalog</a>
+      <a href="praticas.html">Practices</a>
+      <a href="sobre.html">About</a>
+    </nav>
+
+    <div class="header-actions">
+      <nav class="lang" aria-label="Language">
+        <a href="../catalogo.html" hreflang="pt-BR" title="Português">PT</a>
+        <a href="catalogo.html" hreflang="en" aria-current="true" title="English">EN</a>
+        <a href="../es/catalogo.html" hreflang="es" title="Español">ES</a>
+      </nav>
+
+      <button class="icon-btn theme-toggle" type="button"
+              aria-label="Toggle light and dark mode"
+              data-rotulo-claro="Switch to light mode"
+              data-rotulo-escuro="Switch to dark mode">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      </button>
+      <button class="icon-btn nav-toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Open and close the menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="conteudo">
+
+<section class="section section--tight">
+  <div class="wrap">
+    <div class="section__head">
+      <span class="eyebrow">Catalog</span>
+      <h1>Tools, repositories, models and standards</h1>
+      <p>
+        Everything the chapter cites that you can open, install, read or run,
+        gathered in one place. Each entry states what it does and what its role in
+        the short course is. The colored labels indicate which pipeline stage the
+        entry belongs to.
+      </p>
+    </div>
+
+    <!-- ====================== FILTROS ====================== -->
+    <div class="toolbar">
+      <div class="search-field">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+        <label class="visually-hidden" for="busca">Search the catalog</label>
+        <input type="search" id="busca" placeholder="Search by name, technology or purpose (for example: NER, playbook, taxonomy)" autocomplete="off">
+      </div>
+
+      <div class="filter-group" role="group" aria-label="Filter by category">
+        <span class="filter-group__label">Category</span>
+        <button class="chip" type="button" data-filtro="categoria" data-valor="grupo" aria-pressed="false">Proposing group</button>
+        <button class="chip" type="button" data-filtro="categoria" data-valor="privacidade" aria-pressed="false">Privacy</button>
+        <button class="chip" type="button" data-filtro="categoria" data-valor="modelos" aria-pressed="false">Models</button>
+        <button class="chip" type="button" data-filtro="categoria" data-valor="soar" aria-pressed="false">SOAR and response</button>
+        <button class="chip" type="button" data-filtro="categoria" data-valor="padroes" aria-pressed="false">Standards</button>
+        <button class="chip" type="button" data-filtro="categoria" data-valor="dados" aria-pressed="false">Data</button>
+      </div>
+
+      <div class="filter-group" role="group" aria-label="Filter by pipeline stage">
+        <span class="filter-group__label">Stage</span>
+        <button class="chip" type="button" data-filtro="estagio" data-valor="ec1" data-stage="ec1" aria-pressed="false">EC1 Pseudonymization</button>
+        <button class="chip" type="button" data-filtro="estagio" data-valor="ec2" data-stage="ec2" aria-pressed="false">EC2 Classification</button>
+        <button class="chip" type="button" data-filtro="estagio" data-valor="ec3" data-stage="ec3" aria-pressed="false">EC3 Playbooks</button>
+      </div>
+    </div>
+
+    <div class="results-bar">
+      <span id="contagem" aria-live="polite"
+            data-tpl-total="{n} items in the catalog"
+            data-tpl-um="1 item found"
+            data-tpl-varios="{n} items found"
+            data-tpl-grupo-total="{n} items"
+            data-tpl-grupo-parcial="{n} of {total}">42 items in the catalog</span>
+      <button class="btn" type="button" id="limpar" hidden>Clear filters</button>
+    </div>
+
+    <p class="empty-state" id="vazio" hidden>
+      No item matches the search. Try a shorter term or clear the filters.
+    </p>
+
+    <!-- ====================== GRUPO PROPONENTE ====================== -->
+    <section class="catalog-group" id="grupo">
+      <div class="catalog-group__head">
+        <h2>Tools of the proposing group</h2>
+        <span class="catalog-group__count">12 items</span>
+      </div>
+      <p class="prose" style="margin-bottom: 1.5rem; color: var(--text-muted);">
+The components the chapter demonstrates in operation. It is worth noting the
+        anonymization line, which evolved across three generations and whose
+        progression is itself a lesson in security tool design: the first established
+        the hybrid approach, the second fixed the cryptographic weakness and the third
+        redesigned the architecture for scale.
+      </p>
+
+      <div class="grid grid--wide">
+
+        <article class="tool" data-categoria="grupo" data-estagio="ec1" data-termos="pseudonymization anonymization ner regex hmac sqlite gpu privacy">
+          <div class="tool__head">
+            <h3 class="tool__name">AnonShield</h3>
+            <span class="tool__kind">Tool</span>
+          </div>
+          <p class="tool__desc">
+            Scalable pseudonymization executed on your own premises. A five-stage
+            pipeline: streaming ingestion of XML, JSON, CSV, PDF, DOCX and XLSX;
+            entity detection combining a NER model with 36 regular expression
+            patterns; replacement by HMAC-SHA256; persistence of the mapping in
+            SQLite; and output preserving the original schema.
+          </p>
+          <p class="tool__role">
+            <strong>In the short course:</strong> it is the tool demonstrated in Part 1 of
+            Practice 1. The detection strategy is selectable on the command line and
+            trades coverage for processing cost; the chapter's dataset uses the
+            <em>standalone</em> one. The speed-up is above 535 times over the previous
+            generation, on the same dataset and the same hardware, running on CPU
+            alone: the gain is architectural, not GPU-dependent.
+          </p>
+          <div class="tool__foot">
+            <span class="tag tag--ec1">EC1</span>
+            <div class="tool__links">
+              <a href="https://github.com/AnonShield/anonshield">Repository <svg aria-hidden="true"><use href="#i-ext"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="tool" data-categoria="grupo" data-estagio="ec1" data-termos="hmac sha256 secret key ocr xml json openvas">
+          <div class="tool__head">
+            <h3 class="tool__name">AnonLFI 2.0</h3>
+            <span class="tool__kind">Tool</span>
+          </div>
+          <p class="tool__desc">
+            Second generation of the line. It replaces the public hash with HMAC-SHA256
+            under a secret key set by the operator, extends processing to structured
+            formats with schema preservation, and adds OCR for text embedded in
+            images and PDFs.
+          </p>
+          <p class="tool__role">
+            <strong>In the short course:</strong> it explains why the secret key matters. Without
+            it, an adversary reproduces the mapping knowing only the algorithm and the
+            input domain, which makes it trivial to reverse pseudonyms of small spaces
+            such as that of IPv4 addresses.
+          </p>
+          <div class="tool__foot">
+            <span class="tag tag--ec1">EC1</span>
+            <div class="tool__links">
+              <a href="https://arxiv.org/abs/2511.15744">Paper <svg aria-hidden="true"><use href="#i-ext"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="tool" data-categoria="grupo" data-estagio="ec1" data-termos="anon lfi ner controlled reidentification gt-lfi">
+          <div class="tool__head">
+            <h3 class="tool__name">ANON-LFI</h3>
+            <span class="tool__kind">Tool</span>
+          </div>
+          <p class="tool__desc">
+            The first generation, which established the hybrid approach: named entity
+            recognition for what has no fixed syntactic pattern, such as names of
+            people and organizations, and regular expressions for artifacts of
+            determined format, such as IPs, e-mails, URLs and CVE identifiers.
+          </p>
+          <p class="tool__role">
+            <strong>In the short course:</strong> it is the anonymization module of the GT-LFI
+            ecosystem, with 97.38% recall over 763 real incidents. It introduced
+            controlled re-identification, with an audit trail.
+          </p>
+          <div class="tool__foot">
+            <span class="tag tag--ec1">EC1</span>
+            <div class="tool__links">
+              <a href="https://github.com/gt-rnp-lfi/anon-lfi">Repository <svg aria-hidden="true"><use href="#i-ext"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="tool" data-categoria="grupo" data-estagio="ec2 ec3" data-termos="classification playbook markdown ansible human in the loop similarity web">
+          <div class="tool__head">
+            <h3 class="tool__name">AutoClass-LFI</h3>
+            <span class="tool__kind">Tool</span>
+          </div>
+          <p class="tool__desc">
+            Intelligence core of the GT-LFI ecosystem, with a Web interface. It offers
+            five capabilities: automatic classification into categories and
+            subcategories; suggestion of containment actions; playbook generation in
+            Markdown and in Ansible; a human-in-the-loop cycle; and lookup of similar
+            incidents.
+          </p>
+          <p class="tool__role">
+            <strong>In the short course:</strong> it is the central tool of the hands-on parts of
+            case studies 2 and 3. The intelligence layer is abstracted behind an SDK,
+            which allows switching between models according to the privacy requirement,
+            and the return of human validations is incorporated into the system's
+            knowledge.
+          </p>
+          <div class="tool__foot">
+            <span class="tag tag--ec2">EC2</span>
+            <span class="tag tag--ec3">EC3</span>
+            <div class="tool__links">
+              <a href="https://github.com/gt-rnp-lfi/lfi-autoclass">Repository <svg aria-hidden="true"><use href="#i-ext"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="tool" data-categoria="grupo" data-estagio="ec2" data-termos="prompt engineering php taxonomy csv xlsx json llm">
+          <div class="tool__head">
+            <h3 class="tool__name">SecLINC</h3>
+            <span class="tool__kind">Tool</span>
+          </div>
+          <p class="tool__desc">
+            Reference implementation of the prompting strategies evaluated in the
+            chapter. Written in Python, it takes pseudonymized tickets, assembles the
+            prompt according to the chosen scenario (with or without taxonomy, with or
+            without iterative heuristics), calls the APIs of the configured models and
+            exports results as CSV, XLSX or JSON.
+          </p>
+          <p class="tool__role">
+            <strong>In the short course:</strong> it supports the four-scenario experiment over 194
+            incidents that shows the gain of combining a structured taxonomy with
+            iterative heuristics. It was later incorporated into AutoClass-LFI.
+          </p>
+          <div class="tool__foot">
+            <span class="tag tag--ec2">EC2</span>
+            <div class="tool__links">
+              <a href="https://github.com/AI-Horizon-Labs/SecLINC">Repository <svg aria-hidden="true"><use href="#i-ext"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="tool" data-categoria="grupo" data-estagio="ec2" data-termos="prompt engineering ollama open models php shp htp prp zero-shot">
+          <div class="tool__head">
+            <h3 class="tool__name">FrameworkPE</h3>
+            <span class="tool__kind">Tool</span>
+          </div>
+          <p class="tool__desc">
+            An evolution of SecLINC. It generalizes the mechanism to five prompt
+            engineering techniques and adds support for local execution via Ollama.
+          </p>
+          <p class="tool__role">
+            <strong>In the short course:</strong> it is the basis of the experiments with
+            open-weight models executed on premises, which quantify the accuracy cost
+            of choosing privacy.
+          </p>
+          <div class="tool__foot">
+            <span class="tag tag--ec2">EC2</span>
+            <div class="tool__links">
+              <a href="https://github.com/AILabs4All/FrameworkPE">Repository <svg aria-hidden="true"><use href="#i-ext"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="tool" data-categoria="grupo" data-estagio="ec1 ec2 ec3" data-termos="learn from incidents rnp hackers do bem pop module tracks gamification">
+          <div class="tool__head">
+            <h3 class="tool__name">GT-LFI ecosystem</h3>
+            <span class="tool__kind">Project</span>
+          </div>
+          <p class="tool__desc">
+            Learn From Incidents, a project of RNP's Hackers do Bem program. It
+            integrates four modules into a single cycle: ANON-LFI pseudonymizes;
+            AutoClass-LFI classifies and recommends; the PoP Module submits the result
+            to review by interns and validation by experienced analysts; and the
+            educational platform turns validated incidents into learning tracks,
+            lessons, quizzes and challenges.
+          </p>
+          <p class="tool__role">
+            <strong>In the short course:</strong> it is the operational and pedagogical frame of
+            the whole chapter. It is what turned the operational cycle into a
+            pedagogical one, closing the loop between operations and training.
+          </p>
+          <div class="tool__foot">
+            <span class="tag tag--ec1">EC1</span>
+            <span class="tag tag--ec2">EC2</span>
+            <span class="tag tag--ec3">EC3</span>
+            <div class="tool__links">
+              <a href="https://gt-rnp-lfi.github.io/home/">Project page <svg aria-hidden="true"><use href="#i-ext"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="tool" data-categoria="grupo" data-estagio="ec2 ec3" data-termos="pop module triage validation interns analysts agreement human in the loop">
+          <div class="tool__head">
+            <h3 class="tool__name">PoP Module</h3>
+            <span class="tool__kind">Tool</span>
+          </div>
+          <p class="tool__desc">
+            Triage and validation environment of the GT-LFI ecosystem. It gives interns
+            an interface where incidents appear with the labels suggested by the AI for
+            critical review, and gives experienced analysts a consolidated view with
+            the human-AI agreement rate, decision history and prioritization.
+          </p>
+          <p class="tool__role">
+            <strong>In the short course:</strong> it is where human validation stops being
+            rhetoric and becomes mechanism. It places validation <em>between</em>
+            classification and playbook generation, and not only at the end, precisely
+            because a mistaken classification produces a correctly generated playbook
+            for the wrong category.
+          </p>
+          <div class="tool__foot">
+            <span class="tag tag--ec2">EC2</span>
+            <span class="tag tag--ec3">EC3</span>
+            <div class="tool__links">
+              <a href="https://github.com/gt-rnp-lfi/sistema-pop">Repository <svg aria-hidden="true"><use href="#i-ext"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="tool" data-categoria="grupo" data-estagio="" data-termos="hackers do bem gamification tracks lessons quizzes challenges training rnp teaching">
+          <div class="tool__head">
+            <h3 class="tool__name">Hackers do Bem platform</h3>
+            <span class="tool__kind">Platform</span>
+          </div>
+          <p class="tool__desc">
+            AI-based gamification platform for teaching and learning security. It turns
+            already validated incidents into learning tracks, lessons, quizzes and
+            challenges.
+          </p>
+          <p class="tool__role">
+            <strong>In the short course:</strong> it is the link that closes the loop between
+            operations and training. In the evaluation with 35 residents, the mean
+            score between pre-test and post-test rose from 67.9% to 91.7%. The incident
+            classification track was the hardest, with the lowest mean score, which
+            speaks directly to the limits observed in automatic models.
+          </p>
+          <div class="tool__foot">
+            <span class="tag">Training</span>
+            <div class="tool__links">
+              <a href="https://github.com/gt-rnp-lfi/hackers-do-bem">Repository <svg aria-hidden="true"><use href="#i-ext"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="tool" data-categoria="grupo" data-estagio="ec1" data-termos="generator synthetic tickets synthetic data sharing publishable dataset">
+          <div class="tool__head">
+            <h3 class="tool__name">Synthetic ticket generator</h3>
+            <span class="tool__kind">Tool</span>
+          </div>
+          <p class="tool__desc">
+            Generator of synthetic security tickets, from the GT-LFI ecosystem.
+          </p>
+          <p class="tool__role">
+            <strong>In the short course:</strong> it addresses the second strategy for mitigating
+            data scarcity. The two are complementary, not competing: pseudonymized data
+            can feed models that produce publishable synthetic datasets. The GT-LFI
+            team records the construction of a synthetic incident dataset as a priority
+            for the coming cycles.
+          </p>
+          <div class="tool__foot">
+            <span class="tag tag--ec1">EC1</span>
+            <div class="tool__links">
+              <a href="https://github.com/gt-rnp-lfi/synthetic-generator-lfi">Repository <svg aria-hidden="true"><use href="#i-ext"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="tool" data-categoria="grupo" data-estagio="" data-termos="hikari siem threat hunting gamification simulation soc training rnp">
+          <div class="tool__head">
+            <h3 class="tool__name">HIKARI</h3>
+            <span class="tool__kind">Platform</span>
+          </div>
+          <p class="tool__desc">
+            Gamified SOC simulation platform for threat hunting training and incident
+            response education, developed in partnership with RNP. Its architecture is
+            characterized as a SIEM-type environment, which reproduces an analyst's
+            working conditions under controlled conditions.
+          </p>
+          <p class="tool__role">
+            <strong>In the short course:</strong> it complements the GT-LFI ecosystem by offering
+            the simulation environment that the training tracks presuppose.
+          </p>
+          <div class="tool__foot">
+            <span class="tag">Training</span>
+            <div class="tool__links">
+              <span style="color: var(--text-muted); font-weight: 500;">Publicado nos Anais do SBSeg 2025</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="tool" data-categoria="grupo" data-estagio="ec1 ec2 ec3" data-termos="notebooks jupyter python synthetic tickets prompts playbooks material">
+          <div class="tool__head">
+            <h3 class="tool__name">Short course repository</h3>
+            <span class="tool__kind">Repository</span>
+          </div>
+          <p class="tool__desc">
+            It holds the three Python notebooks, one per case study, chained by the
+            outputs of each practice; the set of synthetic tickets used in the
+            demonstrations; the reference prompts; a small repository of standard
+            operating procedures; and the installation instructions.
+          </p>
+          <p class="tool__role">
+            <strong>In the short course:</strong> it is the executable complement to the chapter.
+            The notebooks are self-contained, do not depend on access to the group's
+            internal tools and run without a GPU and without API credentials.
+          </p>
+          <div class="tool__foot">
+            <span class="tag tag--ec1">EC1</span>
+            <span class="tag tag--ec2">EC2</span>
+            <span class="tag tag--ec3">EC3</span>
+            <div class="tool__links">
+              <a href="https://github.com/sbseg26-mc1">GitHub organization <svg aria-hidden="true"><use href="#i-ext"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ====================== PRIVACIDADE ====================== -->
+    <section class="catalog-group" id="privacidade">
+      <div class="catalog-group__head">
+        <h2>Privacy and anonymization</h2>
+        <span class="catalog-group__count">4 items</span>
+      </div>
+      <p class="prose" style="margin-bottom: 1.5rem; color: var(--text-muted);">
+Established tools that, deliberately, do not solve the chapter's case.
+        Understanding why they do not fit is the argument that justifies the hybrid
+        approach: here the data is not tabular, it is free text, and the immediate
+        problem is not to offer a formal guarantee about a released datum, but to
+        locate the identifiers scattered through the report.
+      </p>
+
+      <div class="grid grid--wide">
+
+        <article class="tool" data-categoria="privacidade" data-estagio="ec1" data-termos="presidio microsoft pii detection sdk recognizers recall">
+          <div class="tool__head">
+            <h3 class="tool__name">Microsoft Presidio</h3>
+            <span class="tool__kind">Library</span>
+          </div>
+          <p class="tool__desc">
+            Data protection and de-identification SDK, with orchestration of personal
+            information recognizers over free text.
+          </p>
+          <p class="tool__role">
+            <strong>In the short course:</strong> it is used by AnonShield's <em>presidio</em>
+            strategy, which maximizes recall at the cost of false positives coming from
+            recognizers irrelevant to the security domain. Precision of 71.9% with the
+            same 96.4% recall as the other strategies, which is defensible when
+            over-anonymization is acceptable.
+          </p>
+          <div class="tool__foot">
+            <span class="tag tag--ec1">EC1</span>
+            <div class="tool__links">
+              <a href="https://github.com/microsoft/presidio">Repository <svg aria-hidden="true"><use href="#i-ext"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="tool" data-categoria="privacidade" data-estagio="ec1" data-termos="k-anonymity l-diversity t-closeness tabular biomedical formal guarantees">
+          <div class="tool__head">
+            <h3 class="tool__name">ARX</h3>
+            <span class="tool__kind">Tool</span>
+          </div>
+          <p class="tool__desc">
+            Anonymization of tabular data with formal guarantees: k-anonymity,
+            l-diversity and t-closeness. It originates in the biomedical domain.
+          </p>
+          <p class="tool__role">
+            <strong>In the short course:</strong> it appears as a counterpoint. Tools like this
+            presuppose tabular data and detection already done, and therefore do not
+            attack the operational problem of free-text reports.
+          </p>
+          <div class="tool__foot">
+            <span class="tag tag--ec1">EC1</span>
+            <div class="tool__links">
+              <a href="https://arx.deidentifier.org/">Official site <svg aria-hidden="true"><use href="#i-ext"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="tool" data-categoria="privacidade" data-estagio="ec1" data-termos="microdata statistics r cran disclosure control">
+          <div class="tool__head">
+            <h3 class="tool__name">sdcMicro</h3>
+            <span class="tool__kind">R package</span>
+          </div>
+          <p class="tool__desc">
+            Statistical disclosure control for microdata, originating in the statistical
+            domain.
+          </p>
+          <p class="tool__role">
+            <strong>In the short course:</strong> the same counterpoint as ARX. It is a mature
+            tool for structured tabular data, not for narrative reports mixed with
+            technical artifacts.
+          </p>
+          <div class="tool__foot">
+            <span class="tag tag--ec1">EC1</span>
+            <div class="tool__links">
+              <a href="https://cran.r-project.org/package=sdcMicro">CRAN package <svg aria-hidden="true"><use href="#i-ext"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="tool" data-categoria="privacidade" data-estagio="ec1" data-termos="ip prefix subnet traffic anonymization cryptopan">
+          <div class="tool__head">
+            <h3 class="tool__name">CryptoPAn</h3>
+            <span class="tool__kind">Technique</span>
+          </div>
+          <p class="tool__desc">
+            Anonymization of IP addresses preserving prefix structure, which keeps
+            subnet-level analysis possible after treatment.
+          </p>
+          <p class="tool__role">
+            <strong>In the short course:</strong> it is elegant and solves well what it sets out
+            to do, but it covers a single entity type. It was used by Jesus Filho and
+            colleagues in anonymizing the dataset labeled with the CERT.br taxonomy.
+          </p>
+          <div class="tool__foot">
+            <span class="tag tag--ec1">EC1</span>
+            <div class="tool__links">
+              <span style="color: var(--text-muted); font-weight: 500;">Publicado no ACM SIGCOMM IMW 2001</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ====================== MODELOS ====================== -->
+    <section class="catalog-group" id="modelos">
+      <div class="catalog-group__head">
+        <h2>Models and local execution</h2>
+        <span class="catalog-group__count">8 items</span>
+      </div>
+      <p class="prose" style="margin-bottom: 1.5rem; color: var(--text-muted);">
+The open-weight ecosystem is what materially enables the chapter's privacy
+        commitment: without it, there is no way to classify without the data leaving
+        the organization. The price has been measured, and it is about 60% accuracy
+        with open models from 8B to 20B, against more than 90% with commercial
+        models.
+      </p>
+
+      <div class="grid grid--wide">
+
+        <article class="tool" data-categoria="modelos" data-estagio="ec2 ec3" data-termos="gemini google ai studio api commercial flash lite classification playbook key">
+          <div class="tool__head">
+            <h3 class="tool__name">gemini-3.1-flash-lite</h3>
+            <span class="tool__kind">Model</span>
+          </div>
+          <p class="tool__desc">
+            Lightweight commercial model, accessed through an API, with a free tier on
+            Google AI Studio that is sufficient for the short course activities.
+          </p>
+          <p class="tool__role">
+            <strong>In the short course:</strong> it is the model that produced the results
+            reported in case studies 2 and 3, and the one Practice 2 calls in real
+            time. The exact identifier is recorded on purpose: commercial providers
+            update endpoints without notice, and reproducing the numbers depends on
+            that information.
+          </p>
+          <div class="tool__foot">
+            <span class="tag tag--ec2">EC2</span>
+            <span class="tag tag--ec3">EC3</span>
+            <div class="tool__links">
+              <a href="https://aistudio.google.com/">Google AI Studio <svg aria-hidden="true"><use href="#i-ext"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="tool" data-categoria="modelos" data-estagio="ec2 ec3" data-termos="local llm slm gpu execution on-premise privacy">
+          <div class="tool__head">
+            <h3 class="tool__name">Ollama</h3>
+            <span class="tool__kind">Tool</span>
+          </div>
+          <p class="tool__desc">
+            Packaging and management layer for open-weight models running locally, which
+            substantially lowers the barrier to entry.
+          </p>
+          <p class="tool__role">
+            <strong>In the short course:</strong> it is the local provider of Practice 3 and the
+            basis of the experiments with open models that quantify the cost of
+            privacy. It is the path that makes that argument tangible: with it, the
+            data never leaves the participant's machine.
+          </p>
+          <div class="tool__foot">
+            <span class="tag tag--ec2">EC2</span>
+            <span class="tag tag--ec3">EC3</span>
+            <div class="tool__links">
+              <a href="https://ollama.com">Official site <svg aria-hidden="true"><use href="#i-ext"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="tool" data-categoria="modelos" data-estagio="ec1 ec2" data-termos="hugging face transformers open weights ner python library">
+          <div class="tool__head">
+            <h3 class="tool__name">Transformers</h3>
+            <span class="tool__kind">Library</span>
+          </div>
+          <p class="tool__desc">
+            Library and associated repository that consolidated the ecosystem in which
+            pre-trained models are distributed with open weights and can be executed
+            locally.
+          </p>
+          <p class="tool__role">
+            <strong>In the short course:</strong> it loads AnonShield's NER model. The Practice 1
+            notebook degrades gracefully: if the library is unavailable, a simplified
+            lexical recognizer takes over, and the lesson about coverage remains
+            observable.
+          </p>
+          <div class="tool__foot">
+            <span class="tag tag--ec1">EC1</span>
+            <span class="tag tag--ec2">EC2</span>
+            <div class="tool__links">
+              <a href="https://github.com/huggingface/transformers">Repository <svg aria-hidden="true"><use href="#i-ext"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="tool" data-categoria="modelos" data-estagio="ec1" data-termos="ner multilingual roberta person organization location entity recognition">
+          <div class="tool__head">
+            <h3 class="tool__name">xlm-roberta-base-ner-hrl</h3>
+            <span class="tool__kind">Model</span>
+          </div>
+          <p class="tool__desc">
+            Multilingual named entity recognition model, which recognizes person,
+            organization and location.
+          </p>
+          <p class="tool__role">
+            <strong>In the short course:</strong> it is AnonShield's default NER model, used
+            without fine-tuning. Being multilingual matters, because reports from
+            Brazilian academic CSIRTs mix Portuguese and English, sometimes within the
+            same ticket.
+          </p>
+          <div class="tool__foot">
+            <span class="tag tag--ec1">EC1</span>
+            <div class="tool__links">
+              <a href="https://huggingface.co/Davlan/xlm-roberta-base-ner-hrl">Model card <svg aria-hidden="true"><use href="#i-ext"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="tool" data-categoria="modelos" data-estagio="ec1" data-termos="ner cti threats security domain bert entities cve cpe">
+          <div class="tool__head">
+            <h3 class="tool__name">SecureModernBERT-NER</h3>
+            <span class="tool__kind">Model</span>
+          </div>
+          <p class="tool__desc">
+            Entity recognition model trained on roughly 503 thousand annotated threat
+            intelligence excerpts, able to recognize 22 entity types specific to
+            cybersecurity.
+          </p>
+          <p class="tool__role">
+            <strong>In the short course:</strong> it is the domain alternative to the default
+            multilingual model. It addresses the gap noted in the chapter: generic NLP
+            frameworks do not ship recognizers for the technical vocabulary of
+            security.
+          </p>
+          <div class="tool__foot">
+            <span class="tag tag--ec1">EC1</span>
+            <div class="tool__links">
+              <a href="https://huggingface.co/attack-vector/SecureModernBERT-NER">Model card <svg aria-hidden="true"><use href="#i-ext"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="tool" data-categoria="modelos" data-estagio="ec2" data-termos="embeddings sentence-bert cosine similarity semantic comparison evaluation">
+          <div class="tool__head">
+            <h3 class="tool__name">paraphrase-MiniLM-L6-v2</h3>
+            <span class="tool__kind">Model</span>
+          </div>
+          <p class="tool__desc">
+            Sentence embedding model from the Sentence-BERT family, used to measure
+            semantic similarity between passages of text.
+          </p>
+          <p class="tool__role">
+            <strong>In the short course:</strong> it supports the semantic comparison between the
+            model's answer and the human label, which is needed when the model answers
+            in free text. It introduces a dependency that has to be declared, because
+            the choice of embedding model changes the numbers.
+          </p>
+          <div class="tool__foot">
+            <span class="tag tag--ec2">EC2</span>
+            <div class="tool__links">
+              <a href="https://huggingface.co/sentence-transformers/paraphrase-MiniLM-L6-v2">Model card <svg aria-hidden="true"><use href="#i-ext"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="tool" data-categoria="modelos" data-estagio="ec2" data-termos="cisco foundation ai llama continued pretraining security domain 8b">
+          <div class="tool__head">
+            <h3 class="tool__name">Foundation-Sec-8B</h3>
+            <span class="tool__kind">Model</span>
+          </div>
+          <p class="tool__desc">
+            Model with 8 billion parameters and continued pre-training adapted to the
+            security domain, published by Cisco's Foundation AI.
+          </p>
+          <p class="tool__role">
+            <strong>In the short course:</strong> it represents the third route to narrowing the
+            gap between local and commercial models without giving up local execution.
+            Continued training over specialized corpora improves typical SOC tasks,
+            including alert triage and enrichment.
+          </p>
+          <div class="tool__foot">
+            <span class="tag tag--ec2">EC2</span>
+            <div class="tool__links">
+              <a href="https://huggingface.co/fdtn-ai/Foundation-Sec-8B">Model card <svg aria-hidden="true"><use href="#i-ext"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="tool" data-categoria="modelos" data-estagio="ec2" data-termos="deepseek phi qwen mid-sized 14b 4b temperature gpu hardware">
+          <div class="tool__head">
+            <h3 class="tool__name">Mid-sized open models</h3>
+            <span class="tool__kind">Models</span>
+          </div>
+          <p class="tool__desc">
+            Among 21 models from 1 to 20 billion parameters evaluated, three stood out in
+            the 62% to 70% precision range across both hardware platforms tested:
+            <code>deepseek-r1:14b</code>, <code>phi3:14b</code> and
+            <code>qwen3:4b</code>. Models from 1B to 1.8B stayed below 20%.
+          </p>
+          <p class="tool__role">
+            <strong>In the short course:</strong> they delimit the practical hardware
+            recommendation. The determining factors are the number of parameters and
+            GPU capacity, not temperature: whoever intends to run classification
+            locally should invest in video memory rather than spend time calibrating
+            temperature.
+          </p>
+          <div class="tool__foot">
+            <span class="tag tag--ec2">EC2</span>
+            <div class="tool__links">
+              <a href="https://ollama.com/library/deepseek-r1">deepseek-r1 <svg aria-hidden="true"><use href="#i-ext"/></svg></a>
+              <a href="https://ollama.com/library/phi3">phi3 <svg aria-hidden="true"><use href="#i-ext"/></svg></a>
+              <a href="https://ollama.com/library/qwen3">qwen3 <svg aria-hidden="true"><use href="#i-ext"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ====================== SOAR ====================== -->
+    <section class="catalog-group" id="soar">
+      <div class="catalog-group__head">
+        <h2>SOAR and response</h2>
+        <span class="catalog-group__count">5 items</span>
+      </div>
+      <p class="prose" style="margin-bottom: 1.5rem; color: var(--text-muted);">
+For those who intend to build their own environment from open source
+        components. The chapter's warning is worth repeating: the cognitive layer
+        presupposes the previous ones, and applying language models to telemetry that
+        is neither normalized nor correlated produces poor results, regardless of
+        model quality.
+      </p>
+
+      <div class="grid grid--wide">
+
+        <article class="tool" data-categoria="soar" data-estagio="ec3" data-termos="orchestration flows connectors visual editor automation">
+          <div class="tool__head">
+            <h3 class="tool__name">Shuffle</h3>
+            <span class="tool__kind">Platform</span>
+          </div>
+          <p class="tool__desc">
+            Open source SOAR orchestrator, with a visual flow editor and a broad library
+            of connectors.
+          </p>
+          <p class="tool__role">
+            <strong>In the short course:</strong> it is the main option cited in the survey of
+            open SOAR platforms and the integration basis of AI4SOAR, used to
+            demonstrate automatic playbook selection.
+          </p>
+          <div class="tool__foot">
+            <span class="tag tag--ec3">EC3</span>
+            <div class="tool__links">
+              <a href="https://github.com/Shuffle/Shuffle">Repository <svg aria-hidden="true"><use href="#i-ext"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="tool" data-categoria="soar" data-estagio="ec3" data-termos="case management incidents collaboration observables">
+          <div class="tool__head">
+            <h3 class="tool__name">TheHive</h3>
+            <span class="tool__kind">Platform</span>
+          </div>
+          <p class="tool__desc">
+            Case management platform for incident response, with strong integration to
+            the Cortex analysis engine.
+          </p>
+          <p class="tool__role">
+            <strong>In the short course:</strong> it appears in the survey of open platforms as
+            the option oriented to case management rather than to flow
+            orchestration.
+          </p>
+          <div class="tool__foot">
+            <span class="tag tag--ec3">EC3</span>
+            <div class="tool__links">
+              <a href="https://github.com/TheHive-Project/TheHive">Repository <svg aria-hidden="true"><use href="#i-ext"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="tool" data-categoria="soar" data-estagio="ec3" data-termos="analyzers responders enrichment observables thehive">
+          <div class="tool__head">
+            <h3 class="tool__name">Cortex</h3>
+            <span class="tool__kind">Tool</span>
+          </div>
+          <p class="tool__desc">
+            Analysis engine that accompanies TheHive, running analyzers and response
+            actions over the observables of a case.
+          </p>
+          <p class="tool__role">
+            <strong>In the short course:</strong> it is the component that performs enrichment,
+            the step that precedes deciding which playbook to turn to.
+          </p>
+          <div class="tool__foot">
+            <span class="tag tag--ec3">EC3</span>
+            <div class="tool__links">
+              <a href="https://github.com/TheHive-Project/Cortex">Repository <svg aria-hidden="true"><use href="#i-ext"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="tool" data-categoria="soar" data-estagio="" data-termos="siem endpoint detection active response monitoring visibility">
+          <div class="tool__head">
+            <h3 class="tool__name">Wazuh</h3>
+            <span class="tool__kind">Platform</span>
+          </div>
+          <p class="tool__desc">
+            It combines SIEM functions, endpoint detection and active response in a
+            single open source platform.
+          </p>
+          <p class="tool__role">
+            <strong>In the short course:</strong> it corresponds to the visibility and behavioral
+            detection layers, the first two of the three maturity levels proposed for
+            building a SOC from open components.
+          </p>
+          <div class="tool__foot">
+            <span class="tag">Base</span>
+            <div class="tool__links">
+              <a href="https://github.com/wazuh/wazuh">Repository <svg aria-hidden="true"><use href="#i-ext"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="tool" data-categoria="soar" data-estagio="ec3" data-termos="retrieval similarity playbook selection hallucination shuffle">
+          <div class="tool__head">
+            <h3 class="tool__name">AI4SOAR</h3>
+            <span class="tool__kind">Research</span>
+          </div>
+          <p class="tool__desc">
+            Instead of generating a new playbook, it selects from the existing repository
+            the one best suited to the incoming alert, using similarity learning, with
+            integration to Shuffle.
+          </p>
+          <p class="tool__role">
+            <strong>In the short course:</strong> it represents the path of retrieving rather
+            than generating. The security advantage tends to be underestimated: the
+            retrieved procedure has already been approved, which eliminates the entire
+            category of risks associated with hallucination. The limitation is
+            coverage, since novel alerts have no counterpart.
+          </p>
+          <div class="tool__foot">
+            <span class="tag tag--ec3">EC3</span>
+            <div class="tool__links">
+              <span style="color: var(--text-muted); font-weight: 500;">Publicado no ARES 2024</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ====================== PADRÕES ====================== -->
+    <section class="catalog-group" id="padroes">
+      <div class="catalog-group__head">
+        <h2>Standards, frameworks and taxonomies</h2>
+        <span class="catalog-group__count">11 items</span>
+      </div>
+      <p class="prose" style="margin-bottom: 1.5rem; color: var(--text-muted);">
+Classifying an incident requires, above all, a vocabulary. The absence of
+        terminological standardization across organizations is repeatedly pointed out
+        as an obstacle to automation: reports describing the same phenomenon receive
+        different labels, which blocks both the aggregation of metrics and the training
+        of supervised models.
+      </p>
+
+      <div class="grid grid--wide">
+
+        <article class="tool" data-categoria="padroes" data-estagio="ec2" data-termos="nist standard incident response community profile taxonomy twelve categories">
+          <div class="tool__head">
+            <h3 class="tool__name">NIST SP 800-61r3</h3>
+            <span class="tool__kind">Standard</span>
+          </div>
+          <p class="tool__desc">
+            Revision 3 brought a relevant shift of perspective: rather than treating
+            incident response as a self-contained process with its own phases, it
+            presents it as a community profile of NIST CSF 2.0. Preparation and
+            learning stop being steps of a closed cycle and become continuous risk
+            management activities.
+          </p>
+          <p class="tool__role">
+            <strong>In the short course:</strong> the reference taxonomy adopted here derives
+            from it, with twelve functional categories, used consistently across case
+            studies 1 and 2.
+          </p>
+          <div class="tool__foot">
+            <span class="tag tag--ec2">EC2</span>
+            <div class="tool__links">
+              <a href="https://csrc.nist.gov/pubs/sp/800/61/r3/final">Publication <svg aria-hidden="true"><use href="#i-ext"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="tool" data-categoria="padroes" data-estagio="" data-termos="csf govern identify protect detect respond recover functions">
+          <div class="tool__head">
+            <h3 class="tool__name">NIST CSF 2.0</h3>
+            <span class="tool__kind">Framework</span>
+          </div>
+          <p class="tool__desc">
+            It organizes security management into six functions: Govern, Identify,
+            Protect, Detect, Respond and Recover.
+          </p>
+          <p class="tool__role">
+            <strong>In the short course:</strong> it is the structure onto which the chapter
+            maps, function by function, where AI can help and what remains under human
+            decision. Govern is the function that decides how much autonomy to delegate
+            to an automated system.
+          </p>
+          <div class="tool__foot">
+            <span class="tag">Base</span>
+            <div class="tool__links">
+              <a href="https://www.nist.gov/cyberframework">Framework <svg aria-hidden="true"><use href="#i-ext"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="tool" data-categoria="padroes" data-estagio="" data-termos="ai governance risk map measure manage rmf">
+          <div class="tool__head">
+            <h3 class="tool__name">NIST AI RMF 1.0</h3>
+            <span class="tool__kind">Framework</span>
+          </div>
+          <p class="tool__desc">
+            It organizes risk management for AI systems into four functions: Govern, Map,
+            Measure and Manage.
+          </p>
+          <p class="tool__role">
+            <strong>In the short course:</strong> it provides the governance principles
+            applicable to a SOC context, which is where the abstract discussion about
+            autonomy turns into a decision per function.
+          </p>
+          <div class="tool__foot">
+            <span class="tag">Base</span>
+            <div class="tool__links">
+              <a href="https://www.nist.gov/itl/ai-risk-management-framework">Framework <svg aria-hidden="true"><use href="#i-ext"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="tool" data-categoria="padroes" data-estagio="" data-termos="bias human in the loop mitigation">
+          <div class="tool__head">
+            <h3 class="tool__name">NIST SP 1270</h3>
+            <span class="tool__kind">Publication</span>
+          </div>
+          <p class="tool__desc">
+            It addresses the identification and management of bias in artificial
+            intelligence.
+          </p>
+          <p class="tool__role">
+            <strong>In the short course:</strong> it is the reference that emphasizes the human
+            in the loop as a central practice for mitigating AI risks, and it underpins
+            the design of the PoP Module.
+          </p>
+          <div class="tool__foot">
+            <span class="tag">Base</span>
+            <div class="tool__links">
+              <a href="https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.1270.pdf">Publication <svg aria-hidden="true"><use href="#i-ext"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="tool" data-categoria="padroes" data-estagio="" data-termos="first csirt services service areas soc event management">
+          <div class="tool__head">
+            <h3 class="tool__name">FIRST CSIRT Services Framework 2.1</h3>
+            <span class="tool__kind">Framework</span>
+          </div>
+          <p class="tool__desc">
+            It organizes the work of a response team into service areas: security event
+            management, incident management and vulnerability management, among others.
+            It is deliberately tool-agnostic: it describes what the team does, not
+            how.
+          </p>
+          <p class="tool__role">
+            <strong>In the short course:</strong> it provides the vocabulary that separates CSIRT
+            from SOC, a distinction often confused. Both consume the same input,
+            textual reports of adverse events, and face the same triage bottleneck.
+          </p>
+          <div class="tool__foot">
+            <span class="tag">Base</span>
+            <div class="tool__links">
+              <a href="https://www.first.org/standards/frameworks/csirts/csirt_services_framework_v2.1">Framework <svg aria-hidden="true"><use href="#i-ext"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="tool" data-categoria="padroes" data-estagio="ec3" data-termos="playbook json oasis exchange soar flow agents commands">
+          <div class="tool__head">
+            <h3 class="tool__name">CACAO Security Playbooks 2.0</h3>
+            <span class="tool__kind">Specification</span>
+          </div>
+          <p class="tool__desc">
+            OASIS standard for representing playbooks in JSON, with an explicit flow
+            structure: sequential, conditional, parallel and decision steps, plus
+            target agents and commands. Its purpose is exchange between organizations
+            and orchestration on SOAR platforms.
+          </p>
+          <p class="tool__role">
+            <strong>In the short course:</strong> it is the format required in the output of
+            Practice 3, and what makes automatic validation possible. Syntactic
+            validation checks conformance to the schema; semantic validation checks
+            whether the referenced steps exist, whether the graph is reachable and free
+            of undue cycles, and whether no command uses a tool outside the authorized
+            list.
+          </p>
+          <div class="tool__foot">
+            <span class="tag tag--ec3">EC3</span>
+            <div class="tool__links">
+              <a href="https://docs.oasis-open.org/cacao/security-playbooks/v2.0/security-playbooks-v2.0.html">Specification <svg aria-hidden="true"><use href="#i-ext"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="tool" data-categoria="padroes" data-estagio="ec3" data-termos="mitre attack tactics techniques adversary threat intelligence matrix">
+          <div class="tool__head">
+            <h3 class="tool__name">MITRE ATT&amp;CK</h3>
+            <span class="tool__kind">Knowledge base</span>
+          </div>
+          <p class="tool__desc">
+            It catalogs adversary tactics and techniques observed in real incidents, and
+            is the reference vocabulary for threat intelligence.
+          </p>
+          <p class="tool__role">
+            <strong>In the short course:</strong> it serves as context in playbook generation,
+            but the chapter makes an important caveat: ATT&amp;CK describes how an
+            adversary acts, not what kind of incident occurred, and therefore does not
+            replace a classification taxonomy.
+          </p>
+          <div class="tool__foot">
+            <span class="tag tag--ec3">EC3</span>
+            <div class="tool__links">
+              <a href="https://attack.mitre.org/">Official site <svg aria-hidden="true"><use href="#i-ext"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="tool" data-categoria="padroes" data-estagio="ec2" data-termos="enisa taxonomy europe harmonization csirt classification">
+          <div class="tool__head">
+            <h3 class="tool__name">ENISA reference taxonomy</h3>
+            <span class="tool__kind">Taxonomy</span>
+          </div>
+          <p class="tool__desc">
+            Incident classification taxonomy designed to harmonize communication among
+            European CSIRTs.
+          </p>
+          <p class="tool__role">
+            <strong>In the short course:</strong> it is part of the landscape of vocabularies in
+            use, alongside MITRE ATT&amp;CK, the CERT.br taxonomy and the NIST functional
+            categories.
+          </p>
+          <div class="tool__foot">
+            <span class="tag tag--ec2">EC2</span>
+            <div class="tool__links">
+              <a href="https://www.enisa.europa.eu/publications/reference-incident-classification-taxonomy">Publication <svg aria-hidden="true"><use href="#i-ext"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="tool" data-categoria="padroes" data-estagio="ec2" data-termos="certbr taxonomy six categories dos fraud intrusion scanning web national">
+          <div class="tool__head">
+            <h3 class="tool__name">CERT.br taxonomy</h3>
+            <span class="tool__kind">Taxonomy</span>
+          </div>
+          <p class="tool__desc">
+            Compact set of operational categories adopted in national notifications. In
+            the subset used in the chapter there are six categories: DoS, fraud,
+            intrusion, scanning, web and others.
+          </p>
+          <p class="tool__role">
+            <strong>In the short course:</strong> it is used as a contrast to the twelve NIST
+            categories, which allows discussing a point rarely made explicit: the
+            choice of vocabulary affects measured performance as much as the choice of
+            model, and reporting accuracy without declaring the taxonomy makes the
+            number incomparable.
+          </p>
+          <div class="tool__foot">
+            <span class="tag tag--ec2">EC2</span>
+            <div class="tool__links">
+              <a href="https://stats.cert.br/incidentes/">Statistics and categories <svg aria-hidden="true"><use href="#i-ext"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="tool" data-categoria="padroes" data-estagio="ec3" data-termos="ansible automation idempotence tasks infrastructure executable">
+          <div class="tool__head">
+            <h3 class="tool__name">Ansible</h3>
+            <span class="tool__kind">Tool</span>
+          </div>
+          <p class="tool__desc">
+            Executable format for playbooks, in which each step becomes an idempotent
+            task applicable to the infrastructure.
+          </p>
+          <p class="tool__role">
+            <strong>In the short course:</strong> it is one of the three playbook representations
+            used. Idempotence is decisive, because re-running the procedure does not
+            duplicate effects, which matters when the state of the environment is
+            uncertain. The trade-off is that an executable playbook generated by a
+            model is, potentially, an unsafe action vector.
+          </p>
+          <div class="tool__foot">
+            <span class="tag tag--ec3">EC3</span>
+            <div class="tool__links">
+              <a href="https://www.ansible.com/">Official site <svg aria-hidden="true"><use href="#i-ext"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="tool" data-categoria="padroes" data-estagio="ec1" data-termos="lgpd law 13709 personal data compliance legal anpd">
+          <div class="tool__head">
+            <h3 class="tool__name">LGPD</h3>
+            <span class="tool__kind">Legislation</span>
+          </div>
+          <p class="tool__desc">
+            Law no. 13,709 of 14 August 2018, the Brazilian General Data Protection Law.
+          </p>
+          <p class="tool__role">
+            <strong>In the short course:</strong> it defines the legal regime of the whole
+            material. The consequence has to be stated without ambiguity: because
+            reversal is possible for whoever holds the key and the mapping, the
+            pseudonymized datum remains personal data. Teams that treat pseudonymization
+            as equivalent to anonymization take on a compliance risk they do not
+            perceive.
+          </p>
+          <div class="tool__foot">
+            <span class="tag tag--ec1">EC1</span>
+            <div class="tool__links">
+              <a href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm">Text of the law <svg aria-hidden="true"><use href="#i-ext"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ====================== DADOS ====================== -->
+    <section class="catalog-group" id="dados">
+      <div class="catalog-group__head">
+        <h2>Data and statistics</h2>
+        <span class="catalog-group__count">2 items</span>
+      </div>
+      <p class="prose" style="margin-bottom: 1.5rem; color: var(--text-muted);">
+The two public sources used to size the problem at the opening of the chapter.
+        They measure different things, potential attack surface and reported events,
+        but they point in the same direction.
+      </p>
+
+      <div class="grid grid--wide">
+
+        <article class="tool" data-categoria="dados" data-estagio="" data-termos="certbr notifications historical series statistics brazil incidents">
+          <div class="tool__head">
+            <h3 class="tool__name">CERT.br statistics</h3>
+            <span class="tool__kind">Public dataset</span>
+          </div>
+          <p class="tool__desc">
+            Historical series of incidents reported to CERT.br, broken down by incident
+            type and by year.
+          </p>
+          <p class="tool__role">
+            <strong>In the short course:</strong> it is the source of the number that opens the
+            chapter, 516,556 notifications in 2024 alone, equivalent to an average of
+            1,411 per day.
+          </p>
+          <div class="tool__foot">
+            <span class="tag">Base</span>
+            <div class="tool__links">
+              <a href="https://stats.cert.br/incidentes/">Statistics <svg aria-hidden="true"><use href="#i-ext"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="tool" data-categoria="dados" data-estagio="" data-termos="cve published vulnerabilities per year growth attack surface">
+          <div class="tool__head">
+            <h3 class="tool__name">CVE Details</h3>
+            <span class="tool__kind">Public dataset</span>
+          </div>
+          <p class="tool__desc">
+            Browsing of published vulnerabilities, organized by date.
+          </p>
+          <p class="tool__role">
+            <strong>In the short course:</strong> it supports the second pressure indicator: CVEs
+            published per year went from about 7,928 in 2014 to 40,287 in 2024, reached
+            48,448 in 2025 and have a median forecast of around 59,400 for 2026.
+          </p>
+          <div class="tool__foot">
+            <span class="tag">Base</span>
+            <div class="tool__links">
+              <a href="https://www.cvedetails.com/">Site <svg aria-hidden="true"><use href="#i-ext"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="site-footer__grid">
+      <div>
+        <h4>The short course</h4>
+        <p>
+          Chapter 1 of the short course book of the 26th Brazilian Symposium on
+          Cybersecurity, SBSeg 2026.
+        </p>
+      </div>
+      <div>
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="catalogo.html">Tool catalog</a></li>
+          <li><a href="praticas.html">Practices</a></li>
+          <li><a href="sobre.html">About the chapter</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Code</h4>
+        <ul>
+          <li><a href="https://github.com/sbseg26-mc1">Short course repository</a></li>
+          <li><a href="https://gt-rnp-lfi.github.io/home/">GT-LFI project</a></li>
+          <li><a href="https://github.com/AnonShield/anonshield">AnonShield</a></li>
+          <li><a href="https://github.com/gt-rnp-lfi/lfi-autoclass">AutoClass-LFI</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Support</h4>
+        <p>
+          CAPES (funding code 001), RNP through the Hackers do Bem program and
+          the GT-LFI, FAPERGS, CNPq and ANATEL through its agreement with ITA.
+        </p>
+      </div>
+    </div>
+
+    <div class="site-footer__bottom">
+      <span>Content of this site licensed under Apache 2.0.</span>
+      <span>&copy; <span data-ano>2026</span> Authors of Chapter 1.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/js/site.js" defer></script>
+<script src="../assets/js/catalogo.js" defer></script>
+</body>
+</html>

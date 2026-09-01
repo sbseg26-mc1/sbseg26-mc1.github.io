@@ -1,0 +1,1356 @@
+<!DOCTYPE html>
+<html lang="es" >
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Catálogo de herramientas y repositorios | Minicurso 1 del SBSeg 2026</title>
+<meta name="description" content="Catálogo consultable de las herramientas, repositorios, modelos, estándares y taxonomías citados en el Minicurso 1 del SBSeg 2026 sobre IA aplicada a la respuesta a incidentes.">
+<meta name="theme-color" content="#0c4a6b">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://sbseg26-mc1.github.io/es/catalogo.html">
+<link rel="alternate" hreflang="pt-BR" href="https://sbseg26-mc1.github.io/catalogo.html">
+<link rel="alternate" hreflang="en" href="https://sbseg26-mc1.github.io/en/catalogo.html">
+<link rel="alternate" hreflang="es" href="https://sbseg26-mc1.github.io/es/catalogo.html">
+<link rel="alternate" hreflang="x-default" href="https://sbseg26-mc1.github.io/catalogo.html">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:title" content="Catálogo de herramientas y repositorios">
+<meta property="og:description" content="Herramientas, repositorios, modelos y estándares del Minicurso 1 del SBSeg 2026.">
+<meta property="og:url" content="https://sbseg26-mc1.github.io/es/catalogo.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;600;700&amp;display=swap">
+<link rel="stylesheet" href="../assets/css/site.css">
+<script>
+  /* Aplica o tema salvo antes da primeira pintura, evitando piscada de cor. */
+  (function () {
+    try {
+      var t = localStorage.getItem("tema");
+      if (t) document.documentElement.setAttribute("data-theme", t);
+    } catch (e) {}
+  })();
+</script>
+</head>
+<body>
+
+<a class="skip-link" href="#conteudo">Saltar al contenido</a>
+
+<svg style="display:none" aria-hidden="true" focusable="false">
+  <symbol id="i-ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+    <path d="M15 3h6v6"/>
+    <path d="M10 14 21 3"/>
+  </symbol>
+</svg>
+
+<header class="site-header">
+  <div class="wrap site-header__inner">
+    <a class="brand" href="index.html">
+      <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true">
+        <rect width="32" height="32" rx="7" fill="#0c4a6b"/>
+        <path d="M8 16h16" stroke="#fff" stroke-opacity=".35" stroke-width="2" stroke-linecap="round"/>
+        <circle cx="8" cy="16" r="3.6" fill="#4fd8c4"/>
+        <circle cx="16" cy="16" r="3.6" fill="#f2be55"/>
+        <circle cx="24" cy="16" r="3.6" fill="#b494f5"/>
+      </svg>
+      <span>
+        <span class="brand__name">IA aplicada a la Respuesta a Incidentes</span>
+        <span class="brand__meta">Minicurso 1 del SBSeg 2026</span>
+      </span>
+    </a>
+
+    <nav class="nav" id="menu" aria-label="Navegación principal">
+      <a href="index.html">Inicio</a>
+      <a href="catalogo.html" aria-current="page">Catálogo</a>
+      <a href="praticas.html">Prácticas</a>
+      <a href="sobre.html">Acerca de</a>
+    </nav>
+
+    <div class="header-actions">
+      <nav class="lang" aria-label="Idioma">
+        <a href="../catalogo.html" hreflang="pt-BR" title="Português">PT</a>
+        <a href="../en/catalogo.html" hreflang="en" title="English">EN</a>
+        <a href="catalogo.html" hreflang="es" aria-current="true" title="Español">ES</a>
+      </nav>
+
+      <button class="icon-btn theme-toggle" type="button"
+              aria-label="Alternar modo claro y oscuro"
+              data-rotulo-claro="Activar modo claro"
+              data-rotulo-escuro="Activar modo oscuro">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      </button>
+      <button class="icon-btn nav-toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir y cerrar el menú">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="conteudo">
+
+<section class="section section--tight">
+  <div class="wrap">
+    <div class="section__head">
+      <span class="eyebrow">Catálogo</span>
+      <h1>Herramientas, repositorios, modelos y estándares</h1>
+      <p>
+        Todo lo que el capítulo cita y que usted puede abrir, instalar, leer o
+        ejecutar, reunido en un solo lugar. Cada elemento informa qué hace y
+        cuál es su papel en el minicurso. Las etiquetas de color indican a qué
+        etapa del pipeline pertenece el elemento.
+      </p>
+    </div>
+
+    <!-- ====================== FILTROS ====================== -->
+    <div class="toolbar">
+      <div class="search-field">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+        <label class="visually-hidden" for="busca">Buscar en el catálogo</label>
+        <input type="search" id="busca" placeholder="Buscar por nombre, tecnología o finalidad (por ejemplo: NER, playbook, taxonomía)" autocomplete="off">
+      </div>
+
+      <div class="filter-group" role="group" aria-label="Filtrar por categoría">
+        <span class="filter-group__label">Categoría</span>
+        <button class="chip" type="button" data-filtro="categoria" data-valor="grupo" aria-pressed="false">Grupo proponente</button>
+        <button class="chip" type="button" data-filtro="categoria" data-valor="privacidade" aria-pressed="false">Privacidad</button>
+        <button class="chip" type="button" data-filtro="categoria" data-valor="modelos" aria-pressed="false">Modelos</button>
+        <button class="chip" type="button" data-filtro="categoria" data-valor="soar" aria-pressed="false">SOAR y respuesta</button>
+        <button class="chip" type="button" data-filtro="categoria" data-valor="padroes" aria-pressed="false">Estándares</button>
+        <button class="chip" type="button" data-filtro="categoria" data-valor="dados" aria-pressed="false">Datos</button>
+      </div>
+
+      <div class="filter-group" role="group" aria-label="Filtrar por etapa del pipeline">
+        <span class="filter-group__label">Etapa</span>
+        <button class="chip" type="button" data-filtro="estagio" data-valor="ec1" data-stage="ec1" aria-pressed="false">EC1 Seudonimización</button>
+        <button class="chip" type="button" data-filtro="estagio" data-valor="ec2" data-stage="ec2" aria-pressed="false">EC2 Clasificación</button>
+        <button class="chip" type="button" data-filtro="estagio" data-valor="ec3" data-stage="ec3" aria-pressed="false">EC3 Playbooks</button>
+      </div>
+    </div>
+
+    <div class="results-bar">
+      <span id="contagem" aria-live="polite"
+            data-tpl-total="{n} elementos en el catálogo"
+            data-tpl-um="1 elemento encontrado"
+            data-tpl-varios="{n} elementos encontrados"
+            data-tpl-grupo-total="{n} elementos"
+            data-tpl-grupo-parcial="{n} de {total}">42 elementos en el catálogo</span>
+      <button class="btn" type="button" id="limpar" hidden>Limpiar filtros</button>
+    </div>
+
+    <p class="empty-state" id="vazio" hidden>
+      Ningún elemento corresponde a la búsqueda. Pruebe un término más corto o
+      limpie los filtros.
+    </p>
+
+    <!-- ====================== GRUPO PROPONENTE ====================== -->
+    <section class="catalog-group" id="grupo">
+      <div class="catalog-group__head">
+        <h2>Herramientas del grupo proponente</h2>
+        <span class="catalog-group__count">12 elementos</span>
+      </div>
+      <p class="prose" style="margin-bottom: 1.5rem; color: var(--text-muted);">
+        Los componentes que el capítulo demuestra en operación. Vale la pena
+        reparar en la línea de anonimización, que evolucionó en tres
+        generaciones y cuya progresión es, por sí sola, una lección de diseño de
+        herramienta de seguridad: la primera estableció el enfoque híbrido, la
+        segunda corrigió la fragilidad criptográfica y la tercera rediseñó la
+        arquitectura para escalar.
+      </p>
+
+      <div class="grid grid--wide">
+
+        <article class="tool" data-categoria="grupo" data-estagio="ec1" data-termos="seudonimizacion pseudonimizacion anonimizacion ner regex hmac sqlite gpu privacidad">
+          <div class="tool__head">
+            <h3 class="tool__name">AnonShield</h3>
+            <span class="tool__kind">Herramienta</span>
+          </div>
+          <p class="tool__desc">
+            Seudonimización escalable y ejecutada en el propio entorno. Pipeline
+            de cinco etapas: lectura en flujo continuo de XML, JSON, CSV, PDF,
+            DOCX y XLSX; detección de entidades combinando un modelo de NER con
+            36 patrones de expresiones regulares; sustitución por HMAC-SHA256;
+            persistencia del mapeo en SQLite; y salida preservando el esquema
+            original.
+          </p>
+          <p class="tool__role">
+            <strong>En el minicurso:</strong> es la herramienta demostrada en el
+            Momento 1 de la Práctica 1. La estrategia de detección es
+            seleccionable por línea de comandos y cambia cobertura por costo de
+            procesamiento; la base del capítulo usa la <em>standalone</em>. La
+            aceleración es superior a 535 veces frente a la generación anterior,
+            sobre el mismo conjunto y el mismo hardware, en ejecución
+            exclusivamente por CPU: la ganancia es arquitectónica, y no
+            dependiente de GPU.
+          </p>
+          <div class="tool__foot">
+            <span class="tag tag--ec1">EC1</span>
+            <div class="tool__links">
+              <a href="https://github.com/AnonShield/anonshield">Repositorio <svg aria-hidden="true"><use href="#i-ext"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="tool" data-categoria="grupo" data-estagio="ec1" data-termos="hmac sha256 clave secreta ocr xml json openvas esquema">
+          <div class="tool__head">
+            <h3 class="tool__name">AnonLFI 2.0</h3>
+            <span class="tool__kind">Herramienta</span>
+          </div>
+          <p class="tool__desc">
+            Segunda generación de la línea. Sustituye el hash público por
+            HMAC-SHA256 con clave secreta definida por el operador, extiende el
+            procesamiento a formatos estructurados con preservación de esquema, e
+            incorpora OCR para texto incrustado en imágenes y PDF.
+          </p>
+          <p class="tool__role">
+            <strong>En el minicurso:</strong> explica por qué importa la clave
+            secreta. Sin ella, el adversario reproduce el mapeo conociendo solo
+            el algoritmo y el dominio de entrada, lo que vuelve trivial revertir
+            seudónimos de espacios pequeños como el de las direcciones IPv4.
+          </p>
+          <div class="tool__foot">
+            <span class="tag tag--ec1">EC1</span>
+            <div class="tool__links">
+              <a href="https://arxiv.org/abs/2511.15744">Artículo <svg aria-hidden="true"><use href="#i-ext"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="tool" data-categoria="grupo" data-estagio="ec1" data-termos="anon lfi ner reidentificacion controlada auditoria gt-lfi">
+          <div class="tool__head">
+            <h3 class="tool__name">ANON-LFI</h3>
+            <span class="tool__kind">Herramienta</span>
+          </div>
+          <p class="tool__desc">
+            Primera generación, que estableció el enfoque híbrido: reconocimiento
+            de entidades nombradas para lo que no tiene patrón sintáctico fijo,
+            como nombres de personas y de organizaciones, y expresiones regulares
+            para artefactos de formato determinado, como IP, correos
+            electrónicos, URL e identificadores CVE.
+          </p>
+          <p class="tool__role">
+            <strong>En el minicurso:</strong> es el módulo de anonimización del
+            ecosistema GT-LFI, con recall del 97,38% sobre 763 incidentes reales.
+            Introdujo la reidentificación controlada, con traza de auditoría.
+          </p>
+          <div class="tool__foot">
+            <span class="tag tag--ec1">EC1</span>
+            <div class="tool__links">
+              <a href="https://github.com/gt-rnp-lfi/anon-lfi">Repositorio <svg aria-hidden="true"><use href="#i-ext"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="tool" data-categoria="grupo" data-estagio="ec2 ec3" data-termos="clasificacion playbook markdown ansible humano en el bucle similitud web">
+          <div class="tool__head">
+            <h3 class="tool__name">AutoClass-LFI</h3>
+            <span class="tool__kind">Herramienta</span>
+          </div>
+          <p class="tool__desc">
+            Núcleo de inteligencia del ecosistema GT-LFI, con interfaz web.
+            Ofrece cinco funcionalidades: clasificación automática en categorías
+            y subcategorías; sugerencia de acciones de contención; generación de
+            playbooks en Markdown y en Ansible; ciclo con humano en el bucle; y
+            consulta de incidentes similares.
+          </p>
+          <p class="tool__role">
+            <strong>En el minicurso:</strong> es la herramienta central de las
+            partes prácticas 2 y 3. La capa de inteligencia está abstraída por un
+            SDK, lo que permite alternar entre modelos según el requisito de
+            privacidad, y el retorno de las validaciones humanas se incorpora al
+            conocimiento del sistema.
+          </p>
+          <div class="tool__foot">
+            <span class="tag tag--ec2">EC2</span>
+            <span class="tag tag--ec3">EC3</span>
+            <div class="tool__links">
+              <a href="https://github.com/gt-rnp-lfi/lfi-autoclass">Repositorio <svg aria-hidden="true"><use href="#i-ext"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="tool" data-categoria="grupo" data-estagio="ec2" data-termos="ingenieria de prompts python taxonomia csv xlsx json llm">
+          <div class="tool__head">
+            <h3 class="tool__name">SecLINC</h3>
+            <span class="tool__kind">Herramienta</span>
+          </div>
+          <p class="tool__desc">
+            Implementación de referencia de las estrategias de prompting
+            evaluadas en el capítulo. Escrita en Python, recibe tickets
+            seudonimizados, monta el prompt según el escenario elegido (con o sin
+            taxonomía, con o sin heurística iterativa), envía a las API de los
+            modelos configurados y exporta los resultados en CSV, XLSX o JSON.
+          </p>
+          <p class="tool__role">
+            <strong>En el minicurso:</strong> sostiene el experimento de cuatro
+            escenarios sobre 194 incidentes que muestra la ganancia de combinar
+            taxonomía estructurada con heurística iterativa. Fue posteriormente
+            incorporada a AutoClass-LFI.
+          </p>
+          <div class="tool__foot">
+            <span class="tag tag--ec2">EC2</span>
+            <div class="tool__links">
+              <a href="https://github.com/AI-Horizon-Labs/SecLINC">Repositorio <svg aria-hidden="true"><use href="#i-ext"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="tool" data-categoria="grupo" data-estagio="ec2" data-termos="ingenieria de prompts ollama modelos abiertos zero-shot ejecucion local">
+          <div class="tool__head">
+            <h3 class="tool__name">FrameworkPE</h3>
+            <span class="tool__kind">Herramienta</span>
+          </div>
+          <p class="tool__desc">
+            Evolución de SecLINC. Generaliza el mecanismo para cinco técnicas de
+            ingeniería de prompts y añade soporte para ejecución local vía
+            Ollama.
+          </p>
+          <p class="tool__role">
+            <strong>En el minicurso:</strong> es la base de los experimentos con
+            modelos de pesos abiertos ejecutados en el propio entorno, que
+            cuantifican el costo de exactitud de la opción por la privacidad.
+          </p>
+          <div class="tool__foot">
+            <span class="tag tag--ec2">EC2</span>
+            <div class="tool__links">
+              <a href="https://github.com/AILabs4All/FrameworkPE">Repositorio <svg aria-hidden="true"><use href="#i-ext"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="tool" data-categoria="grupo" data-estagio="ec1 ec2 ec3" data-termos="learn from incidents rnp hackers do bem modulo pop itinerarios gamificacion">
+          <div class="tool__head">
+            <h3 class="tool__name">Ecosistema GT-LFI</h3>
+            <span class="tool__kind">Proyecto</span>
+          </div>
+          <p class="tool__desc">
+            Learn From Incidents, proyecto del programa Hackers do Bem de la RNP.
+            Integra cuatro módulos en un ciclo único: ANON-LFI seudonimiza;
+            AutoClass-LFI clasifica y recomienda; el Módulo PoP somete el
+            resultado al análisis de pasantes y a la validación de analistas
+            experimentados; y la plataforma educativa convierte los incidentes
+            validados en itinerarios, lecciones, cuestionarios y desafíos.
+          </p>
+          <p class="tool__role">
+            <strong>En el minicurso:</strong> es el marco operativo y pedagógico
+            de todo el capítulo. Fue él quien convirtió el ciclo operativo en
+            ciclo pedagógico, cerrando el lazo entre operación y formación.
+          </p>
+          <div class="tool__foot">
+            <span class="tag tag--ec1">EC1</span>
+            <span class="tag tag--ec2">EC2</span>
+            <span class="tag tag--ec3">EC3</span>
+            <div class="tool__links">
+              <a href="https://gt-rnp-lfi.github.io/home/">Página del proyecto <svg aria-hidden="true"><use href="#i-ext"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="tool" data-categoria="grupo" data-estagio="ec2 ec3" data-termos="modulo pop triaje validacion pasantes analistas concordancia humano en el bucle">
+          <div class="tool__head">
+            <h3 class="tool__name">Módulo PoP</h3>
+            <span class="tool__kind">Herramienta</span>
+          </div>
+          <p class="tool__desc">
+            Entorno operativo de triaje y validación del ecosistema GT-LFI.
+            Ofrece a los pasantes una interfaz en la que los incidentes aparecen
+            con las etiquetas sugeridas por la IA para análisis crítico, y a los
+            analistas experimentados una vista consolidada con tasa de
+            concordancia entre humano e IA, historial de decisiones y
+            priorización.
+          </p>
+          <p class="tool__role">
+            <strong>En el minicurso:</strong> es donde la validación humana deja
+            de ser discurso y se vuelve mecanismo. Sitúa la validación
+            <strong>entre</strong> la clasificación y la generación del playbook,
+            y no solo al final, justamente porque una clasificación equivocada
+            produce un playbook correctamente generado para la categoría
+            incorrecta.
+          </p>
+          <div class="tool__foot">
+            <span class="tag tag--ec2">EC2</span>
+            <span class="tag tag--ec3">EC3</span>
+            <div class="tool__links">
+              <a href="https://github.com/gt-rnp-lfi/sistema-pop">Repositorio <svg aria-hidden="true"><use href="#i-ext"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="tool" data-categoria="grupo" data-estagio="" data-termos="hackers do bem gamificacion itinerarios lecciones cuestionarios desafios formacion rnp ensenanza">
+          <div class="tool__head">
+            <h3 class="tool__name">Plataforma Hackers do Bem</h3>
+            <span class="tool__kind">Plataforma</span>
+          </div>
+          <p class="tool__desc">
+            Plataforma de gamificación basada en IA orientada a la enseñanza y al
+            aprendizaje en seguridad. Convierte los incidentes ya validados en
+            itinerarios, lecciones, cuestionarios y desafíos.
+          </p>
+          <p class="tool__role">
+            <strong>En el minicurso:</strong> es el eslabón que cierra el ciclo
+            entre operación y formación. En la evaluación con 35 residentes, la
+            tasa media de acierto entre la prueba previa y la posterior subió del
+            67,9% al 91,7%. El itinerario de clasificación de incidentes fue el
+            más difícil, con el menor puntaje medio, lo que dialoga directamente
+            con los límites observados en los modelos automáticos.
+          </p>
+          <div class="tool__foot">
+            <span class="tag">Formación</span>
+            <div class="tool__links">
+              <a href="https://github.com/gt-rnp-lfi/hackers-do-bem">Repositorio <svg aria-hidden="true"><use href="#i-ext"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="tool" data-categoria="grupo" data-estagio="ec1" data-termos="generador tickets sinteticos datos sinteticos compartir base publicable">
+          <div class="tool__head">
+            <h3 class="tool__name">Generador de tickets sintéticos</h3>
+            <span class="tool__kind">Herramienta</span>
+          </div>
+          <p class="tool__desc">
+            Generador de tickets sintéticos de seguridad, del ecosistema GT-LFI.
+          </p>
+          <p class="tool__role">
+            <strong>En el minicurso:</strong> aborda la segunda estrategia de
+            mitigación de la escasez de datos. Las dos son complementarias, y no
+            competidoras: los datos seudonimizados pueden alimentar modelos que
+            producen conjuntos sintéticos publicables. El equipo del GT-LFI
+            registra la construcción de una base sintética de incidentes como
+            prioridad para los próximos ciclos.
+          </p>
+          <div class="tool__foot">
+            <span class="tag tag--ec1">EC1</span>
+            <div class="tool__links">
+              <a href="https://github.com/gt-rnp-lfi/synthetic-generator-lfi">Repositorio <svg aria-hidden="true"><use href="#i-ext"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="tool" data-categoria="grupo" data-estagio="" data-termos="hikari siem caza de amenazas gamificacion simulacion soc entrenamiento rnp">
+          <div class="tool__head">
+            <h3 class="tool__name">HIKARI</h3>
+            <span class="tool__kind">Plataforma</span>
+          </div>
+          <p class="tool__desc">
+            Plataforma gamificada de simulación de SOC, orientada al
+            entrenamiento en caza de amenazas y a la educación en respuesta a
+            incidentes, desarrollada en alianza con la RNP. La arquitectura se
+            caracteriza como un entorno de tipo SIEM, lo que permite reproducir
+            de forma controlada las condiciones de trabajo de un analista.
+          </p>
+          <p class="tool__role">
+            <strong>En el minicurso:</strong> complementa el ecosistema GT-LFI al
+            ofrecer el entorno de simulación que los itinerarios de formación
+            presuponen.
+          </p>
+          <div class="tool__foot">
+            <span class="tag">Formación</span>
+            <div class="tool__links">
+              <span style="color: var(--text-muted); font-weight: 500;">Publicado en las Actas del SBSeg 2025</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="tool" data-categoria="grupo" data-estagio="ec1 ec2 ec3" data-termos="notebooks jupyter python tickets sinteticos prompts playbooks material">
+          <div class="tool__head">
+            <h3 class="tool__name">Repositorio del minicurso</h3>
+            <span class="tool__kind">Repositorio</span>
+          </div>
+          <p class="tool__desc">
+            Contiene los tres notebooks Python, uno por estudio de caso,
+            encadenados por las salidas de cada práctica; el conjunto de tickets
+            sintéticos usados en las demostraciones; los prompts de referencia;
+            un pequeño repositorio de procedimientos operativos estándar; y las
+            instrucciones de instalación.
+          </p>
+          <p class="tool__role">
+            <strong>En el minicurso:</strong> es el complemento ejecutable del
+            capítulo. Los notebooks son autocontenidos, no dependen del acceso a
+            las herramientas internas del grupo y se ejecutan sin GPU y sin
+            credenciales de API.
+          </p>
+          <div class="tool__foot">
+            <span class="tag tag--ec1">EC1</span>
+            <span class="tag tag--ec2">EC2</span>
+            <span class="tag tag--ec3">EC3</span>
+            <div class="tool__links">
+              <a href="https://github.com/sbseg26-mc1">Organización en GitHub <svg aria-hidden="true"><use href="#i-ext"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ====================== PRIVACIDAD ====================== -->
+    <section class="catalog-group" id="privacidade">
+      <div class="catalog-group__head">
+        <h2>Privacidad y anonimización</h2>
+        <span class="catalog-group__count">4 elementos</span>
+      </div>
+      <p class="prose" style="margin-bottom: 1.5rem; color: var(--text-muted);">
+        Herramientas consagradas que, deliberadamente, no resuelven el caso del
+        capítulo. Entender por qué no sirven es el argumento que justifica el
+        enfoque híbrido: aquí los datos no son tabulares, son texto libre, y el
+        problema inmediato no es ofrecer una garantía formal sobre un dato
+        divulgado, sino localizar los identificadores dispersos en el relato.
+      </p>
+
+      <div class="grid grid--wide">
+
+        <article class="tool" data-categoria="privacidade" data-estagio="ec1" data-termos="presidio microsoft pii deteccion sdk reconocedores recall">
+          <div class="tool__head">
+            <h3 class="tool__name">Microsoft Presidio</h3>
+            <span class="tool__kind">Biblioteca</span>
+          </div>
+          <p class="tool__desc">
+            SDK de protección de datos y desidentificación, con orquestación de
+            reconocedores de información personal en texto libre.
+          </p>
+          <p class="tool__role">
+            <strong>En el minicurso:</strong> lo usa la estrategia
+            <code>presidio</code> de AnonShield, que maximiza el recall al costo
+            de falsos positivos provenientes de reconocedores irrelevantes para
+            el dominio de seguridad. Precisión del 71,9% con el mismo recall del
+            96,4% de las demás estrategias, lo que es defendible cuando la
+            sobreanonimización es aceptable.
+          </p>
+          <div class="tool__foot">
+            <span class="tag tag--ec1">EC1</span>
+            <div class="tool__links">
+              <a href="https://github.com/microsoft/presidio">Repositorio <svg aria-hidden="true"><use href="#i-ext"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="tool" data-categoria="privacidade" data-estagio="ec1" data-termos="k-anonimato l-diversidad t-cercania tabular biomedico garantias formales">
+          <div class="tool__head">
+            <h3 class="tool__name">ARX</h3>
+            <span class="tool__kind">Herramienta</span>
+          </div>
+          <p class="tool__desc">
+            Anonimización de datos tabulares con garantías formales:
+            k-anonimato, l-diversidad y t-cercanía. Con origen en el dominio
+            biomédico.
+          </p>
+          <p class="tool__role">
+            <strong>En el minicurso:</strong> aparece como contrapunto. Las
+            herramientas así presuponen datos tabulares y la detección ya hecha,
+            y por eso no atacan el problema operativo de los relatos en texto
+            libre.
+          </p>
+          <div class="tool__foot">
+            <span class="tag tag--ec1">EC1</span>
+            <div class="tool__links">
+              <a href="https://arx.deidentifier.org/">Sitio oficial <svg aria-hidden="true"><use href="#i-ext"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="tool" data-categoria="privacidade" data-estagio="ec1" data-termos="microdatos estadistica r cran control de divulgacion">
+          <div class="tool__head">
+            <h3 class="tool__name">sdcMicro</h3>
+            <span class="tool__kind">Paquete R</span>
+          </div>
+          <p class="tool__desc">
+            Control de divulgación estadística para microdatos, con origen en el
+            dominio estadístico.
+          </p>
+          <p class="tool__role">
+            <strong>En el minicurso:</strong> el mismo contrapunto que ARX. Es
+            una herramienta madura para datos tabulares estructurados, y no para
+            relatos narrativos mezclados con artefactos técnicos.
+          </p>
+          <div class="tool__foot">
+            <span class="tag tag--ec1">EC1</span>
+            <div class="tool__links">
+              <a href="https://cran.r-project.org/package=sdcMicro">Paquete en CRAN <svg aria-hidden="true"><use href="#i-ext"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="tool" data-categoria="privacidade" data-estagio="ec1" data-termos="ip prefijo subred trafico anonimizacion cryptopan">
+          <div class="tool__head">
+            <h3 class="tool__name">CryptoPAn</h3>
+            <span class="tool__kind">Técnica</span>
+          </div>
+          <p class="tool__desc">
+            Anonimización de direcciones IP preservando la estructura de prefijo,
+            lo que mantiene la posibilidad de análisis por subred después del
+            tratamiento.
+          </p>
+          <p class="tool__role">
+            <strong>En el minicurso:</strong> es elegante y resuelve bien lo que
+            se propone, pero cubre un único tipo de entidad. Fue usada por Jesus
+            Filho y colegas en la anonimización de la base etiquetada con la
+            taxonomía del CERT.br.
+          </p>
+          <div class="tool__foot">
+            <span class="tag tag--ec1">EC1</span>
+            <div class="tool__links">
+              <span style="color: var(--text-muted); font-weight: 500;">Publicado en ACM SIGCOMM IMW 2001</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ====================== MODELOS ====================== -->
+    <section class="catalog-group" id="modelos">
+      <div class="catalog-group__head">
+        <h2>Modelos y ejecución local</h2>
+        <span class="catalog-group__count">8 elementos</span>
+      </div>
+      <p class="prose" style="margin-bottom: 1.5rem; color: var(--text-muted);">
+        El ecosistema de pesos abiertos es lo que hace materialmente posible el
+        compromiso de privacidad del capítulo: sin él, no hay manera de
+        clasificar sin que el dato salga de la organización. El precio está
+        medido, y es de cerca del 60% de exactitud con modelos abiertos de 8B a
+        20B, frente a más del 90% con modelos comerciales.
+      </p>
+
+      <div class="grid grid--wide">
+
+        <article class="tool" data-categoria="modelos" data-estagio="ec2 ec3" data-termos="gemini google ai studio api comercial flash lite clasificacion playbook clave">
+          <div class="tool__head">
+            <h3 class="tool__name">gemini-3.1-flash-lite</h3>
+            <span class="tool__kind">Modelo</span>
+          </div>
+          <p class="tool__desc">
+            Modelo comercial ligero, accedido por API, con capa gratuita en
+            Google AI Studio suficiente para las actividades del minicurso.
+          </p>
+          <p class="tool__role">
+            <strong>En el minicurso:</strong> es el modelo que produjo los
+            resultados reportados en los estudios de caso 2 y 3, y el que la
+            Práctica 2 llama en tiempo real. El identificador exacto se registra
+            a propósito: los proveedores comerciales actualizan endpoints sin
+            aviso, y la reproducción de los números depende de esa información.
+          </p>
+          <div class="tool__foot">
+            <span class="tag tag--ec2">EC2</span>
+            <span class="tag tag--ec3">EC3</span>
+            <div class="tool__links">
+              <a href="https://aistudio.google.com/">Google AI Studio <svg aria-hidden="true"><use href="#i-ext"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="tool" data-categoria="modelos" data-estagio="ec2 ec3" data-termos="local llm slm gpu ejecucion on-premise privacidad">
+          <div class="tool__head">
+            <h3 class="tool__name">Ollama</h3>
+            <span class="tool__kind">Herramienta</span>
+          </div>
+          <p class="tool__desc">
+            Capa de empaquetado y gestión de modelos de pesos abiertos para
+            ejecución local, que reduce sustancialmente la barrera de entrada.
+          </p>
+          <p class="tool__role">
+            <strong>En el minicurso:</strong> es el proveedor local de la
+            Práctica 3 y la base de los experimentos con modelos abiertos que
+            cuantifican el costo de la privacidad. Es el camino que vuelve
+            tangible ese argumento: con él, el dato no sale de la máquina del
+            participante.
+          </p>
+          <div class="tool__foot">
+            <span class="tag tag--ec2">EC2</span>
+            <span class="tag tag--ec3">EC3</span>
+            <div class="tool__links">
+              <a href="https://ollama.com">Sitio oficial <svg aria-hidden="true"><use href="#i-ext"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="tool" data-categoria="modelos" data-estagio="ec1 ec2" data-termos="hugging face transformers pesos abiertos ner biblioteca python">
+          <div class="tool__head">
+            <h3 class="tool__name">Transformers</h3>
+            <span class="tool__kind">Biblioteca</span>
+          </div>
+          <p class="tool__desc">
+            Biblioteca y repositorio asociado que consolidaron el ecosistema en
+            el cual los modelos preentrenados se distribuyen con pesos abiertos y
+            pueden ejecutarse localmente.
+          </p>
+          <p class="tool__role">
+            <strong>En el minicurso:</strong> carga el modelo de NER de
+            AnonShield. El notebook de la Práctica 1 degrada con elegancia: si la
+            biblioteca no está disponible, un reconocedor léxico simplificado
+            asume el papel, y la lección sobre cobertura permanece observable.
+          </p>
+          <div class="tool__foot">
+            <span class="tag tag--ec1">EC1</span>
+            <span class="tag tag--ec2">EC2</span>
+            <div class="tool__links">
+              <a href="https://github.com/huggingface/transformers">Repositorio <svg aria-hidden="true"><use href="#i-ext"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="tool" data-categoria="modelos" data-estagio="ec1" data-termos="ner multilingue roberta persona organizacion lugar reconocimiento de entidades">
+          <div class="tool__head">
+            <h3 class="tool__name">xlm-roberta-base-ner-hrl</h3>
+            <span class="tool__kind">Modelo</span>
+          </div>
+          <p class="tool__desc">
+            Modelo multilingüe de reconocimiento de entidades nombradas, que
+            reconoce persona, organización y lugar.
+          </p>
+          <p class="tool__role">
+            <strong>En el minicurso:</strong> es el modelo predeterminado de NER
+            de AnonShield, usado sin ajuste fino. El carácter multilingüe
+            importa, porque los relatos de CSIRT académicos brasileños mezclan
+            portugués e inglés, a veces en el mismo ticket.
+          </p>
+          <div class="tool__foot">
+            <span class="tag tag--ec1">EC1</span>
+            <div class="tool__links">
+              <a href="https://huggingface.co/Davlan/xlm-roberta-base-ner-hrl">Ficha del modelo <svg aria-hidden="true"><use href="#i-ext"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="tool" data-categoria="modelos" data-estagio="ec1" data-termos="ner cti amenazas dominio seguridad bert entidades cve cpe">
+          <div class="tool__head">
+            <h3 class="tool__name">SecureModernBERT-NER</h3>
+            <span class="tool__kind">Modelo</span>
+          </div>
+          <p class="tool__desc">
+            Modelo de reconocimiento de entidades entrenado sobre
+            aproximadamente 503 mil fragmentos anotados de inteligencia de
+            amenazas, capaz de reconocer 22 tipos de entidad específicos de
+            ciberseguridad.
+          </p>
+          <p class="tool__role">
+            <strong>En el minicurso:</strong> es la alternativa de dominio al
+            modelo multilingüe predeterminado. Aborda la brecha señalada en el
+            capítulo: los marcos genéricos de PLN no traen, de fábrica,
+            reconocedores para el vocabulario técnico de seguridad.
+          </p>
+          <div class="tool__foot">
+            <span class="tag tag--ec1">EC1</span>
+            <div class="tool__links">
+              <a href="https://huggingface.co/attack-vector/SecureModernBERT-NER">Ficha del modelo <svg aria-hidden="true"><use href="#i-ext"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="tool" data-categoria="modelos" data-estagio="ec2" data-termos="embeddings sentence-bert similitud coseno comparacion semantica evaluacion">
+          <div class="tool__head">
+            <h3 class="tool__name">paraphrase-MiniLM-L6-v2</h3>
+            <span class="tool__kind">Modelo</span>
+          </div>
+          <p class="tool__desc">
+            Modelo de embeddings de oración de la familia Sentence-BERT, usado
+            para medir similitud semántica entre fragmentos de texto.
+          </p>
+          <p class="tool__role">
+            <strong>En el minicurso:</strong> sostiene la comparación semántica
+            entre la respuesta del modelo y la etiqueta humana, necesaria cuando
+            el modelo responde en texto libre. Introduce una dependencia que debe
+            declararse, porque la elección del modelo de embeddings cambia los
+            números.
+          </p>
+          <div class="tool__foot">
+            <span class="tag tag--ec2">EC2</span>
+            <div class="tool__links">
+              <a href="https://huggingface.co/sentence-transformers/paraphrase-MiniLM-L6-v2">Ficha del modelo <svg aria-hidden="true"><use href="#i-ext"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="tool" data-categoria="modelos" data-estagio="ec2" data-termos="cisco foundation ai llama preentrenamiento continuo dominio seguridad 8b">
+          <div class="tool__head">
+            <h3 class="tool__name">Foundation-Sec-8B</h3>
+            <span class="tool__kind">Modelo</span>
+          </div>
+          <p class="tool__desc">
+            Modelo de 8 mil millones de parámetros con preentrenamiento continuo
+            adaptado al dominio de seguridad, publicado por Foundation AI de
+            Cisco.
+          </p>
+          <p class="tool__role">
+            <strong>En el minicurso:</strong> representa la tercera vía para
+            reducir la brecha entre modelos locales y comerciales sin renunciar a
+            la ejecución local. El entrenamiento continuo sobre corpus
+            especializados mejora tareas típicas de SOC, incluidos el triaje y el
+            enriquecimiento de alertas.
+          </p>
+          <div class="tool__foot">
+            <span class="tag tag--ec2">EC2</span>
+            <div class="tool__links">
+              <a href="https://huggingface.co/fdtn-ai/Foundation-Sec-8B">Ficha del modelo <svg aria-hidden="true"><use href="#i-ext"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="tool" data-categoria="modelos" data-estagio="ec2" data-termos="deepseek phi qwen porte medio 14b 4b temperatura gpu hardware">
+          <div class="tool__head">
+            <h3 class="tool__name">Modelos abiertos de porte medio</h3>
+            <span class="tool__kind">Modelos</span>
+          </div>
+          <p class="tool__desc">
+            Entre 21 modelos de 1 a 20 mil millones de parámetros evaluados, tres
+            se destacaron en la franja del 62% al 70% de precisión en las dos
+            plataformas de hardware probadas: <code>deepseek-r1:14b</code>,
+            <code>phi3:14b</code> y <code>qwen3:4b</code>. Los modelos de 1B a
+            1,8B quedaron por debajo del 20%.
+          </p>
+          <p class="tool__role">
+            <strong>En el minicurso:</strong> delimitan la recomendación práctica
+            de hardware. Los factores determinantes son el número de parámetros y
+            la capacidad de GPU, y no la temperatura: quien pretenda operar
+            clasificación local debe invertir en memoria de video, y no gastar
+            tiempo calibrando la temperatura.
+          </p>
+          <div class="tool__foot">
+            <span class="tag tag--ec2">EC2</span>
+            <div class="tool__links">
+              <a href="https://ollama.com/library/deepseek-r1">deepseek-r1 <svg aria-hidden="true"><use href="#i-ext"/></svg></a>
+              <a href="https://ollama.com/library/phi3">phi3 <svg aria-hidden="true"><use href="#i-ext"/></svg></a>
+              <a href="https://ollama.com/library/qwen3">qwen3 <svg aria-hidden="true"><use href="#i-ext"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ====================== SOAR ====================== -->
+    <section class="catalog-group" id="soar">
+      <div class="catalog-group__head">
+        <h2>SOAR y respuesta</h2>
+        <span class="catalog-group__count">5 elementos</span>
+      </div>
+      <p class="prose" style="margin-bottom: 1.5rem; color: var(--text-muted);">
+        Para quien pretenda montar su propio entorno con componentes de código
+        abierto. Vale la advertencia del capítulo: la capa cognitiva presupone
+        las anteriores, y aplicar modelos de lenguaje sobre telemetría no
+        normalizada y sin correlación produce resultados pobres,
+        independientemente de la calidad del modelo.
+      </p>
+
+      <div class="grid grid--wide">
+
+        <article class="tool" data-categoria="soar" data-estagio="ec3" data-termos="orquestacion flujos conectores editor visual automatizacion">
+          <div class="tool__head">
+            <h3 class="tool__name">Shuffle</h3>
+            <span class="tool__kind">Plataforma</span>
+          </div>
+          <p class="tool__desc">
+            Orquestador SOAR de código abierto, con editor visual de flujos y
+            amplia biblioteca de conectores.
+          </p>
+          <p class="tool__role">
+            <strong>En el minicurso:</strong> es la principal opción citada en el
+            relevamiento de plataformas SOAR abiertas y la base de integración de
+            AI4SOAR, usada para demostrar la selección automática de playbooks.
+          </p>
+          <div class="tool__foot">
+            <span class="tag tag--ec3">EC3</span>
+            <div class="tool__links">
+              <a href="https://github.com/Shuffle/Shuffle">Repositorio <svg aria-hidden="true"><use href="#i-ext"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="tool" data-categoria="soar" data-estagio="ec3" data-termos="gestion de casos incidentes colaboracion observables">
+          <div class="tool__head">
+            <h3 class="tool__name">TheHive</h3>
+            <span class="tool__kind">Plataforma</span>
+          </div>
+          <p class="tool__desc">
+            Plataforma de gestión de casos de respuesta a incidentes, con fuerte
+            integración con el motor de análisis Cortex.
+          </p>
+          <p class="tool__role">
+            <strong>En el minicurso:</strong> aparece en el relevamiento de
+            plataformas abiertas como la opción orientada a la gestión del caso,
+            y no a la orquestación del flujo.
+          </p>
+          <div class="tool__foot">
+            <span class="tag tag--ec3">EC3</span>
+            <div class="tool__links">
+              <a href="https://github.com/TheHive-Project/TheHive">Repositorio <svg aria-hidden="true"><use href="#i-ext"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="tool" data-categoria="soar" data-estagio="ec3" data-termos="analizadores responders enriquecimiento observables thehive">
+          <div class="tool__head">
+            <h3 class="tool__name">Cortex</h3>
+            <span class="tool__kind">Herramienta</span>
+          </div>
+          <p class="tool__desc">
+            Motor de análisis que acompaña a TheHive, ejecutando analizadores y
+            acciones de respuesta sobre los observables de un caso.
+          </p>
+          <p class="tool__role">
+            <strong>En el minicurso:</strong> es el componente que ejecuta el
+            enriquecimiento, etapa que antecede a la decisión sobre a qué
+            playbook recurrir.
+          </p>
+          <div class="tool__foot">
+            <span class="tag tag--ec3">EC3</span>
+            <div class="tool__links">
+              <a href="https://github.com/TheHive-Project/Cortex">Repositorio <svg aria-hidden="true"><use href="#i-ext"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="tool" data-categoria="soar" data-estagio="" data-termos="siem endpoint deteccion respuesta activa monitoreo visibilidad">
+          <div class="tool__head">
+            <h3 class="tool__name">Wazuh</h3>
+            <span class="tool__kind">Plataforma</span>
+          </div>
+          <p class="tool__desc">
+            Combina funciones de SIEM, detección en endpoint y respuesta activa
+            en una única plataforma de código abierto.
+          </p>
+          <p class="tool__role">
+            <strong>En el minicurso:</strong> corresponde a las capas de
+            visibilidad y de detección conductual, los dos primeros de los tres
+            niveles de madurez propuestos para quien monta un SOC con componentes
+            abiertos.
+          </p>
+          <div class="tool__foot">
+            <span class="tag">Base</span>
+            <div class="tool__links">
+              <a href="https://github.com/wazuh/wazuh">Repositorio <svg aria-hidden="true"><use href="#i-ext"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="tool" data-categoria="soar" data-estagio="ec3" data-termos="recuperacion similitud seleccion de playbook alucinacion shuffle">
+          <div class="tool__head">
+            <h3 class="tool__name">AI4SOAR</h3>
+            <span class="tool__kind">Investigación</span>
+          </div>
+          <p class="tool__desc">
+            En vez de generar un playbook nuevo, selecciona del repositorio
+            existente aquel más adecuado a la alerta recibida, usando aprendizaje
+            de similitud, con integración con Shuffle.
+          </p>
+          <p class="tool__role">
+            <strong>En el minicurso:</strong> representa el camino de recuperar
+            en vez de generar. La ventaja de seguridad suele ser subestimada: el
+            procedimiento recuperado ya fue homologado, lo que elimina la
+            categoría entera de riesgos asociados a la alucinación. La limitación
+            es la cobertura, ya que las alertas inéditas no tienen
+            correspondiente.
+          </p>
+          <div class="tool__foot">
+            <span class="tag tag--ec3">EC3</span>
+            <div class="tool__links">
+              <span style="color: var(--text-muted); font-weight: 500;">Publicado en ARES 2024</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ====================== ESTÁNDARES ====================== -->
+    <section class="catalog-group" id="padroes">
+      <div class="catalog-group__head">
+        <h2>Estándares, marcos de referencia y taxonomías</h2>
+        <span class="catalog-group__count">11 elementos</span>
+      </div>
+      <p class="prose" style="margin-bottom: 1.5rem; color: var(--text-muted);">
+        Clasificar un incidente exige, ante todo, un vocabulario. La ausencia de
+        estandarización terminológica entre organizaciones se señala de forma
+        recurrente como obstáculo a la automatización: relatos que describen el
+        mismo fenómeno reciben etiquetas distintas, lo que impide tanto la
+        agregación de métricas como el entrenamiento de modelos supervisados.
+      </p>
+
+      <div class="grid grid--wide">
+
+        <article class="tool" data-categoria="padroes" data-estagio="ec2" data-termos="nist norma respuesta a incidentes perfil comunitario taxonomia doce categorias">
+          <div class="tool__head">
+            <h3 class="tool__name">NIST SP 800-61r3</h3>
+            <span class="tool__kind">Norma</span>
+          </div>
+          <p class="tool__desc">
+            La revisión 3 promovió un cambio de perspectiva relevante: en vez de
+            tratar la respuesta a incidentes como proceso autocontenido con fases
+            propias, pasa a presentarla como un perfil comunitario del NIST CSF
+            2.0. La preparación y el aprendizaje dejan de ser etapas de un ciclo
+            cerrado y se vuelven actividades continuas de gestión de riesgo.
+          </p>
+          <p class="tool__role">
+            <strong>En el minicurso:</strong> de ella deriva la taxonomía de
+            referencia adoptada, con doce categorías funcionales, usada de forma
+            consistente en los estudios de caso 1 y 2.
+          </p>
+          <div class="tool__foot">
+            <span class="tag tag--ec2">EC2</span>
+            <div class="tool__links">
+              <a href="https://csrc.nist.gov/pubs/sp/800/61/r3/final">Publicación <svg aria-hidden="true"><use href="#i-ext"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="tool" data-categoria="padroes" data-estagio="" data-termos="csf gobernar identificar proteger detectar responder recuperar funciones">
+          <div class="tool__head">
+            <h3 class="tool__name">NIST CSF 2.0</h3>
+            <span class="tool__kind">Marco de referencia</span>
+          </div>
+          <p class="tool__desc">
+            Organiza la gestión de seguridad en seis funciones: Gobernar,
+            Identificar, Proteger, Detectar, Responder y Recuperar.
+          </p>
+          <p class="tool__role">
+            <strong>En el minicurso:</strong> es la estructura sobre la cual el
+            capítulo mapea, función por función, dónde la IA puede apoyar y qué
+            permanece bajo decisión humana. Gobernar es la función que decide
+            cuánta autonomía delegar a un sistema automatizado.
+          </p>
+          <div class="tool__foot">
+            <span class="tag">Base</span>
+            <div class="tool__links">
+              <a href="https://www.nist.gov/cyberframework">Marco de referencia <svg aria-hidden="true"><use href="#i-ext"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="tool" data-categoria="padroes" data-estagio="" data-termos="gobernanza de ia riesgo mapear medir gestionar rmf">
+          <div class="tool__head">
+            <h3 class="tool__name">NIST AI RMF 1.0</h3>
+            <span class="tool__kind">Marco de referencia</span>
+          </div>
+          <p class="tool__desc">
+            Organiza la gestión de riesgo de sistemas de IA en cuatro funciones:
+            Gobernar, Mapear, Medir y Gestionar.
+          </p>
+          <p class="tool__role">
+            <strong>En el minicurso:</strong> aporta los principios de gobernanza
+            aplicables al contexto de un SOC, que es donde la discusión abstracta
+            sobre autonomía se convierte en decisión por función.
+          </p>
+          <div class="tool__foot">
+            <span class="tag">Base</span>
+            <div class="tool__links">
+              <a href="https://www.nist.gov/itl/ai-risk-management-framework">Marco de referencia <svg aria-hidden="true"><use href="#i-ext"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="tool" data-categoria="padroes" data-estagio="" data-termos="sesgo bias humano en el bucle mitigacion">
+          <div class="tool__head">
+            <h3 class="tool__name">NIST SP 1270</h3>
+            <span class="tool__kind">Publicación</span>
+          </div>
+          <p class="tool__desc">
+            Trata de la identificación y de la gestión del sesgo en inteligencia
+            artificial.
+          </p>
+          <p class="tool__role">
+            <strong>En el minicurso:</strong> es la referencia que enfatiza al
+            humano en el bucle como práctica central de mitigación de riesgos de
+            IA, y sostiene el diseño del Módulo PoP.
+          </p>
+          <div class="tool__foot">
+            <span class="tag">Base</span>
+            <div class="tool__links">
+              <a href="https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.1270.pdf">Publicación <svg aria-hidden="true"><use href="#i-ext"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="tool" data-categoria="padroes" data-estagio="" data-termos="first csirt servicios areas de servicio soc gestion de eventos">
+          <div class="tool__head">
+            <h3 class="tool__name">FIRST CSIRT Services Framework 2.1</h3>
+            <span class="tool__kind">Marco de referencia</span>
+          </div>
+          <p class="tool__desc">
+            Organiza la actuación de un equipo de respuesta en áreas de servicio:
+            gestión de eventos de seguridad, gestión de incidentes y gestión de
+            vulnerabilidades, entre otras. Es deliberadamente agnóstico en cuanto
+            a herramientas: describe qué hace el equipo, no cómo.
+          </p>
+          <p class="tool__role">
+            <strong>En el minicurso:</strong> aporta el vocabulario que separa
+            CSIRT de SOC, distinción frecuentemente confundida. Ambos consumen el
+            mismo insumo, relatos textuales de eventos adversos, y enfrentan el
+            mismo cuello de botella de triaje.
+          </p>
+          <div class="tool__foot">
+            <span class="tag">Base</span>
+            <div class="tool__links">
+              <a href="https://www.first.org/standards/frameworks/csirts/csirt_services_framework_v2.1">Marco de referencia <svg aria-hidden="true"><use href="#i-ext"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="tool" data-categoria="padroes" data-estagio="ec3" data-termos="playbook json oasis intercambio soar flujo agentes comandos">
+          <div class="tool__head">
+            <h3 class="tool__name">CACAO Security Playbooks 2.0</h3>
+            <span class="tool__kind">Especificación</span>
+          </div>
+          <p class="tool__desc">
+            Estándar OASIS para representación de playbooks en JSON, con
+            estructura explícita de flujo: pasos secuenciales, condicionales,
+            paralelos y de decisión, además de agentes objetivo y comandos. Su
+            propósito es el intercambio entre organizaciones y la orquestación en
+            plataformas SOAR.
+          </p>
+          <p class="tool__role">
+            <strong>En el minicurso:</strong> es el formato exigido en la salida
+            de la Práctica 3, y lo que vuelve posible la validación automática.
+            La validación sintáctica verifica la conformidad con el esquema; la
+            semántica verifica si los pasos referenciados existen, si el grafo es
+            alcanzable y sin ciclos indebidos, y si ningún comando usa una
+            herramienta fuera de la lista autorizada.
+          </p>
+          <div class="tool__foot">
+            <span class="tag tag--ec3">EC3</span>
+            <div class="tool__links">
+              <a href="https://docs.oasis-open.org/cacao/security-playbooks/v2.0/security-playbooks-v2.0.html">Especificación <svg aria-hidden="true"><use href="#i-ext"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="tool" data-categoria="padroes" data-estagio="ec3" data-termos="mitre attack tacticas tecnicas adversario inteligencia de amenazas matriz">
+          <div class="tool__head">
+            <h3 class="tool__name">MITRE ATT&amp;CK</h3>
+            <span class="tool__kind">Base de conocimiento</span>
+          </div>
+          <p class="tool__desc">
+            Cataloga tácticas y técnicas adversarias observadas en incidentes
+            reales, y es el vocabulario de referencia para inteligencia de
+            amenazas.
+          </p>
+          <p class="tool__role">
+            <strong>En el minicurso:</strong> sirve de contexto en la generación
+            de playbooks, pero el capítulo hace una salvedad importante:
+            ATT&amp;CK describe <em>cómo</em> actúa un adversario, y no <em>qué
+            tipo</em> de incidente ocurrió, y por eso no sustituye una taxonomía
+            de clasificación.
+          </p>
+          <div class="tool__foot">
+            <span class="tag tag--ec3">EC3</span>
+            <div class="tool__links">
+              <a href="https://attack.mitre.org/">Sitio oficial <svg aria-hidden="true"><use href="#i-ext"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="tool" data-categoria="padroes" data-estagio="ec2" data-termos="enisa taxonomia europa armonizacion csirt clasificacion">
+          <div class="tool__head">
+            <h3 class="tool__name">Taxonomía de referencia de ENISA</h3>
+            <span class="tool__kind">Taxonomía</span>
+          </div>
+          <p class="tool__desc">
+            Taxonomía de clasificación de incidentes concebida para armonizar la
+            comunicación entre CSIRT europeos.
+          </p>
+          <p class="tool__role">
+            <strong>En el minicurso:</strong> integra el panorama de vocabularios
+            en uso, junto a MITRE ATT&amp;CK, la taxonomía del CERT.br y las
+            categorías funcionales del NIST.
+          </p>
+          <div class="tool__foot">
+            <span class="tag tag--ec2">EC2</span>
+            <div class="tool__links">
+              <a href="https://www.enisa.europa.eu/publications/reference-incident-classification-taxonomy">Publicación <svg aria-hidden="true"><use href="#i-ext"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="tool" data-categoria="padroes" data-estagio="ec2" data-termos="certbr taxonomia seis categorias dos fraude intrusion escaneo web nacional brasil">
+          <div class="tool__head">
+            <h3 class="tool__name">Taxonomía del CERT.br</h3>
+            <span class="tool__kind">Taxonomía</span>
+          </div>
+          <p class="tool__desc">
+            Conjunto compacto de categorías operativas adoptado en las
+            notificaciones nacionales brasileñas. En el recorte usado en el
+            capítulo, son seis categorías: DoS, fraude, intrusión, escaneo, web y
+            otros.
+          </p>
+          <p class="tool__role">
+            <strong>En el minicurso:</strong> se usa como contraste a las doce
+            categorías del NIST, lo que permite discutir un punto raramente
+            explicitado: la elección del vocabulario afecta el desempeño medido
+            tanto como la elección del modelo, y reportar exactitud sin declarar
+            la taxonomía vuelve el número incomparable.
+          </p>
+          <div class="tool__foot">
+            <span class="tag tag--ec2">EC2</span>
+            <div class="tool__links">
+              <a href="https://stats.cert.br/incidentes/">Estadísticas y categorías <svg aria-hidden="true"><use href="#i-ext"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="tool" data-categoria="padroes" data-estagio="ec3" data-termos="ansible automatizacion idempotencia tareas infraestructura ejecutable">
+          <div class="tool__head">
+            <h3 class="tool__name">Ansible</h3>
+            <span class="tool__kind">Herramienta</span>
+          </div>
+          <p class="tool__desc">
+            Formato ejecutable de los playbooks, en el cual cada paso se vuelve
+            una tarea idempotente aplicable a la infraestructura.
+          </p>
+          <p class="tool__role">
+            <strong>En el minicurso:</strong> es una de las tres
+            representaciones de playbook usadas. La idempotencia es decisiva,
+            porque reejecutar el procedimiento no duplica efectos, lo que importa
+            cuando el estado del entorno es incierto. La contrapartida es que un
+            playbook ejecutable generado por un modelo es, potencialmente, un
+            vector de acción insegura.
+          </p>
+          <div class="tool__foot">
+            <span class="tag tag--ec3">EC3</span>
+            <div class="tool__links">
+              <a href="https://www.ansible.com/">Sitio oficial <svg aria-hidden="true"><use href="#i-ext"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="tool" data-categoria="padroes" data-estagio="ec1" data-termos="lgpd ley brasilena proteccion de datos dato personal conformidad anpd">
+          <div class="tool__head">
+            <h3 class="tool__name">LGPD</h3>
+            <span class="tool__kind">Legislación</span>
+          </div>
+          <p class="tool__desc">
+            Ley brasileña n. 13.709, del 14 de agosto de 2018, la Lei Geral de
+            Proteção de Dados Pessoais, la ley general de protección de datos
+            personales de Brasil.
+          </p>
+          <p class="tool__role">
+            <strong>En el minicurso:</strong> define el régimen jurídico de todo
+            el material. La consecuencia debe enunciarse sin ambigüedad: como la
+            reversión es posible para quien tiene la clave y el mapeo, el dato
+            seudonimizado <strong>sigue siendo dato personal</strong>. Los
+            equipos que tratan la seudonimización como equivalente a la
+            anonimización asumen un riesgo de conformidad que no perciben.
+          </p>
+          <div class="tool__foot">
+            <span class="tag tag--ec1">EC1</span>
+            <div class="tool__links">
+              <a href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm">Texto de la ley <svg aria-hidden="true"><use href="#i-ext"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ====================== DATOS ====================== -->
+    <section class="catalog-group" id="dados">
+      <div class="catalog-group__head">
+        <h2>Datos y estadísticas</h2>
+        <span class="catalog-group__count">2 elementos</span>
+      </div>
+      <p class="prose" style="margin-bottom: 1.5rem; color: var(--text-muted);">
+        Las dos fuentes públicas usadas para dimensionar el problema en la
+        apertura del capítulo. Miden cosas distintas, superficie de ataque
+        potencial y eventos reportados, pero apuntan en la misma dirección.
+      </p>
+
+      <div class="grid grid--wide">
+
+        <article class="tool" data-categoria="dados" data-estagio="" data-termos="certbr notificaciones serie historica estadisticas brasil incidentes">
+          <div class="tool__head">
+            <h3 class="tool__name">Estadísticas del CERT.br</h3>
+            <span class="tool__kind">Base pública</span>
+          </div>
+          <p class="tool__desc">
+            Serie histórica de incidentes notificados al CERT.br, con detalle por
+            tipo de incidente y por año.
+          </p>
+          <p class="tool__role">
+            <strong>En el minicurso:</strong> es la fuente del número que abre el
+            capítulo, 516.556 notificaciones solo en 2024, equivalentes a un
+            promedio de 1.411 por día.
+          </p>
+          <div class="tool__foot">
+            <span class="tag">Base</span>
+            <div class="tool__links">
+              <a href="https://stats.cert.br/incidentes/">Estadísticas <svg aria-hidden="true"><use href="#i-ext"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="tool" data-categoria="dados" data-estagio="" data-termos="cve vulnerabilidades publicadas por ano crecimiento superficie de ataque">
+          <div class="tool__head">
+            <h3 class="tool__name">CVE Details</h3>
+            <span class="tool__kind">Base pública</span>
+          </div>
+          <p class="tool__desc">
+            Navegación por vulnerabilidades publicadas, organizadas por fecha.
+          </p>
+          <p class="tool__role">
+            <strong>En el minicurso:</strong> sostiene el segundo indicador de
+            presión: las CVE divulgadas por año pasaron de cerca de 7.928 en 2014
+            a 40.287 en 2024, llegaron a 48.448 en 2025 y tienen una previsión
+            mediana en torno de 59.400 para 2026.
+          </p>
+          <div class="tool__foot">
+            <span class="tag">Base</span>
+            <div class="tool__links">
+              <a href="https://www.cvedetails.com/">Sitio <svg aria-hidden="true"><use href="#i-ext"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="site-footer__grid">
+      <div>
+        <h4>El minicurso</h4>
+        <p>
+          Capítulo 1 del libro de minicursos del XXVI Simposio Brasileño de
+          Ciberseguridad, el SBSeg 2026.
+        </p>
+      </div>
+      <div>
+        <h4>Navegación</h4>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="catalogo.html">Catálogo de herramientas</a></li>
+          <li><a href="praticas.html">Prácticas</a></li>
+          <li><a href="sobre.html">Acerca del capítulo</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Código</h4>
+        <ul>
+          <li><a href="https://github.com/sbseg26-mc1">Repositorio del minicurso</a></li>
+          <li><a href="https://gt-rnp-lfi.github.io/home/">Proyecto GT-LFI</a></li>
+          <li><a href="https://github.com/AnonShield/anonshield">AnonShield</a></li>
+          <li><a href="https://github.com/gt-rnp-lfi/lfi-autoclass">AutoClass-LFI</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Apoyo</h4>
+        <p>
+          CAPES (código 001), RNP a través del Programa Hackers do Bem y del
+          GT-LFI, FAPERGS, CNPq y ANATEL a través del convenio con el ITA.
+        </p>
+      </div>
+    </div>
+
+    <div class="site-footer__bottom">
+      <span>Contenido de este sitio bajo licencia Apache 2.0.</span>
+      <span>&copy; <span data-ano>2026</span> Autores del Capítulo 1.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/js/site.js" defer></script>
+<script src="../assets/js/catalogo.js" defer></script>
+</body>
+</html>

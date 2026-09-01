@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SBSeg 2026 Short Course 1: AI Applied to Incident Response</title>
+<meta name="description" content="Material for Short Course 1 at SBSeg 2026. Pseudonymization, incident classification and playbook generation with AI, over real anonymized CSIRT data, with human validation at every transition.">
+<meta name="theme-color" content="#0c4a6b">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://sbseg26-mc1.github.io/en/">
+<link rel="alternate" hreflang="pt-BR" href="https://sbseg26-mc1.github.io/">
+<link rel="alternate" hreflang="en" href="https://sbseg26-mc1.github.io/en/">
+<link rel="alternate" hreflang="es" href="https://sbseg26-mc1.github.io/es/">
+<link rel="alternate" hreflang="x-default" href="https://sbseg26-mc1.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:title" content="SBSeg 2026 Short Course 1: AI Applied to Incident Response">
+<meta property="og:description" content="Pseudonymization, classification and playbook generation with AI, over real anonymized CSIRT data.">
+<meta property="og:url" content="https://sbseg26-mc1.github.io/en/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;600;700&amp;display=swap">
+<link rel="stylesheet" href="../assets/css/site.css">
+<script>
+  /* Aplica o tema salvo antes da primeira pintura, evitando piscada de cor. */
+  (function () {
+    try {
+      var t = localStorage.getItem("tema");
+      if (t) document.documentElement.setAttribute("data-theme", t);
+    } catch (e) {}
+  })();
+</script>
+</head>
+<body>
+
+<a class="skip-link" href="#conteudo">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap site-header__inner">
+    <a class="brand" href="index.html">
+      <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true">
+        <rect width="32" height="32" rx="7" fill="#0c4a6b"/>
+        <path d="M8 16h16" stroke="#fff" stroke-opacity=".35" stroke-width="2" stroke-linecap="round"/>
+        <circle cx="8" cy="16" r="3.6" fill="#4fd8c4"/>
+        <circle cx="16" cy="16" r="3.6" fill="#f2be55"/>
+        <circle cx="24" cy="16" r="3.6" fill="#b494f5"/>
+      </svg>
+      <span>
+        <span class="brand__name">AI Applied to Incident Response</span>
+        <span class="brand__meta">SBSeg 2026 Short Course 1</span>
+      </span>
+    </a>
+
+    <nav class="nav" id="menu" aria-label="Main navigation">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="catalogo.html">Catalog</a>
+      <a href="praticas.html">Practices</a>
+      <a href="sobre.html">About</a>
+    </nav>
+
+    <div class="header-actions">
+      <nav class="lang" aria-label="Language">
+        <a href="../index.html" hreflang="pt-BR" title="Português">PT</a>
+        <a href="index.html" hreflang="en" aria-current="true" title="English">EN</a>
+        <a href="../es/index.html" hreflang="es" title="Español">ES</a>
+      </nav>
+
+      <button class="icon-btn theme-toggle" type="button"
+              aria-label="Toggle light and dark mode"
+              data-rotulo-claro="Switch to light mode"
+              data-rotulo-escuro="Switch to dark mode">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      </button>
+      <button class="icon-btn nav-toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Open and close the menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="conteudo">
+
+<!-- ====================== HERO ====================== -->
+<section class="hero">
+  <div class="wrap hero__conteudo">
+    <div class="tag-row" style="margin-bottom: 1.25rem;">
+      <span class="tag tag--base">SBSeg 2026</span>
+      <span class="tag">Short Course 1</span>
+      <span class="tag">3 guided practices, 70 minutes</span>
+    </div>
+
+    <h1>Artificial Intelligence Applied to Incident Response</h1>
+
+    <p class="hero__lead">
+      From standards to executable practice: how Large Language Models can
+      support incident response teams without taking the analyst out of the
+      process.
+    </p>
+
+    <p class="hero__thesis">
+      <strong>The chapter's thesis:</strong> AI does not replace incident
+      response. It extends the capacity for triage, analysis, documentation and
+      recommendation when it is integrated with established frameworks,
+      trustworthy data, adequate anonymization and human validation.
+    </p>
+
+    <div class="btn-row">
+      <a class="btn btn--primary" href="praticas.html">
+        See the three practices
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <a class="btn" href="catalogo.html">Tool catalog</a>
+      <a class="btn" href="https://github.com/sbseg26-mc1">Repository and notebooks</a>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== PIPELINE ====================== -->
+<section class="section" id="pipeline">
+  <div class="wrap">
+    <div class="section__head">
+      <span class="eyebrow">How the three practices connect</span>
+      <h2>The pipeline in three stages</h2>
+    </div>
+
+    <div class="pipeline">
+      <ol class="flow">
+        <li class="flow__io">Ticket received by the CSIRT</li>
+
+        <li class="flow__arrow" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </li>
+
+        <li class="flow__stage flow__stage--ec1">
+          <span class="flow__badge">EC1</span>
+          <h3>Pseudonymization</h3>
+          <p class="flow__tools">ANON-LFI, AnonShield</p>
+          <p class="flow__note">NER + regex + HMAC-SHA256</p>
+        </li>
+
+        <li class="flow__gate">Human validation</li>
+
+        <li class="flow__stage flow__stage--ec2">
+          <span class="flow__badge">EC2</span>
+          <h3>Classification</h3>
+          <p class="flow__tools">AutoClass-LFI, SecLINC</p>
+          <p class="flow__note">taxonomy + prompting</p>
+        </li>
+
+        <li class="flow__gate">Human validation</li>
+
+        <li class="flow__stage flow__stage--ec3">
+          <span class="flow__badge">EC3</span>
+          <h3>Playbook</h3>
+          <p class="flow__tools">AutoClass-LFI</p>
+          <p class="flow__note">Markdown and Ansible</p>
+        </li>
+
+        <li class="flow__arrow" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </li>
+
+        <li class="flow__io">Documented, auditable response</li>
+      </ol>
+
+      <p class="pipeline__caption">
+        The three case studies are not independent exercises: they form a single
+        pipeline, in which the output of one feeds the next. Human validation
+        appears <strong>between</strong> the stages, and not only at the end,
+        because a classification error produces a silently wrong playbook.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== NUMBERS ====================== -->
+<section class="section section--alt">
+  <div class="wrap">
+    <div class="section__head">
+      <span class="eyebrow">Why this subject matters</span>
+      <h2>Six numbers from the chapter</h2>
+      <p>
+        Two indicators explain the pressure on the teams, two come from the
+        experiments carried out in the chapter itself, over the real ticket
+        base, and two are reminders of where the limits lie.
+      </p>
+    </div>
+
+    <div class="grid grid--wide">
+      <div class="stat">
+        <span class="stat__value">516,556</span>
+        <span class="stat__label">
+          incident reports recorded by CERT.br in 2024, an average of 1,411 per
+          day.
+        </span>
+        <span class="stat__source">CERT.br, 2025</span>
+      </div>
+
+      <div class="stat">
+        <span class="stat__value">4 million</span>
+        <span class="stat__label">
+          is the estimated global shortfall of security professionals. Triage
+          grows faster than the capacity to train analysts.
+        </span>
+        <span class="stat__source">ISC2, 2023</span>
+      </div>
+
+      <div class="stat stat--ec2">
+        <span class="stat__value">89.7%</span>
+        <span class="stat__label">
+          accuracy over 174 real tickets with <strong>a single labeled example
+          per category</strong>, against 68.4% with no example at all. Almost
+          all of the gain comes from a single confusion resolved, between
+          vulnerability exploitation and intrusion attempt.
+        </span>
+        <span class="stat__source">Case study 2 of the chapter</span>
+      </div>
+
+      <div class="stat stat--ec1">
+        <span class="stat__value">5,256</span>
+        <span class="stat__label">
+          sensitive entity replacements across 182 tickets, roughly 29 per
+          ticket, for only 531 distinct entities. Each one reappears ten times
+          on average, and it is that repetition that deterministic
+          pseudonymization turns into correlation.
+        </span>
+        <span class="stat__source">Case study 1 of the chapter</span>
+      </div>
+
+      <div class="stat stat--ec3">
+        <span class="stat__value">42%</span>
+        <span class="stat__label">
+          of the summaries produced by models <strong>working alone</strong>
+          contained factual inaccuracies, and 35% omitted critical details. In
+          collaborative use, the same models reduce the analyst's effort.
+        </span>
+        <span class="stat__source">Kramer et al., SOUPS 2025</span>
+      </div>
+
+      <div class="stat">
+        <span class="stat__value">18.5%</span>
+        <span class="stat__label">
+          is the disagreement rate between <strong>two human analysts</strong>
+          labeling the same tickets. That is the practical ceiling of any
+          classifier evaluated against a human label.
+        </span>
+        <span class="stat__source">Jesus Filho et al., ICMLA 2025</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== WHAT MAKES THIS SHORT COURSE DIFFERENT ====================== -->
+<section class="section">
+  <div class="wrap">
+    <div class="section__head">
+      <span class="eyebrow">What sets it apart</span>
+      <h2>Real data, anonymized, with an explicit policy</h2>
+      <p>
+        Most teaching material on AI in security works over synthetic examples.
+        Synthetic examples are clean, free of ambiguity and free of noise, and
+        for that very reason they hide exactly the difficulties that
+        characterize the real task.
+      </p>
+    </div>
+
+    <div class="grid">
+      <article class="card card--ec1">
+        <div class="card__top">
+          <span class="card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </span>
+          <h3>No raw data leaves its source</h3>
+        </div>
+        <p>
+          The real tickets were provided by partner CSIRTs and pseudonymized
+          locally, without relying on any external service. The live
+          demonstrations work over synthetic tickets.
+        </p>
+      </article>
+
+      <article class="card card--ec2">
+        <div class="card__top">
+          <span class="card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h18M3 12h12M3 18h7"/></svg>
+          </span>
+          <h3>A base with the real imbalance</h3>
+        </div>
+        <p>
+          There are 182 records, one per distinct incident, accumulated over
+          roughly 18 months. A single category holds 64.8% of the base and four
+          categories account for about 94%, which makes overall accuracy a
+          misleading metric and forces measurement per category.
+        </p>
+      </article>
+
+      <article class="card card--ec3">
+        <div class="card__top">
+          <span class="card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 17l6-6-6-6M12 19h8"/></svg>
+          </span>
+          <h3>Notebooks you can hold in your head</h3>
+        </div>
+        <p>
+          Each practice reimplements the essence of the mechanism in a few dozen
+          lines of Python, without a GPU and without API credentials, so that
+          the behavior observed in the production tool becomes inspectable.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="card__top">
+          <span class="card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9.5" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg>
+          </span>
+          <h3>The human in the loop is measured, not assumed</h3>
+        </div>
+        <p>
+          The GT-LFI cycle feeds the corrections made by analysts back into the
+          knowledge the system uses. Human validation is a source of correction
+          signal, and not merely a bureaucratic safeguard.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== TRACKS BY PROFILE ====================== -->
+<section class="section section--alt">
+  <div class="wrap">
+    <div class="section__head">
+      <span class="eyebrow">Diverse audience, different entry points</span>
+      <h2>Where to start, depending on your profile</h2>
+      <p>
+        The material is the same for everyone. What changes is the order in
+        which it pays off most. Pick the track closest to your situation.
+      </p>
+    </div>
+
+    <div class="grid grid--wide">
+      <article class="card track">
+        <h3>Undergraduate student</h3>
+        <p>First contact with incident response.</p>
+        <ol>
+          <li><strong>Understand the chain:</strong> read the pipeline diagram above, end to end.</li>
+          <li><strong>Start with Practice 1:</strong> anonymizing is, above all, a detection problem, and that becomes visible within minutes.</li>
+          <li><strong>Fix the vocabulary:</strong> go through the standards and taxonomies group in the catalog.</li>
+        </ol>
+        <div class="card__links">
+          <a href="praticas.html#pratica-1">Go to Practice 1</a>
+          <a href="catalogo.html#padroes">Standards and taxonomies</a>
+        </div>
+      </article>
+
+      <article class="card track">
+        <h3>Instructor</h3>
+        <p>Wants to use the material in a course or workshop.</p>
+        <ol>
+          <li><strong>Use the notebooks as they are:</strong> they are self-contained and run without a GPU and without credentials.</li>
+          <li><strong>Make use of the discussion questions:</strong> each practice brings the questions that drive the analysis in class.</li>
+          <li><strong>Adopt the synthetic tickets:</strong> published in the repository, they require no data use agreement.</li>
+        </ol>
+        <div class="card__links">
+          <a href="praticas.html">Practice guide</a>
+          <a href="https://github.com/sbseg26-mc1">Repository</a>
+        </div>
+      </article>
+
+      <article class="card track">
+        <h3>Researcher</h3>
+        <p>Wants to replicate, compare or extend the results.</p>
+        <ol>
+          <li><strong>Read the methodological caveats:</strong> accuracy figures are only comparable when you know which set they were measured on and under which taxonomy.</li>
+          <li><strong>Map the gaps:</strong> data, evaluation, actionable explainability, human and AI collaboration, and agent verifiability.</li>
+          <li><strong>Go to the sources:</strong> the recommended reading list gathers the SoKs and the central empirical studies.</li>
+        </ol>
+        <div class="card__links">
+          <a href="sobre.html#leituras">Recommended reading</a>
+          <a href="sobre.html#como-citar">How to cite</a>
+        </div>
+      </article>
+
+      <article class="card track">
+        <h3>CSIRT or SOC professional</h3>
+        <p>Wants to assess what can be taken into operations.</p>
+        <ol>
+          <li><strong>Decide the data policy first:</strong> pseudonymization is not anonymization, and pseudonymized data remains personal data under Brazil's data protection law, the LGPD.</li>
+          <li><strong>Measure the cost of privacy:</strong> roughly 60% accuracy with local open models against more than 90% with commercial models.</li>
+          <li><strong>Build the environment in layers:</strong> visibility, then behavioral detection, and only then the cognitive layer.</li>
+        </ol>
+        <div class="card__links">
+          <a href="catalogo.html#grupo">Tools from the group</a>
+          <a href="catalogo.html#soar">SOAR and response</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== PREPARATION ====================== -->
+<section class="section">
+  <div class="wrap">
+    <div class="section__head">
+      <span class="eyebrow">Before the session</span>
+      <h2>Set up your environment</h2>
+      <p>
+        The notebooks were written under three deliberate constraints: they are
+        self-contained, they run without a GPU and without API credentials, and
+        they reimplement the essential mechanism of each tool in a few dozen
+        lines.
+      </p>
+    </div>
+
+    <div class="grid grid--2">
+      <div class="card">
+        <h3>The bare minimum</h3>
+        <dl class="deflist">
+          <dt>Python 3 with Jupyter</dt>
+          <dd>Any recent installation will do. A local notebook or a cloud notebook service, whichever you prefer.</dd>
+          <dt>No GPU</dt>
+          <dd>The reference demonstration of AnonShield runs on an ordinary laptop with four vCPUs and 8 GB of RAM. The speedup of more than 535 times over the previous generation is architectural, measured on CPU-only execution.</dd>
+          <dt>Optional credential</dt>
+          <dd>Only Practice 2 in its online version calls an API, and it has an equivalent offline variant. The others run with a local or simulated provider.</dd>
+          <dt>Clone the repository</dt>
+          <dd>The three notebooks, the synthetic tickets, the reference prompts and the playbooks are all in the organization's repository.</dd>
+        </dl>
+        <div class="card__links">
+          <a href="https://github.com/sbseg26-mc1">github.com/sbseg26-mc1</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>There is always a credential-free path</h3>
+        <p>
+          Each practice has a route that needs no network, no API key and no
+          budget, so that no connectivity scenario leaves anyone stuck.
+        </p>
+        <ol>
+          <li><strong>Practice 1:</strong> plain Python. If the Transformers library is unavailable, a simplified lexical recognizer takes the place of the NER and the lesson about coverage remains observable.</li>
+          <li><strong>Practice 2:</strong> <code>02-classificacao.ipynb</code> calls Gemini in real time and asks for a Google AI Studio key. <code>02-classificacao_offline.ipynb</code> embeds the results of a complete run and reaches the same numbers, with no network.</li>
+          <li><strong>Practice 3:</strong> the provider is selected by a single variable, among a local model via Ollama, an OpenAI-compatible API and a deterministic simulated generator.</li>
+        </ol>
+        <div class="card__links">
+          <a href="catalogo.html#modelos">Models and local execution</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout" style="margin-top: 2rem;">
+      <span class="callout__icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 16v-5M12 8h.01"/></svg>
+      </span>
+      <div>
+        <h3>About the data used in the practices</h3>
+        <p>
+          For the operational security of the contributing CSIRTs and in
+          compliance with the LGPD, the real ticket base is not made available.
+          The live anonymization demonstrations use <strong>synthetic
+          tickets</strong>, published in the repository. Aggregate results over
+          the real base are presented in precomputed form, always accompanied by
+          the code that produced them.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="site-footer__grid">
+      <div>
+        <h4>The short course</h4>
+        <p>
+          Chapter 1 of the short course book of the 26th Brazilian Symposium on
+          Cybersecurity, SBSeg 2026.
+        </p>
+      </div>
+      <div>
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="catalogo.html">Tool catalog</a></li>
+          <li><a href="praticas.html">Practices</a></li>
+          <li><a href="sobre.html">About the chapter</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Code</h4>
+        <ul>
+          <li><a href="https://github.com/sbseg26-mc1">Short course repository</a></li>
+          <li><a href="https://gt-rnp-lfi.github.io/home/">GT-LFI project</a></li>
+          <li><a href="https://github.com/AnonShield/anonshield">AnonShield</a></li>
+          <li><a href="https://github.com/gt-rnp-lfi/lfi-autoclass">AutoClass-LFI</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Support</h4>
+        <p>
+          CAPES (funding code 001), RNP through the Hackers do Bem program and
+          the GT-LFI, FAPERGS, CNPq and ANATEL through its agreement with ITA.
+        </p>
+      </div>
+    </div>
+
+    <div class="site-footer__bottom">
+      <span>Content of this site licensed under Apache 2.0.</span>
+      <span>&copy; <span data-ano>2026</span> Authors of Chapter 1.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/js/site.js" defer></script>
+</body>
+</html>

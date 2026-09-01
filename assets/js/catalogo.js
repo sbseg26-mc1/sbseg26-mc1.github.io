@@ -29,6 +29,26 @@
       .replace(/[\u0300-\u036f]/g, "");
   }
 
+  /* Todo texto que este arquivo escreve na página vem de um modelo declarado
+     no HTML, que é traduzido por idioma. Assim o mesmo catalogo.js serve as
+     árvores pt-BR, en e es sem conter texto de nenhuma delas. Os padrões
+     abaixo valem para uma página que ainda não declare os atributos. */
+  function modelo(nome, padrao) {
+    return (contagem && contagem.dataset[nome]) || padrao;
+  }
+
+  var tplTotal = modelo("tplTotal", "{n} itens no catálogo");
+  var tplUm = modelo("tplUm", "1 item encontrado");
+  var tplVarios = modelo("tplVarios", "{n} itens encontrados");
+  var tplGrupoTotal = modelo("tplGrupoTotal", "{n} itens");
+  var tplGrupoParcial = modelo("tplGrupoParcial", "{n} de {total}");
+
+  function preencher(texto, n, total) {
+    return texto
+      .replace("{n}", String(n))
+      .replace("{total}", total == null ? "" : String(total));
+  }
+
   /* Índice de busca montado uma única vez, a partir do conteúdo do cartão. */
   cartoes.forEach(function (cartao) {
     cartao.dataset.indice = normalizar(
@@ -87,18 +107,18 @@
       if (marcador) {
         marcador.textContent =
           abertos === doGrupo.length
-            ? doGrupo.length + " itens"
-            : abertos + " de " + doGrupo.length;
+            ? preencher(tplGrupoTotal, doGrupo.length)
+            : preencher(tplGrupoParcial, abertos, doGrupo.length);
       }
     });
 
     if (contagem) {
       contagem.textContent =
         visiveis === cartoes.length
-          ? cartoes.length + " itens no catálogo"
+          ? preencher(tplTotal, cartoes.length)
           : visiveis === 1
-          ? "1 item encontrado"
-          : visiveis + " itens encontrados";
+          ? tplUm
+          : preencher(tplVarios, visiveis);
     }
 
     if (vazio) vazio.hidden = visiveis !== 0;

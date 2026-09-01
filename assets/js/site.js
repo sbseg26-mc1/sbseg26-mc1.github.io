@@ -26,9 +26,15 @@
       /* Navegação privativa pode bloquear o armazenamento. Ignoramos. */
     }
     if (botaoTema) {
+      /* O rótulo vem do HTML, que é traduzido por idioma. Este arquivo é
+         compartilhado pelas árvores pt-BR, en e es, e por isso não carrega
+         texto de nenhum idioma. Os padrões valem para uma página que ainda
+         não declare os atributos. */
       botaoTema.setAttribute(
         "aria-label",
-        tema === "dark" ? "Ativar modo claro" : "Ativar modo escuro"
+        tema === "dark"
+          ? botaoTema.dataset.rotuloClaro || "Ativar modo claro"
+          : botaoTema.dataset.rotuloEscuro || "Ativar modo escuro"
       );
     }
   }

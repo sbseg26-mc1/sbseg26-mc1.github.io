@@ -416,6 +416,45 @@ hr {
   background: var(--primary-soft);
 }
 
+/* Seletor de idioma. Três links e nada mais: trocar de idioma é seguir um link
+   para a página equivalente na outra árvore, sem JavaScript envolvido. Fica
+   dentro de .header-actions, e não dentro de .nav, para continuar visível
+   quando o menu principal se recolhe em telas estreitas: um seletor escondido
+   atrás do menu ficaria invisível justamente para quem não lê o rótulo do
+   menu. */
+.lang {
+  display: flex;
+  align-items: stretch;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+.lang a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.5rem;
+  padding: 0 var(--sp-2);
+  color: var(--text-muted);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.lang a + a { border-left: 1px solid var(--border); }
+
+.lang a:hover {
+  background: var(--surface-2);
+  color: var(--text);
+}
+
+.lang a[aria-current="true"] {
+  background: var(--primary-soft);
+  color: var(--primary);
+}
+
 .header-actions {
   display: flex;
   align-items: center;
@@ -489,6 +528,7 @@ hr {
    para leitores de tela. */
 @media (max-width: 620px) {
   .brand { gap: var(--sp-2); }
+  .lang a { padding: 0 0.4rem; }
   .brand__name { display: none; }
 
   .brand__meta {
