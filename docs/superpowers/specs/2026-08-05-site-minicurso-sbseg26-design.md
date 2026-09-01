@@ -23,6 +23,12 @@ material, e não com quatro versões do material.
 2. **O PDF do capítulo não entra no repositório.** Ele vai para o `.gitignore`. O site,
    portanto, não hospeda nem oferece download do capítulo; aponta para a publicação
    oficial nos anais.
+
+   > **Revisto em 2026-09-01, por decisão dos autores.** O site passa a hospedar
+   > `assets/minicurso-sbseg2026.pdf`, a versão dos autores do capítulo, anterior à
+   > publicação oficial pela SBC. O `.gitignore` mantém `*.pdf` e abre exceção apenas
+   > para esse arquivo, de modo que originais de trabalho continuam fora do
+   > versionamento. A indicação da publicação oficial nos anais permanece.
 3. **Português impecável.** Acentuação, gramática e pontuação corretas em todo o site.
    Sem travessões.
 4. **Sem links inventados.** Só entram URLs presentes no capítulo ou endereços oficiais

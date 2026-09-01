@@ -1,6 +1,10 @@
 # Material de origem do capítulo, não versionado neste repositório
 minicurso.pdf
+minicurso_texto.pdf
 *.pdf
+
+# Exceção: o capítulo publicado, servido pelo site
+!assets/minicurso-sbseg2026.pdf
 
 # Artefatos de edição em LaTeX, caso o capítulo seja editado nesta pasta
 *.aux

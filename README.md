@@ -21,6 +21,7 @@ assets/css/site.css      Folha de estilo única, compartilhada pelos três idiom
 assets/js/site.js        Tema claro e escuro, menu em telas pequenas
 assets/js/catalogo.js    Busca e filtros do catálogo
 assets/img/favicon.svg   Marca do site
+assets/minicurso-sbseg2026.pdf   O capítulo em PDF, servido pelo site
 docs/superpowers/specs/  Documentos de especificação do site
 ```
 
@@ -131,9 +132,19 @@ valor escrito no HTML é o que aparece sem JavaScript.
 
 ## O PDF do capítulo
 
-O arquivo `minicurso.pdf` está no `.gitignore` e não é versionado aqui. O
-capítulo será publicado no livro de minicursos do SBSeg 2026, pela Sociedade
-Brasileira de Computação.
+O site serve `assets/minicurso-sbseg2026.pdf`, a versão dos autores do capítulo,
+com 50 páginas, em português. Ele é alcançável pelo botão do topo da Home, pelo
+botão da página Sobre e por um cartão do catálogo, nas três árvores. Nas versões
+em inglês e espanhol o rótulo do link avisa que o capítulo está em português.
+
+O `.gitignore` continua ignorando `*.pdf` e abre exceção apenas para esse
+arquivo, de modo que originais de trabalho, como `minicurso_texto.pdf`, seguem
+fora do versionamento. Para atualizar o capítulo, sobrescreva o arquivo em
+`assets/` mantendo o nome, e os links nas doze páginas continuam válidos.
+
+O capítulo será publicado no livro de minicursos do SBSeg 2026, pela Sociedade
+Brasileira de Computação. Quando isso ocorrer, complete o campo de páginas e o
+identificador digital na referência da página Sobre, nos três idiomas.
 
 ## Licença
 
