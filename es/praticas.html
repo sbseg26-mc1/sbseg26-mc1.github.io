@@ -641,7 +641,10 @@
           resultados de una ejecución real y completa están incrustados en el
           notebook, que reproduce la misma secuencia de experimentos y llega a
           los mismos números, sin red y sin costo. En la Práctica 3, seleccione
-          el proveedor simulado determinista.
+          el proveedor simulado determinista. Se basa en reglas y no es un modelo
+          de lenguaje, de modo que los números que produce no deben leerse como
+          desempeño de un LLM: lo que preserva es la mecánica del pipeline, de
+          las métricas y de la auditoría.
         </p>
       </div>
 
@@ -664,6 +667,18 @@
           comerciales y las comparaciones de tiempo entre arquitecturas de
           hardware. En todos los casos, el notebook incluye el código que
           produjo el resultado.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>No ejecutó la práctica anterior</h3>
+        <p>
+          Cada notebook también se ejecuta aislado. El de la Práctica 3 busca los
+          tickets clasificados en <code>saida/</code>, tanto en la raíz como en
+          <code>notebooks/</code>, y recurre a la copia precalculada en
+          <code>dados/tickets_classificados.csv</code> cuando la Práctica 2
+          todavía no se ejecutó. Los playbooks generados van a
+          <code>saida/playbooks/</code>.
         </p>
       </div>
     </div>

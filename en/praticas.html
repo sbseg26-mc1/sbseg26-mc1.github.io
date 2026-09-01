@@ -634,7 +634,10 @@
           results of a real and complete run are embedded in the notebook, which
           reproduces the same sequence of experiments and reaches the same
           numbers, with no network and no cost. In Practice 3, select the
-          deterministic simulated provider.
+          deterministic simulated provider. It is rule-based and is not a
+          language model, so the numbers it produces should not be read as LLM
+          performance: what it preserves is the mechanics of the pipeline, of the
+          metrics and of the auditing.
         </p>
       </div>
 
@@ -655,6 +658,18 @@
           results over the real base, the runs that depend on commercial APIs
           and the timing comparisons between hardware architectures. In every
           case, the notebook includes the code that produced the result.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>You did not run the previous practice</h3>
+        <p>
+          Each notebook also runs in isolation. The Practice 3 one looks for the
+          classified tickets in <code>saida/</code>, both at the root and inside
+          <code>notebooks/</code>, and falls back to the precomputed copy in
+          <code>dados/tickets_classificados.csv</code> when Practice 2 has not
+          been run yet. The generated playbooks go to
+          <code>saida/playbooks/</code>.
         </p>
       </div>
     </div>

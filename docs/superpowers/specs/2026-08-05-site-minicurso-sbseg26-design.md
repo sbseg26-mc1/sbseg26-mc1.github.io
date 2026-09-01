@@ -131,7 +131,7 @@ As três práticas em cartões sequenciais, cada uma com os dois tempos previsto
 capítulo (demonstração da ferramenta e execução do notebook), duração, objetivos
 numerados, perguntas de discussão guiada e o artefato de saída que alimenta a prática
 seguinte: `saida/tickets_pseudonimizados.csv`, depois
-`saida/incidentes_classificados.csv`, depois o playbook avaliado criticamente.
+`saida/tickets_classificados.csv`, depois o playbook avaliado criticamente.
 
 Encerra com "se algo der errado", cobrindo a degradação elegante prevista nos notebooks:
 reconhecedor léxico simplificado quando a biblioteca Transformers não estiver
@@ -162,3 +162,33 @@ bloco "como citar" com BibTeX.
 Versão em inglês, mecanismo de busca global, formulário de inscrição, analytics,
 hospedagem dos notebooks (que vivem no repositório da organização) e qualquer conteúdo
 que dependa de dados reais de incidentes.
+
+## 8. Notas de atualização
+
+Esta especificação registra o que foi planejado em 2026-08-05. As decisões abaixo a
+superam em pontos específicos, e ficam aqui para que a leitura do documento não
+contradiga o site publicado.
+
+**2026-08-31, site trilíngue.** O item "versão em inglês" da seção 7 deixa de valer: o
+site passa a ser publicado em português do Brasil, inglês e espanhol, em três árvores
+estáticas. Ver `2026-08-31-site-trilingue-design.md`.
+
+**2026-09-01, o capítulo em PDF.** A restrição 2 foi revista, conforme a nota registrada
+nela. O critério de aceitação 7 permanece verdadeiro para `minicurso.pdf` e para
+`minicurso_texto.pdf`, que seguem ignorados; a exceção do `.gitignore` alcança apenas
+`assets/minicurso-sbseg2026.pdf`.
+
+**2026-09-01, correções conferidas contra o material publicado.** Ao revisar o site
+contra o repositório `sbseg26-mc1/minicurso` e contra a versão final do capítulo,
+apareceram divergências que este documento carregava:
+
+| Onde | O documento dizia | O correto |
+| --- | --- | --- |
+| Seção 5.1 | 92,27% de acurácia com Progressive-Hint Prompting e Gemini 2 | 89,7% com one-shot, contra 68,4% sem exemplo, sobre 174 tickets reais |
+| Seção 5.1 | aceleração superior a 738 vezes no AnonShield | superior a 535 vezes, em execução só por CPU |
+| Seção 5.2 | cerca de 37 entradas em seis grupos | 43 entradas em seis grupos |
+| Seção 5.3 | `saida/incidentes_classificados.csv` | `saida/tickets_classificados.csv`, corrigido inline |
+| Seção 7 | notebooks "vivem no repositório da organização" | vivem em `sbseg26-mc1/minicurso`, em `notebooks/`, e são cinco |
+
+Os números do site já seguem a coluna da direita. Os valores da coluna do meio são os
+que constavam do planejamento inicial, anteriores à versão final do capítulo.
