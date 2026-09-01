@@ -140,7 +140,7 @@
           <span class="flow__badge">EC3</span>
           <h3>Playbook</h3>
           <p class="flow__tools">AutoClass-LFI</p>
-          <p class="flow__note">Markdown, Ansible, CACAO</p>
+          <p class="flow__note">Markdown e Ansible</p>
         </li>
 
         <li class="flow__arrow" aria-hidden="true">
@@ -167,8 +167,9 @@
       <span class="eyebrow">Por que este tema importa</span>
       <h2>Seis números do capítulo</h2>
       <p>
-        Dois indicadores explicam a pressão sobre as equipes, dois delimitam o
-        que a IA entrega hoje, e dois lembram que o problema não é só técnico.
+        Dois indicadores explicam a pressão sobre as equipes, dois vêm dos
+        experimentos conduzidos no próprio capítulo, sobre a base real de
+        tickets, e dois lembram onde ficam os limites.
       </p>
     </div>
 
@@ -191,6 +192,28 @@
         <span class="stat__source">ISC2, 2023</span>
       </div>
 
+      <div class="stat stat--ec2">
+        <span class="stat__value">89,7%</span>
+        <span class="stat__label">
+          de acurácia sobre 174 tickets reais com <strong>um único exemplo
+          rotulado por categoria</strong>, contra 68,4% sem exemplo algum. Quase
+          todo o ganho vem de uma só confusão desfeita, entre exploração de
+          vulnerabilidade e tentativa de intrusão.
+        </span>
+        <span class="stat__source">Estudo de caso 2 do capítulo</span>
+      </div>
+
+      <div class="stat stat--ec1">
+        <span class="stat__value">5.256</span>
+        <span class="stat__label">
+          substituições de entidade sensível em 182 tickets, cerca de 29 por
+          ticket, para apenas 531 entidades distintas. Cada uma reaparece dez
+          vezes em média, e é essa repetição que a pseudonimização determinística
+          converte em correlação.
+        </span>
+        <span class="stat__source">Estudo de caso 1 do capítulo</span>
+      </div>
+
       <div class="stat stat--ec3">
         <span class="stat__value">42%</span>
         <span class="stat__label">
@@ -199,25 +222,6 @@
           uso colaborativo, os mesmos modelos reduzem o esforço do analista.
         </span>
         <span class="stat__source">Kramer et al., SOUPS 2025</span>
-      </div>
-
-      <div class="stat stat--ec2">
-        <span class="stat__value">92,27%</span>
-        <span class="stat__label">
-          de acurácia na classificação de 194 incidentes, combinando taxonomia
-          estruturada com heurística iterativa de prompting.
-        </span>
-        <span class="stat__source">Severo et al., 2025</span>
-      </div>
-
-      <div class="stat stat--ec1">
-        <span class="stat__value">738×</span>
-        <span class="stat__label">
-          de aceleração do AnonShield sobre a geração anterior: de cerca de 92,9
-          horas para 453 segundos em 70.951 registros. O ganho é arquitetural, e
-          não dependente de GPU.
-        </span>
-        <span class="stat__source">Kapelinski et al., SBRC 2026</span>
       </div>
 
       <div class="stat">
@@ -270,9 +274,10 @@
           <h3>Uma base com o desbalanceamento real</h3>
         </div>
         <p>
-          São 185 registros de 182 incidentes únicos, acumulados em cerca de 18
-          meses. Uma única categoria concentra 64,9% da base, o que torna a
-          acurácia global uma métrica enganosa e obriga a medir por categoria.
+          São 182 registros, um por incidente distinto, acumulados em cerca de 18
+          meses. Uma única categoria concentra 64,8% da base e quatro categorias
+          respondem por cerca de 94%, o que torna a acurácia global uma métrica
+          enganosa e obriga a medir por categoria.
         </p>
       </article>
 
@@ -401,9 +406,9 @@
           <dt>Python 3 com Jupyter</dt>
           <dd>Qualquer instalação recente serve. Um notebook local ou um serviço de notebooks na nuvem, à sua escolha.</dd>
           <dt>Sem GPU</dt>
-          <dd>A demonstração de referência do AnonShield executa em um notebook comum com quatro vCPUs e 8 GB de RAM.</dd>
-          <dt>Sem credenciais</dt>
-          <dd>As práticas rodam com um provedor local ou simulado. Executar com modelo comercial é opcional.</dd>
+          <dd>A demonstração de referência do AnonShield executa em um notebook comum com quatro vCPUs e 8 GB de RAM. A aceleração de mais de 535 vezes sobre a geração anterior é arquitetural, medida em execução só por CPU.</dd>
+          <dt>Credencial opcional</dt>
+          <dd>Só a Prática 2 na versão online chama uma API, e ela tem uma variante offline equivalente. As demais rodam com provedor local ou simulado.</dd>
           <dt>Clone o repositório</dt>
           <dd>Os três notebooks, os tickets sintéticos, os prompts de referência e os playbooks estão no repositório da organização.</dd>
         </dl>
@@ -413,16 +418,15 @@
       </div>
 
       <div class="card">
-        <h3>Três provedores intercambiáveis</h3>
+        <h3>Sempre há um caminho sem credencial</h3>
         <p>
-          O notebook de classificação seleciona o provedor por uma única
-          variável, o que permite executar a atividade inteira em qualquer
-          cenário de conectividade e de orçamento.
+          Cada prática tem uma rota que dispensa rede, chave de API e orçamento,
+          de modo que nenhum cenário de conectividade deixe alguém parado.
         </p>
         <ol>
-          <li><strong>Modelo local via Ollama:</strong> o dado não sai da máquina. É o caminho que torna tangível o argumento de privacidade.</li>
-          <li><strong>API compatível com OpenAI:</strong> para quem já tem credencial e quer ver o teto de desempenho.</li>
-          <li><strong>Provedor simulado determinístico:</strong> sem rede, sem custo, com saída reprodutível. Garante que ninguém fique parado.</li>
+          <li><strong>Prática 1:</strong> Python puro. Se a biblioteca Transformers não estiver disponível, um reconhecedor léxico simplificado assume o papel do NER e a lição sobre cobertura continua observável.</li>
+          <li><strong>Prática 2:</strong> <code>02-classificacao.ipynb</code> chama o Gemini em tempo real e pede uma chave do Google AI Studio. <code>02-classificacao_offline.ipynb</code> traz os resultados de uma execução completa embutidos e chega aos mesmos números, sem rede.</li>
+          <li><strong>Prática 3:</strong> provedor selecionado por uma única variável, entre um modelo local via Ollama, uma API compatível com OpenAI e um gerador simulado determinístico.</li>
         </ol>
         <div class="card__links">
           <a href="catalogo.html#modelos">Modelos e execução local</a>
@@ -475,7 +479,7 @@
         <ul>
           <li><a href="https://github.com/sbseg26-mc1">Repositório do minicurso</a></li>
           <li><a href="https://gt-rnp-lfi.github.io/home/">Projeto GT-LFI</a></li>
-          <li><a href="https://github.com/AnonShield/tool">AnonShield</a></li>
+          <li><a href="https://github.com/AnonShield/anonshield">AnonShield</a></li>
           <li><a href="https://github.com/gt-rnp-lfi/lfi-autoclass">AutoClass-LFI</a></li>
         </ul>
       </div>

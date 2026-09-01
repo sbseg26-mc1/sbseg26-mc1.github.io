@@ -114,7 +114,7 @@
     </div>
 
     <div class="results-bar">
-      <span id="contagem" aria-live="polite">41 itens no catálogo</span>
+      <span id="contagem" aria-live="polite">42 itens no catálogo</span>
       <button class="btn" type="button" id="limpar" hidden>Limpar filtros</button>
     </div>
 
@@ -154,14 +154,17 @@
           </p>
           <p class="tool__role">
             <strong>No minicurso:</strong> é a ferramenta demonstrada no Tempo 1 da
-            Prática 1. Oferece quatro estratégias selecionáveis por linha de
-            comando, com F1 de 94,2% na melhor configuração e aceleração superior
-            a 738 vezes frente à geração anterior.
+            Prática 1. A estratégia de detecção é selecionável por linha de comando
+            e troca cobertura por custo de processamento; a base do capítulo usa a
+            <em>standalone</em>. A aceleração é superior a 535 vezes frente à
+            geração anterior, sobre o mesmo conjunto e o mesmo hardware, em execução
+            exclusivamente por CPU: o ganho é arquitetural, e não dependente
+            de GPU.
           </p>
           <div class="tool__foot">
             <span class="tag tag--ec1">EC1</span>
             <div class="tool__links">
-              <a href="https://github.com/AnonShield/tool">Repositório <svg aria-hidden="true"><use href="#i-ext"/></svg></a>
+              <a href="https://github.com/AnonShield/anonshield">Repositório <svg aria-hidden="true"><use href="#i-ext"/></svg></a>
             </div>
           </div>
         </article>
@@ -562,7 +565,7 @@
     <section class="catalog-group" id="modelos">
       <div class="catalog-group__head">
         <h2>Modelos e execução local</h2>
-        <span class="catalog-group__count">7 itens</span>
+        <span class="catalog-group__count">8 itens</span>
       </div>
       <p class="prose" style="margin-bottom: 1.5rem; color: var(--text-muted);">
         O ecossistema de pesos abertos é o que torna materialmente possível o
@@ -574,6 +577,31 @@
 
       <div class="grid grid--wide">
 
+        <article class="tool" data-categoria="modelos" data-estagio="ec2 ec3" data-termos="gemini google ai studio api comercial flash lite classificacao playbook chave">
+          <div class="tool__head">
+            <h3 class="tool__name">gemini-3.1-flash-lite</h3>
+            <span class="tool__kind">Modelo</span>
+          </div>
+          <p class="tool__desc">
+            Modelo comercial leve, acessado por API, com camada gratuita no Google
+            AI Studio suficiente para as atividades do minicurso.
+          </p>
+          <p class="tool__role">
+            <strong>No minicurso:</strong> é o modelo que produziu os resultados
+            reportados nos estudos de caso 2 e 3, e o que a Prática 2 chama em tempo
+            real. O identificador exato é registrado de propósito: provedores
+            comerciais atualizam endpoints sem aviso, e a reprodução dos números
+            depende dessa informação.
+          </p>
+          <div class="tool__foot">
+            <span class="tag tag--ec2">EC2</span>
+            <span class="tag tag--ec3">EC3</span>
+            <div class="tool__links">
+              <a href="https://aistudio.google.com/">Google AI Studio <svg aria-hidden="true"><use href="#i-ext"/></svg></a>
+            </div>
+          </div>
+        </article>
+
         <article class="tool" data-categoria="modelos" data-estagio="ec2 ec3" data-termos="local llm slm gpu execucao on-premise privacidade">
           <div class="tool__head">
             <h3 class="tool__name">Ollama</h3>
@@ -584,10 +612,10 @@
             execução local, que reduz substancialmente a barreira de entrada.
           </p>
           <p class="tool__role">
-            <strong>No minicurso:</strong> é o provedor local das Práticas 2 e 3, e a
-            base dos experimentos com modelos abertos. É o caminho que torna
-            tangível o argumento de privacidade: com ele, o dado não sai da
-            máquina do participante.
+            <strong>No minicurso:</strong> é o provedor local da Prática 3 e a base
+            dos experimentos com modelos abertos que quantificam o custo da
+            privacidade. É o caminho que torna tangível esse argumento: com ele, o
+            dado não sai da máquina do participante.
           </p>
           <div class="tool__foot">
             <span class="tag tag--ec2">EC2</span>
@@ -1248,7 +1276,7 @@
         <ul>
           <li><a href="https://github.com/sbseg26-mc1">Repositório do minicurso</a></li>
           <li><a href="https://gt-rnp-lfi.github.io/home/">Projeto GT-LFI</a></li>
-          <li><a href="https://github.com/AnonShield/tool">AnonShield</a></li>
+          <li><a href="https://github.com/AnonShield/anonshield">AnonShield</a></li>
           <li><a href="https://github.com/gt-rnp-lfi/lfi-autoclass">AutoClass-LFI</a></li>
         </ul>
       </div>
